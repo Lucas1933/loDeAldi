@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sideBarIcons {
+    @apply mx-2 flex grow justify-center rounded-lg border-4 border-solid border-black py-2;
+  }
+}
