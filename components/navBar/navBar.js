@@ -1,5 +1,3 @@
-import { setBtnsListeners } from "./btnInteraction.js";
-
 export function navBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("fixed", "bottom-0", "flex", "w-full", "justify-evenly");

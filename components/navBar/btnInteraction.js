@@ -1,6 +1,4 @@
-import { hamburguesas } from "../hamburgesas/hamburgesas.js";
-import { pizzas } from "../pizzas/pizzas.js";
-import { fritas } from "../fritas/fritas.js";
+import { createMenu, displayMenu } from "../menu/menu.js";
 export function setBtnsListeners() {
   let btnsDivs = Array.from(document.getElementsByClassName("sideBarIcons"));
   let btns = [];
@@ -11,7 +9,7 @@ export function setBtnsListeners() {
   btns.forEach((cadaBtn) => {
     cadaBtn.addEventListener("click", (btnTriggerEvent) => {
       changeBgColor(btnTriggerEvent, btnsDivs);
-      changeSection(btnTriggerEvent);
+      changeMenu(btnTriggerEvent);
     });
   });
 }
@@ -23,14 +21,15 @@ function changeBgColor(btnTriggerEvent, btnsDivs) {
   btnTriggerEvent.target.parentNode.parentNode.classList.add("bg-fuchsia-300");
 }
 
-function changeSection(btnTriggerEvent) {
-  let section = document.getElementsByTagName("section")[0];
+function changeMenu(btnTriggerEvent) {
+  let menu = createMenu();
+  let main = document.getElementsByTagName("main")[0];
   let btnPressed = btnTriggerEvent.target.id;
   if (btnPressed == "pizzaBtn") {
-    section.replaceWith(pizzas());
+    main.replaceWith(displayMenu(menu.getPizzas()));
   } else if (btnPressed == "hambBtn") {
-    section.replaceWith(hamburguesas());
+    main.replaceWith(displayMenu(menu.getHamburguesas()));
   } else {
-    section.replaceWith(fritas());
+    main.replaceWith(displayMenu(menu.getFritas()));
   }
 }

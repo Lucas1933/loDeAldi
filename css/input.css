@@ -6,4 +6,15 @@
   .sideBarIcons {
     @apply mx-2 flex grow justify-center rounded-lg border-4 border-solid border-black py-2;
   }
+  .foodGrid {
+    @apply grid
+    grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
+    grid-rows-3
+    gap-1
+    px-4
+    py-4;
+  }
+  .foodDivs {
+    @apply flex h-[500px] w-full flex-col justify-end rounded-lg border-2 border-solid border-black  bg-cover bg-center bg-no-repeat;
+  }
 }
