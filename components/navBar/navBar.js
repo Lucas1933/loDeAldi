@@ -1,13 +1,13 @@
 export function navBar() {
   let navBar = document.createElement("nav");
-  navBar.classList.add("fixed", "bottom-0", "flex", "w-full", "justify-evenly");
+  navBar.classList.add("navBar");
   navBar.innerHTML = ` 
   <div class="sideBarIcons">
     <button>
       <img
         id="hambBtn"
         class="h-12 w-12"
-        src="../../assets/icons/navBarIcons/hamburger-part-2-svgrepo-com.svg"
+        src="../../assets/icons/navBarIcons/burgerIconB.svg"
         alt=""
       />
     </button>
@@ -17,7 +17,7 @@ export function navBar() {
       <img
         id="pizzaBtn"
         class="h-12 w-12"
-        src="../../assets/icons/navBarIcons/pizza-svgrepo-com.svg"
+        src="../../assets/icons/navBarIcons/pizzaIconB.svg"
         alt=""
       />
     </button>
@@ -27,7 +27,7 @@ export function navBar() {
       <img
         id="fritaBtn"
         class="h-12 w-12"
-        src="../../assets/icons/navBarIcons/french-fries-svgrepo-com.svg"
+        src="../../assets/icons/navBarIcons/fritaIconB.svg"
         alt=""
       />
     </button>

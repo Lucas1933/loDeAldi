@@ -6,5 +6,5 @@ let index = document.getElementById("index");
 let navBarNode = await navBar();
 let mainDefault = displayMenu(createMenu().getPizzas());
 index.appendChild(mainDefault);
-/* index.appendChild(navBarNode); */
+index.appendChild(navBarNode);
 navBarListeners();

@@ -108,10 +108,10 @@ export function displayMenu(comida) {
       style="background-image: url('${cadaComida.src}')"
       class="foodDivs"
     >
-      <div class="bg-black text-center font-extrabold text-white">
-        <h1>${cadaComida.nombre}</h1>
-        <p>${cadaComida.precio}</p>
-        <p>${cadaComida.descripcion}</p>
+      <div class="bg-yellow-300 text-center  text-black">
+        <h1 class="font-extrabold">${cadaComida.nombre}</h1>
+        <p class="font-semibold text-lg">$${cadaComida.precio}</p>
+        <p>(${cadaComida.descripcion})</p>
       </div>
     </div>`;
   });

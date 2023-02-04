@@ -16,9 +16,9 @@ export function setBtnsListeners() {
 
 function changeBgColor(btnTriggerEvent, btnsDivs) {
   btnsDivs.forEach((cadaBtnDiv) => {
-    cadaBtnDiv.classList.remove("bg-fuchsia-300");
+    cadaBtnDiv.classList.remove("bg-yellow-300");
   });
-  btnTriggerEvent.target.parentNode.parentNode.classList.add("bg-fuchsia-300");
+  btnTriggerEvent.target.parentNode.parentNode.classList.add("bg-yellow-300");
 }
 
 function changeMenu(btnTriggerEvent) {

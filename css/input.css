@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 @layer components {
+  .navBar {
+    @apply fixed bottom-0 flex w-full justify-evenly bg-red-600 pt-1;
+  }
   .sideBarIcons {
-    @apply mx-2 flex grow justify-center rounded-lg border-4 border-solid border-black py-2;
+    @apply mx-2 mb-1 flex grow justify-center rounded-lg border-4 border-solid border-yellow-300 py-2;
   }
   .foodGrid {
-    @apply mb-20
+    @apply mb-16
     grid
     grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
     grid-rows-3
     gap-1
+    bg-red-600
     px-4
     py-4;
   }
   .foodDivs {
-    @apply flex h-[500px] w-full flex-col justify-end rounded-lg border-2 border-solid border-black  bg-cover bg-center bg-no-repeat;
+    @apply flex h-[500px] w-full flex-col justify-end rounded-lg border-4 border-solid border-yellow-300  bg-cover bg-center bg-no-repeat;
   }
 }
