@@ -529,6 +529,7 @@ video {
 }
 
 .foodGrid {
+  margin-bottom: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -559,20 +560,24 @@ video {
   position: fixed;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .flex {
   display: flex;
 }
 
-.grid {
-  display: grid;
+.h-12 {
+  height: 3rem;
 }
 
 .h-\[20vh\] {
@@ -583,32 +588,16 @@ video {
   height: 5rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-12 {
-  height: 3rem;
-}
-
 .w-full {
   width: 100%;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .w-12 {
   width: 3rem;
 }
 
-.grid-cols-\[repeat\(auto-fit\2c minmax\(240px\2c 1fr\)\)\] {
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+.w-40 {
+  width: 10rem;
 }
 
 .items-center {
@@ -623,12 +612,13 @@ video {
   justify-content: space-evenly;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-green-300 {
@@ -654,16 +644,6 @@ video {
 .bg-fuchsia-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 171 252 / var(--tw-bg-opacity));
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .text-center {

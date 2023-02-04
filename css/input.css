@@ -7,7 +7,8 @@
     @apply mx-2 flex grow justify-center rounded-lg border-4 border-solid border-black py-2;
   }
   .foodGrid {
-    @apply grid
+    @apply mb-20
+    grid
     grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
     grid-rows-3
     gap-1
