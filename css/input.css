@@ -20,6 +20,6 @@
     py-4;
   }
   .foodDivs {
-    @apply flex h-[500px] w-full flex-col justify-end rounded-lg border-4 border-solid border-yellow-300  bg-cover bg-center bg-no-repeat;
+    @apply my-4 flex h-[450px] w-[90%] flex-col justify-end justify-self-center  rounded-lg border-4 border-solid border-yellow-300 bg-cover bg-center bg-no-repeat shadow-lg shadow-yellow-300;
   }
 }
