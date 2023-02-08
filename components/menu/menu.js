@@ -58,7 +58,7 @@ export function createMenu() {
     new Comida(
       "Simple",
       750,
-      "(Medallon de carne de 150g en pan de papa)",
+      "(1 Medallon de carne de 150g en pan de papa)",
       1,
       "./assets/hamburguesas/1.jpeg"
     )
@@ -67,7 +67,7 @@ export function createMenu() {
     new Comida(
       "Cuarto de Libra",
       950,
-      "(Salsa de ketchup y cebolla, queso cheddar, medallon de carne 150g en pan de papa)",
+      "(Salsa de ketchup y cebolla, queso cheddar, 1 medallon de carne 150g en pan de papa)",
       2,
       "./assets/hamburguesas/2.jpeg"
     )
@@ -76,7 +76,7 @@ export function createMenu() {
     new Comida(
       "Completa Clasica",
       950,
-      "(Lechuga, tomate, jamon,queso muzzarella, medallon de carne de 150g en pan de papa)",
+      "(Lechuga, tomate, jamon,queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       3,
       "./assets/hamburguesas/3.jpeg"
     )
@@ -85,7 +85,7 @@ export function createMenu() {
     new Comida(
       "Cheddar y Panceta",
       950,
-      "(Panceta crocante, cebolla caramelizada, queso cheddar, medallon de carne de 150g en pan de papa)",
+      "(Panceta crocante, cebolla caramelizada, queso cheddar, 1 medallon de carne de 150g en pan de papa)",
       4,
       "./assets/hamburguesas/4.png"
     )
@@ -94,7 +94,7 @@ export function createMenu() {
     new Comida(
       "Cebolla y Morron asado",
       950,
-      "(Morron asado, cebolla caramelizada, queso muzzarella, medallon de carne de 150g en pan de papa)",
+      "(Morron asado, cebolla caramelizada, queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       5,
       "./assets/hamburguesas/5.jpeg"
     )
