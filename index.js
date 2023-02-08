@@ -1,10 +1,12 @@
 import { navBar } from "./components/navBar/navBar.js";
+import { getHeader } from "./components/header/header.js";
 import { setBtnsListeners as navBarListeners } from "./components/navBar/btnInteraction.js";
 import { createMenu } from "./components/menu/menu.js";
 import { displayMenu } from "./components/menu/menu.js";
 let index = document.getElementById("index");
 let navBarNode = await navBar();
 let mainDefault = displayMenu(createMenu().getPizzas());
+index.appendChild(getHeader());
 index.appendChild(mainDefault);
 index.appendChild(navBarNode);
 navBarListeners();
