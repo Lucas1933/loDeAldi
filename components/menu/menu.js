@@ -36,38 +36,22 @@ class Comida {
 export function createMenu() {
   let menu = new Menu();
   menu.addPizza(
-    new Comida(
-      "Muzzarella",
-      1000,
-      "pizza de muzza capo media pila",
-      1,
-      "./assets/pizzas/1.jpeg"
-    )
+    new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg")
   );
 
   menu.addPizza(
-    new Comida(
-      "Calabresa",
-      1500,
-      "pizza de chorizo en tu culo de nuevo jaja",
-      2,
-      "./assets/pizzas/2.jpeg"
-    )
+    new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg")
+  );
+  menu.addPizza(new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/3.jpeg"));
+  menu.addPizza(new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg"));
+  menu.addPizza(
+    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/5.jpeg")
   );
   menu.addPizza(
-    new Comida("Anchoa", 1560, "pizza de mar", 3, "./assets/pizzas/3.jpeg")
+    new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg")
   );
   menu.addPizza(
-    new Comida(
-      "Cochina",
-      2000,
-      "Como tu vieja oink oink",
-      4,
-      "./assets/pizzas/4.jpeg"
-    )
-  );
-  menu.addPizza(
-    new Comida("Example", 200000, "REDACTED", 5, "./assets/pizzas/5.jpeg")
+    new Comida("Napolitana", 1400, "", 7, "./assets/pizzas/7.jpeg")
   );
 
   menu.addHamburguesa(
@@ -111,7 +95,7 @@ export function displayMenu(comida) {
       <div class="bg-yellow-300 text-center  text-black">
         <h1 class="font-extrabold">${cadaComida.nombre}</h1>
         <p class="font-semibold text-lg">$${cadaComida.precio}</p>
-        <p>(${cadaComida.descripcion})</p>
+        <p>${cadaComida.descripcion}</p>
       </div>
     </div>`;
   });
