@@ -56,29 +56,47 @@ export function createMenu() {
 
   menu.addHamburguesa(
     new Comida(
-      "la ricarda",
-      850,
-      "paty con queso",
+      "Simple",
+      750,
+      "(Medallon de carne de 150g en pan de papa)",
       1,
       "./assets/hamburguesas/1.jpeg"
     )
   );
   menu.addHamburguesa(
     new Comida(
-      "burguen queen",
-      900,
-      "paty con queso feminista",
+      "Cuarto de Libra",
+      950,
+      "(Salsa de ketchup y cebolla, queso cheddar, medallon de carne 150g en pan de papa)",
       2,
       "./assets/hamburguesas/2.jpeg"
     )
   );
   menu.addHamburguesa(
     new Comida(
-      "cangreburger",
-      1500,
-      "la concha de tu madre bob sponja",
+      "Completa Clasica",
+      950,
+      "(Lechuga, tomate, jamon,queso muzzarella, medallon de carne de 150g en pan de papa)",
       3,
       "./assets/hamburguesas/3.jpeg"
+    )
+  );
+  menu.addHamburguesa(
+    new Comida(
+      "Cheddar y Panceta",
+      950,
+      "(Panceta crocante, cebolla caramelizada, queso cheddar, medallon de carne de 150g en pan de papa)",
+      4,
+      "./assets/hamburguesas/4.png"
+    )
+  );
+  menu.addHamburguesa(
+    new Comida(
+      "Cebolla y Morron asado",
+      950,
+      "(Morron asado, cebolla caramelizada, queso muzzarella, medallon de carne de 150g en pan de papa)",
+      5,
+      "./assets/hamburguesas/5.jpeg"
     )
   );
   return menu;
