@@ -7,7 +7,7 @@ export function navBar() {
       <img
         id="hambBtn"
         class="h-12 w-12"
-        src="../../assets/icons/navBarIcons/burgerIconB.svg"
+        src="../../assets/icons/navBarIcons/burgerIcon.svg"
         alt=""
       />
     </button>
@@ -17,7 +17,7 @@ export function navBar() {
       <img
         id="pizzaBtn"
         class="h-12 w-12"
-        src="../../assets/icons/navBarIcons/pizzaIconB.svg"
+        src="../../assets/icons/navBarIcons/pizzaIcon.svg"
         alt=""
       />
     </button>
@@ -27,7 +27,7 @@ export function navBar() {
       <img
         id="fritaBtn"
         class="h-12 w-12"
-        src="../../assets/icons/navBarIcons/fritaIconB.svg"
+        src="../../assets/icons/navBarIcons/fritaIcon.svg"
         alt=""
       />
     </button>
