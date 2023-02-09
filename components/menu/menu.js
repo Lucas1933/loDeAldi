@@ -41,16 +41,23 @@ export function createMenu() {
   );
 
   menu.addPizza(
-    new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg", "pizza")
+    new Comida(
+      "Jamon y Morron",
+      1400,
+      "",
+      2,
+      "./assets/pizzas/404.png",
+      "pizza"
+    )
   );
   menu.addPizza(
-    new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/3.jpeg", "pizza")
+    new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/404.png", "pizza")
   );
   menu.addPizza(
-    new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg", "pizza")
+    new Comida("Choclo", 1400, "", 4, "./assets/pizzas/404.png", "pizza")
   );
   menu.addPizza(
-    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/5.jpeg", "pizza")
+    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/404.png", "pizza")
   );
   menu.addPizza(
     new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg", "pizza")
@@ -65,7 +72,7 @@ export function createMenu() {
       750,
       "(1 Medallon de carne de 150g en pan de papa)",
       1,
-      "./assets/hamburguesas/1.jpeg",
+      "./assets/hamburguesas/404.png",
       "hamburguesa"
     )
   );
@@ -75,7 +82,7 @@ export function createMenu() {
       950,
       "(Salsa de ketchup y cebolla, queso cheddar, 1 medallon de carne 150g en pan de papa)",
       2,
-      "./assets/hamburguesas/2.jpeg",
+      "./assets/hamburguesas/404.png",
       "hamburguesa"
     )
   );
