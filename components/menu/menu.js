@@ -1,3 +1,4 @@
+import { getExtras } from "../hamburguesas/extras.js";
 class Menu {
   pizzas = [];
   hamburguesas = [];
@@ -122,6 +123,9 @@ export function displayMenu(comida) {
   let comidaArray = comida;
   let main = document.createElement("main");
   main.classList.add("foodGrid");
+  if (comidaArray[0].type == "hamburguesa") {
+    main.appendChild(getExtras());
+  }
   comidaArray.forEach((cadaComida) => {
     if (cadaComida.type != "hamburguesa") {
       main.innerHTML += `<div

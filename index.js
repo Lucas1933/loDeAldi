@@ -3,6 +3,7 @@ import { getHeader } from "./components/header/header.js";
 import { setBtnsListeners as navBarListeners } from "./components/navBar/btnInteraction.js";
 import { createMenu } from "./components/menu/menu.js";
 import { displayMenu } from "./components/menu/menu.js";
+import { getExtras } from "./components/hamburguesas/extras.js";
 let index = document.getElementById("index");
 let navBarNode = await navBar();
 let mainDefault = displayMenu(createMenu().getPizzas());
