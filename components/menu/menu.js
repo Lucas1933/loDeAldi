@@ -25,33 +25,38 @@ class Menu {
 }
 
 class Comida {
-  constructor(nombre, precio, descripcion, id, src) {
+  constructor(nombre, precio, descripcion, id, src, type) {
     this.nombre = nombre;
     this.precio = precio;
     this.descripcion = descripcion;
     this.id = id;
     this.src = src;
+    this.type = type;
   }
 }
 export function createMenu() {
   let menu = new Menu();
   menu.addPizza(
-    new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg")
+    new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg", "pizza")
   );
 
   menu.addPizza(
-    new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg")
-  );
-  menu.addPizza(new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/3.jpeg"));
-  menu.addPizza(new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg"));
-  menu.addPizza(
-    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/5.jpeg")
+    new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg", "pizza")
   );
   menu.addPizza(
-    new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg")
+    new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/3.jpeg", "pizza")
   );
   menu.addPizza(
-    new Comida("Napolitana", 1400, "", 7, "./assets/pizzas/7.jpeg")
+    new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg", "pizza")
+  );
+  menu.addPizza(
+    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/5.jpeg", "pizza")
+  );
+  menu.addPizza(
+    new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg", "pizza")
+  );
+  menu.addPizza(
+    new Comida("Napolitana", 1400, "", 7, "./assets/pizzas/7.jpeg", "pizza")
   );
 
   menu.addHamburguesa(
@@ -60,7 +65,8 @@ export function createMenu() {
       750,
       "(1 Medallon de carne de 150g en pan de papa)",
       1,
-      "./assets/hamburguesas/1.jpeg"
+      "./assets/hamburguesas/1.jpeg",
+      "hamburguesa"
     )
   );
   menu.addHamburguesa(
@@ -69,7 +75,8 @@ export function createMenu() {
       950,
       "(Salsa de ketchup y cebolla, queso cheddar, 1 medallon de carne 150g en pan de papa)",
       2,
-      "./assets/hamburguesas/2.jpeg"
+      "./assets/hamburguesas/2.jpeg",
+      "hamburguesa"
     )
   );
   menu.addHamburguesa(
@@ -78,7 +85,8 @@ export function createMenu() {
       950,
       "(Lechuga, tomate, jamon,queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       3,
-      "./assets/hamburguesas/3.jpeg"
+      "./assets/hamburguesas/3.jpeg",
+      "hamburguesa"
     )
   );
   menu.addHamburguesa(
@@ -87,7 +95,8 @@ export function createMenu() {
       950,
       "(Panceta crocante, cebolla caramelizada, queso cheddar, 1 medallon de carne de 150g en pan de papa)",
       4,
-      "./assets/hamburguesas/4.png"
+      "./assets/hamburguesas/4.png",
+      "hamburguesa"
     )
   );
   menu.addHamburguesa(
@@ -96,7 +105,8 @@ export function createMenu() {
       950,
       "(Morron asado, cebolla caramelizada, queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       5,
-      "./assets/hamburguesas/5.jpeg"
+      "./assets/hamburguesas/5.jpeg",
+      "hamburguesa"
     )
   );
   return menu;
@@ -106,7 +116,8 @@ export function displayMenu(comida) {
   let main = document.createElement("main");
   main.classList.add("foodGrid");
   comidaArray.forEach((cadaComida) => {
-    main.innerHTML += `<div
+    if (cadaComida.type != "hamburguesa") {
+      main.innerHTML += `<div
       style="background-image: url('${cadaComida.src}')"
       class="foodDivs"
     >
@@ -116,6 +127,41 @@ export function displayMenu(comida) {
         <p>${cadaComida.descripcion}</p>
       </div>
     </div>`;
+    } else {
+      main.innerHTML += `<div
+          style="background-image: url('${cadaComida.src}')"
+          class="foodDivs"
+        >
+          <div class="grow bg-none">
+            <div>
+              <p
+                class="absolute z-20 translate-x-[-3px] translate-y-[20px] rotate-[-45deg] text-center font-bold"
+              >
+                Todas vienen <br />
+                con fritas!
+              </p>
+              <img
+                class="relative z-10 m-0 w-32 translate-x-[-25px] translate-y-[-25px] rotate-[-45deg]"
+                src="./assets/icons/burgerCards/triangle-filled-svgrepo-com.svg"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="h-[110px] w-[45px] translate-y-[-130px] translate-x-[-3px] rounded-b-lg bg-yellow-300"
+            ></div>
+            <div
+              class="h-[38px] w-[108px] translate-y-[-240px] rounded-b-lg bg-yellow-300"
+            ></div>
+          </div>
+
+          <div class="bg-yellow-300 text-center text-black">
+            <h1 class="font-extrabold">${cadaComida.nombre}</h1>
+            <p class="text-lg font-semibold">$${cadaComida.precio}</p>
+            <p>${cadaComida.descripcion}</p>
+          </div>
+        </div>`;
+    }
   });
 
   return main;
