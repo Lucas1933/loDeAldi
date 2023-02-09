@@ -40,7 +40,6 @@ export function createMenu() {
   menu.addPizza(
     new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg", "pizza")
   );
-
   menu.addPizza(
     new Comida(
       "Jamon y Morron",
@@ -116,6 +115,23 @@ export function createMenu() {
       "./assets/hamburguesas/5.jpeg",
       "hamburguesa"
     )
+  );
+
+  menu.addFrita(
+    new Comida("Fritas", 700, " ", 1, "./assets/fritas/404.png", "frita")
+  );
+  menu.addFrita(
+    new Comida(
+      "Panceta, cheddar y verdeo",
+      850,
+      " ",
+      2,
+      "./assets/fritas/2.jpeg",
+      "frita"
+    )
+  );
+  menu.addFrita(
+    new Comida("Salsa Picante", 850, " ", 3, "./assets/fritas/404.png", "frita")
   );
   return menu;
 }
