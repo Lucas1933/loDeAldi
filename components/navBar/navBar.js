@@ -2,7 +2,7 @@ export function navBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("navBar");
   navBar.innerHTML = ` 
-  <div class="sideBarIcons">
+  <div class="navBarIcons">
     <button>
       <img
         id="hambBtn"
@@ -12,7 +12,7 @@ export function navBar() {
       />
     </button>
   </div>
-  <div class="sideBarIcons">
+  <div class="navBarIcons">
     <button>
       <img
         id="pizzaBtn"
@@ -22,7 +22,7 @@ export function navBar() {
       />
     </button>
   </div>
-  <div class="sideBarIcons">
+  <div class="navBarIcons">
     <button>
       <img
         id="fritaBtn"

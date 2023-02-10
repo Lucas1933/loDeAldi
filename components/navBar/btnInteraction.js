@@ -1,6 +1,6 @@
 import { createMenu, displayMenu } from "../menu/menu.js";
 export function setBtnsListeners() {
-  let btnsDivs = Array.from(document.getElementsByClassName("sideBarIcons"));
+  let btnsDivs = Array.from(document.getElementsByClassName("navBarIcons"));
   let btns = [];
   btnsDivs.forEach((cadaDiv) => {
     btns.push(cadaDiv.firstElementChild);
