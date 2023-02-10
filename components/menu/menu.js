@@ -1,4 +1,5 @@
 import { getExtras } from "../hamburguesas/extras.js";
+import "tw-elements";
 class Menu {
   pizzas = [];
   hamburguesas = [];
