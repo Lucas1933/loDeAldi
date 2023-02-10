@@ -159,28 +159,7 @@ export function displayMenu(comida) {
           style="background-image: url('${cadaComida.src}')"
           class="foodDivs"
         >
-          <div class="grow bg-none">
-            <div>
-              <p
-                class="absolute z-20 translate-x-[-3px] translate-y-[20px] rotate-[-45deg] text-center font-bold"
-              >
-                Todas vienen <br />
-                con fritas!
-              </p>
-              <img
-                class="relative z-10 m-0 w-32 translate-x-[-25px] translate-y-[-25px] rotate-[-45deg]"
-                src="./assets/icons/burgerCards/triangle-filled-svgrepo-com.svg"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="h-[110px] w-[45px] translate-y-[-130px] translate-x-[-3px] rounded-b-lg bg-primary"
-            ></div>
-            <div
-              class="h-[37px] w-[108px] translate-y-[-240px] rounded-b-lg bg-primary"
-            ></div>
-          </div>
+        <div class="grow"><p class="font-extrabold rounded-r-lg rounded-b-lg bg-primary text-center inline-block w-16 ">Incluye fritas!</p></div>
 
           <div class="bg-primary text-center text-black">
             <h1 class="font-extrabold">${cadaComida.nombre}</h1>
