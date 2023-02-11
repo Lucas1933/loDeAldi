@@ -42,20 +42,13 @@ export function createMenu() {
     new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg", "pizza")
   );
   menu.addPizza(
-    new Comida(
-      "Jamon y Morron",
-      1400,
-      "",
-      2,
-      "./assets/pizzas/404.png",
-      "pizza"
-    )
+    new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg", "pizza")
   );
   menu.addPizza(
     new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/404.png", "pizza")
   );
   menu.addPizza(
-    new Comida("Choclo", 1400, "", 4, "./assets/pizzas/404.png", "pizza")
+    new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg", "pizza")
   );
   menu.addPizza(
     new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/404.png", "pizza")
