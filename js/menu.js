@@ -1,6 +1,3 @@
-import "tw-elements";
-import { getExtras } from "../hamburguesas/extras.js";
-
 class Menu {
   pizzas = [];
   hamburguesas = [];
@@ -37,7 +34,7 @@ class Comida {
     this.type = type;
   }
 }
-export function createMenu() {
+export function getMenu() {
   let menu = new Menu();
   menu.addPizza(
     new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg", "pizza")
@@ -130,40 +127,45 @@ export function createMenu() {
   );
   return menu;
 }
-export function displayMenu(comida) {
-  let comidaArray = comida;
-  let main = document.createElement("main");
-  main.classList.add("foodGrid");
-  if (comidaArray[0].type == "hamburguesa") {
-    main.appendChild(getExtras());
-  }
-  comidaArray.forEach((cadaComida) => {
-    if (cadaComida.type != "hamburguesa") {
-      main.innerHTML += `<div
-      style="background-image: url('${cadaComida.src}')"
-      class="foodDivs"
-    >
-      <div class="bg-primary text-center  text-black">
-        <h1 class="font-extrabold">${cadaComida.nombre}</h1>
-        <p class="font-semibold text-lg">$${cadaComida.precio}</p>
-        <p>${cadaComida.descripcion}</p>
+
+export function getBurguerExtras() {
+  let aside = document.createElement("aside");
+  aside.classList.add(
+    "flex",
+    "h-fit",
+    "fixed",
+    "right-0",
+    "translate-y-60",
+    "z-50"
+  );
+  aside.innerHTML = `<div class="mb-4">
+      <button
+        class="text-md inline-block h-32 w-10 rounded-t-lg rounded-b-lg border-2 border-solid border-black bg-red-700 font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWidthExample"
+        aria-expanded="false"
+        aria-controls="collapseWidthExample"
+      >
+        E <br />
+        x <br />
+        t <br />
+        r <br />
+        a <br />
+        s <br />
+      </button>
+    </div>
+    <div style="min-height: 120px">
+      <div class="collapse-horizontal collapse" id="collapseWidthExample">
+        <div
+          class="block max-w-sm rounded-lg bg-white p-6 shadow-lg"
+          style="width: 300px"
+        >
+          Otro medallon = $250 <br />
+          Papas con cheddar, panceta y verdeo = $200
+        </div>
       </div>
     </div>`;
-    } else {
-      main.innerHTML += `<div
-          style="background-image: url('${cadaComida.src}')"
-          class="foodDivs"
-        >
-        <div class="grow"><p class="font-extrabold rounded-r-lg rounded-b-lg bg-primary text-center inline-block w-16 ">Incluye fritas!</p></div>
 
-          <div class="bg-primary text-center text-black">
-            <h1 class="font-extrabold">${cadaComida.nombre}</h1>
-            <p class="text-lg font-semibold">$${cadaComida.precio}</p>
-            <p>${cadaComida.descripcion}</p>
-          </div>
-        </div>`;
-    }
-  });
-
-  return main;
+  return aside;
 }
