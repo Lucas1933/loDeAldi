@@ -1,3 +1,4 @@
+import "tw-elements";
 import { displayHeader, displayNavBar } from "./display.js";
 import { displayMenu } from "./display.js";
 let index = document.getElementById("index");
