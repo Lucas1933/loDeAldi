@@ -1,5 +1,4 @@
 import { displayMenu } from "./display.js";
-import { route } from "./route.js";
 
 export function getNavBar() {
   let navBar = document.createElement("nav");
@@ -48,7 +47,7 @@ export function setBtnsListeners() {
   btns.forEach((cadaBtn) => {
     cadaBtn.addEventListener("click", (btnTriggerEvent) => {
       setNavBtnsBgColor(btnTriggerEvent, btnsDivs);
-      route(btnTriggerEvent);
+      displayMenu(btnTriggerEvent.target.id);
     });
   });
 }

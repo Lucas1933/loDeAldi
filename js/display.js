@@ -12,8 +12,6 @@ export function displayMenu(btnPressedId) {
     main.replaceWith(getMain(menu.getHamburguesas()));
   } else if (btnPressed == "/frita") {
     main.replaceWith(getMain(menu.getFritas()));
-  } else {
-    displayInicio();
   }
 }
 function getMain(comida) {
@@ -66,16 +64,4 @@ export function displayHeader() {
     <img class="w-40" src="./assets/logo.png" alt="" />
   </div>`;
   document.getElementById("index").appendChild(header);
-}
-
-export function display404() {
-  let currentMain = document.getElementsByTagName("main")[0];
-  let newMain = document.createElement("main");
-  newMain.innerHTML = "<h1>404 not found</h1>";
-  currentMain.replaceWith(newMain);
-}
-export function displayInicio() {
-  let main = document.createElement("main");
-  main.innerHTML = "<h1>INICIO</h1>";
-  document.getElementById("index").appendChild(main);
 }
