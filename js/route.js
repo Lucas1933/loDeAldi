@@ -16,7 +16,7 @@ async function routeLocationHandler() {
 }
 
 export function routingInit() {
-  window.onpopstate = routeLocationHandler;
-  window.route = route;
-  routeLocationHandler();
+  window.addEventListener("popstate", () => {
+    routeLocationHandler();
+  });
 }
