@@ -48,7 +48,6 @@ export function setBtnsListeners() {
   btns.forEach((cadaBtn) => {
     cadaBtn.addEventListener("click", (btnTriggerEvent) => {
       setNavBtnsBgColor(btnTriggerEvent, btnsDivs);
-      /* displayMenu(btnTriggerEvent.target.id); */
       route(btnTriggerEvent);
     });
   });
