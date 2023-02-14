@@ -1,4 +1,6 @@
 import { displayMenu } from "./display.js";
+import { route } from "./route.js";
+
 export function getNavBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("navBar");
@@ -6,7 +8,7 @@ export function getNavBar() {
     <div class="navBarIcons">
       <button>
         <img
-          id="burger"
+          id="/burger"
           class="h-12 w-12"
           src="../../assets/icons/navBarIcons/burgerIcon.svg"
           alt=""
@@ -16,7 +18,7 @@ export function getNavBar() {
     <div class="navBarIcons">
       <button>
         <img
-          id="pizza"
+          id="/pizza"
           class="h-12 w-12"
           src="../../assets/icons/navBarIcons/pizzaIcon.svg"
           alt=""
@@ -26,7 +28,7 @@ export function getNavBar() {
     <div class="navBarIcons">
       <button>
         <img
-          id="frita"
+          id="/frita"
           class="h-12 w-12"
           src="../../assets/icons/navBarIcons/fritaIcon.svg"
           alt=""
@@ -46,7 +48,8 @@ export function setBtnsListeners() {
   btns.forEach((cadaBtn) => {
     cadaBtn.addEventListener("click", (btnTriggerEvent) => {
       setNavBtnsBgColor(btnTriggerEvent, btnsDivs);
-      displayMenu(btnTriggerEvent.target.id);
+      /* displayMenu(btnTriggerEvent.target.id); */
+      route(btnTriggerEvent);
     });
   });
 }
