@@ -1,5 +1,5 @@
 import { displayMenu } from "./display.js";
-
+import { urlRoute } from "./route.js";
 export function getNavBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("navBar");
@@ -47,7 +47,8 @@ export function setBtnsListeners() {
   btns.forEach((cadaBtn) => {
     cadaBtn.addEventListener("click", (btnTriggerEvent) => {
       setNavBtnsBgColor(btnTriggerEvent, btnsDivs);
-      displayMenu(btnTriggerEvent.target.id);
+      /* displayMenu(btnTriggerEvent.target.id); */
+      urlRoute(btnTriggerEvent);
     });
   });
 }

@@ -12,6 +12,10 @@ export function displayMenu(btnPressedId) {
     main.replaceWith(getMain(menu.getHamburguesas()));
   } else if (btnPressed == "/frita") {
     main.replaceWith(getMain(menu.getFritas()));
+  } else {
+    let home = document.createElement("main");
+    home.innerHTML = "INICIO";
+    main.replaceWith(home);
   }
 }
 function getMain(comida) {
