@@ -1,4 +1,4 @@
-import { displayMenu } from "./display";
+import { displayMenu } from "./display.js";
 
 export function urlRoute(event) {
   event = event || window.event;
