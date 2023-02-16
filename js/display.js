@@ -13,9 +13,7 @@ export function displayMenu(btnPressedId) {
   } else if (btnPressed == "/frita") {
     main.replaceWith(getMain(menu.getFritas()));
   } else {
-    let home = document.createElement("main");
-    home.innerHTML = "INICIO";
-    main.replaceWith(home);
+    displayHome();
   }
 }
 function getMain(comida) {
@@ -56,6 +54,11 @@ function getMain(comida) {
   return main;
 }
 
+export function displayHome() {
+  let home = document.createElement("main");
+  home.innerHTML = "INICIO";
+  main.replaceWith(home);
+}
 export function displayNavBar() {
   let index = document.getElementById("index");
   index.appendChild(getNavBar());
