@@ -57,7 +57,7 @@ function getMain(comida) {
 export function displayHome() {
   let home = document.createElement("main");
   home.innerHTML = "INICIO";
-  main.replaceWith(home);
+  document.getElementsByTagName("main")[0].replaceWith(home);
 }
 export function displayNavBar() {
   let index = document.getElementById("index");
