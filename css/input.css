@@ -4,7 +4,7 @@
 
 @layer components {
   .navBar {
-    @apply fixed bottom-0 z-30 flex w-full justify-evenly bg-black pt-1;
+    @apply fixed bottom-0 z-30 flex  w-full justify-evenly bg-black pt-1;
   }
   .navBarIcons {
     @apply mx-2 mb-1 flex grow justify-center rounded-lg border-4 border-solid border-primary bg-black py-2;

@@ -2,6 +2,7 @@ import { getMenu } from "./menu.js";
 import { getBurguerExtras } from "./menu.js";
 import { getNavBar } from "./navBar.js";
 import { setBtnsListeners } from "./navBar.js";
+import { urlRoute } from "./router.js";
 import { ROUTES } from "./routes.js";
 
 export function displayPage(location) {
@@ -9,10 +10,16 @@ export function displayPage(location) {
 }
 
 export function displayRotiseria(path) {
-  console.log(path);
-  if (path.length == 10) {
+  if (path === "/rotiseria") {
+    displayHeader();
     let main = document.getElementsByTagName("main")[0];
-    main.innerHTML = "Rotiseria Home";
+    main.classList.remove("bg-[url('../assets/homeBg.jpg')]");
+    main.classList.add("bg-black");
+    main.classList.add("text-white", "font-extrabold", "text-center");
+    main.innerHTML = `Bienvenido a nuestra rotiseria! <br> 
+    debajo tenes los botones para navegar por nuestro menu <br> 
+    esperamos que te de hambre :D!`;
+    displayNavBar();
   } else {
     displayMenu(path);
   }
@@ -74,9 +81,33 @@ function getMain(comida) {
   return main;
 }
 
-export function displayHome() {
-  let home = document.createElement("main");
-  home.innerHTML = "INICIO";
+export function displayHome(_ignore) {
+  let home = document.getElementsByTagName("main")[0];
+  home.classList.add(
+    "flex",
+    "h-[100vh]",
+    "flex-col",
+    "justify-center",
+    "bg-[url('../assets/homeBg.jpg')]"
+  );
+  home.innerHTML = `
+  <button
+    id="rotiseria"
+    class="mx-4 mb-4 border-2 border-solid border-black bg-black font-semibold text-white"
+  >
+    Rotiseria
+  </button>
+  <button
+    id="pasteleria"
+    class="mx-4 border-2 border-solid border-pink-700 bg-pink-500 font-semibold text-white"
+  >
+    Pasteleria
+  </button>
+`;
+  document.getElementById("index").appendChild(home);
+  document.getElementById("rotiseria").addEventListener("click", (event) => {
+    urlRoute(event);
+  });
 }
 export function displayNavBar() {
   let index = document.getElementById("index");
@@ -86,7 +117,10 @@ export function displayNavBar() {
 export function displayHeader() {
   let header = document.createElement("header");
   header.innerHTML = `<div class="fixed top-0 flex w-full justify-center z-50">
-    <img class="w-40" src="./assets/logo.png" alt="" />
+    <img id="/" class="w-40" src="./assets/logo.png" alt="" />
   </div>`;
   document.getElementById("index").appendChild(header);
+  document.getElementById("/").addEventListener("click", (event) => {
+    urlRoute(event);
+  });
 }
