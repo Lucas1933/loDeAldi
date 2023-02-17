@@ -17,7 +17,7 @@ export function displayRotiseria(path) {
     displayMenu(path);
   }
 }
-export function display404() {
+export function display404(_ignore) {
   let main = document.getElementsByTagName("main")[0];
   main.innerHTML = "404 not found";
 }
