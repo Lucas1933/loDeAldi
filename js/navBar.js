@@ -1,5 +1,5 @@
 import { displayMenu } from "./display.js";
-import { urlRoute } from "./route.js";
+import { urlRoute } from "./router.js";
 export function getNavBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("navBar");
@@ -7,7 +7,7 @@ export function getNavBar() {
     <div class="navBarIcons">
       <button>
         <img
-          id="/burger"
+          id="/rotiseria/burger"
           class="h-12 w-12"
           src="../../assets/icons/navBarIcons/burgerIcon.svg"
           alt=""
@@ -17,7 +17,7 @@ export function getNavBar() {
     <div class="navBarIcons">
       <button>
         <img
-          id="/pizza"
+          id="/rotiseria/pizza"
           class="h-12 w-12"
           src="../../assets/icons/navBarIcons/pizzaIcon.svg"
           alt=""
@@ -27,7 +27,7 @@ export function getNavBar() {
     <div class="navBarIcons">
       <button>
         <img
-          id="/frita"
+          id="/rotiseria/frita"
           class="h-12 w-12"
           src="../../assets/icons/navBarIcons/fritaIcon.svg"
           alt=""
