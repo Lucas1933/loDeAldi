@@ -10,8 +10,8 @@ button.id = "rotiseria";
 
 /* displayHeader(); */
 displayNavBar();
-routerInit();
 main.appendChild(button);
 button.addEventListener("click", (event) => {
   urlRoute(event);
 });
+routerInit();
