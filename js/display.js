@@ -32,6 +32,8 @@ export function displayMenu(btnPressedId) {
     main.replaceWith(getMain(menu.getHamburguesas()));
   } else if (btnPressed == "/rotiseria/frita") {
     main.replaceWith(getMain(menu.getFritas()));
+  } else {
+    display404(" ");
   }
 }
 function getMain(comida) {
