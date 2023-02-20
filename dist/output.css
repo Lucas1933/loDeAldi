@@ -1083,6 +1083,27 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.rotiseriaHome {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  text-align: center;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../assets/homeBg.jpg');
+}
+
 .collapse {
   visibility: collapse;
 }
@@ -1122,10 +1143,6 @@ video {
 
 .flex {
   display: flex;
-}
-
-.h-\[100vh\] {
-  height: 100vh;
 }
 
 .h-fit {
@@ -1172,10 +1189,6 @@ video {
 .translate-y-60 {
   --tw-translate-y: 15rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.flex-col {
-  flex-direction: column;
 }
 
 .justify-center {
@@ -1242,10 +1255,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\'\.\.\/assets\/homeBg\.jpg\'\)\] {
-  background-image: url('../assets/homeBg.jpg');
 }
 
 .p-6 {
