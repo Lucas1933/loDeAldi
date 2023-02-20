@@ -4,7 +4,8 @@ export const get = {
   navBar: getNavBar(),
   header: getHeader(),
   home: getHome(),
-
+  rotiseriaHome: getRotiseriaHome(),
+  error404: getError404(),
   currentNavBar: () => {
     return document.getElementById("index").getElementsByTagName("nav")[0];
   },
@@ -20,6 +21,19 @@ export const get = {
   setNavBtnsListeners: setNavBtnsListeners,
 };
 
+function getError404() {
+  let main = document.createElement("main");
+  main.innerHTML = "404 not found";
+  return main;
+}
+function getRotiseriaHome() {
+  let rotiseriaHome = document.createElement("main");
+  rotiseriaHome.classList.add("rotiseriaHome");
+  rotiseriaHome.innerHTML = `Bienvenido a nuestra rotiseria! <br> 
+    debajo tenes los botones para navegar por nuestro menu <br> 
+    esperamos que te de hambre :D!`;
+  return rotiseriaHome;
+}
 function setNavBtnsListeners() {
   let btnsDivs = Array.from(document.getElementsByClassName("navBarIcons"));
   let btns = [];

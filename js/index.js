@@ -1,5 +1,4 @@
 /* import "tw-elements"; */
-import { displayHeader, displayNavBar } from "./display.js";
 import { routerInit, urlRoute } from "./router.js";
 let main = document.createElement("main");
 let button = document.createElement("button");

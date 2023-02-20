@@ -1,5 +1,4 @@
-import { displayMenu } from "./display.js";
-import { displayPage } from "./display.js";
+import { displayRoute } from "./routes.js";
 /* updates the current url */
 export function urlRoute(event) {
   event = event || window.event;
@@ -7,13 +6,14 @@ export function urlRoute(event) {
   window.history.pushState({}, "", event.target.id);
   urlLocationHandler();
 }
+
 /* passes the current url to be displayed */
 async function urlLocationHandler() {
   const location = window.location.pathname;
   if (location.length == 0) {
     location = "/";
   }
-  displayPage(location);
+  displayRoute(location);
 }
 export function routerInit() {
   window.onpopstate = urlLocationHandler;
