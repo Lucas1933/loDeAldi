@@ -4,7 +4,7 @@ import { getNavBar } from "./navBar.js";
 import { setBtnsListeners } from "./navBar.js";
 import { urlRoute } from "./router.js";
 import { ROUTES } from "./routes.js";
-import { DOM } from "./variables.js";
+import { get } from "./variables.js";
 
 export function displayPage(location) {
   ROUTES[location].display(location);
@@ -87,24 +87,7 @@ function getMain(comida) {
 
 export function displayHome(_ignore) {
   let main = document.getElementsByTagName("main")[0];
-  main.remove();
-  let home = document.createElement("main");
-  home.classList.add("home");
-  home.innerHTML = `
-  <button
-    id="rotiseria"
-    class="mx-4 mb-4 border-2 border-solid border-black bg-black font-semibold text-white"
-  >
-    Rotiseria
-  </button>
-  <button
-    id="pasteleria"
-    class="mx-4 border-2 border-solid border-pink-700 bg-pink-500 font-semibold text-white"
-  >
-    Pasteleria
-  </button>
-`;
-  document.getElementById("index").appendChild(home);
+  main.replaceWith(get.home);
   document.getElementById("rotiseria").addEventListener("click", (event) => {
     urlRoute(event);
   });
@@ -125,12 +108,12 @@ export function displayHome(_ignore) {
   }
 }
 export function displayNavBar() {
-  DOM.root.appendChild(getNavBar());
+  get.root.appendChild(getNavBar());
   setBtnsListeners();
 }
 export function displayHeader() {
-  DOM.root.appendChild(DOM.header);
-  DOM.header
+  get.root.appendChild(get.header);
+  get.header
     .getElementsByTagName("img")[0]
     .addEventListener("click", (event) => {
       urlRoute(event);
