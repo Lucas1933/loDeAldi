@@ -66,16 +66,16 @@ function displayHome() {
   }
 }
 function displayRotiseria() {
+  if (RENDER.currentHeaderLogo() == null) {
+    displayHeader();
+  }
+
+  if (RENDER.currentNavBar() == null) {
+    displayNavBar();
+  }
+
   if (window.location.pathname === "/rotiseria") {
     RENDER.currentMain().replaceWith(RENDER.rotiseriaHome);
-
-    if (RENDER.currentHeaderLogo() == null) {
-      displayHeader();
-    }
-
-    if (RENDER.currentNavBar() == null) {
-      displayNavBar();
-    }
   } else {
     displayMenu(window.location.pathname);
   }
