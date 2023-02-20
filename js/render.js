@@ -1,5 +1,5 @@
 import { urlRoute } from "./router.js";
-export const get = {
+export const RENDER = {
   root: document.getElementById("index"),
   navBar: getNavBar(),
   header: getHeader(),

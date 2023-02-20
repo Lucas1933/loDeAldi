@@ -1,4 +1,4 @@
-import { get } from "./variables.js";
+import { RENDER } from "./render.js";
 import { urlRoute } from "./router.js";
 import { getMenu } from "./menu.js";
 import { getBurguerExtras } from "./menu.js";
@@ -38,60 +38,59 @@ const ROUTES = {
   },
   404: {
     display: () => {
-      get.currentMain().replaceWith(get.error404);
+      RENDER.currentMain().replaceWith(RENDER.error404);
     },
   },
 };
 function displayHeader() {
-  get.root.appendChild(get.header);
-  get.currentHeaderLogo().addEventListener("click", (event) => {
+  RENDER.root.appendChild(RENDER.header);
+  RENDER.currentHeaderLogo().addEventListener("click", (event) => {
     urlRoute(event);
   });
 }
 function displayNavBar() {
-  get.root.appendChild(get.navBar);
-  get.setNavBtnsListeners();
+  RENDER.root.appendChild(RENDER.navBar);
+  RENDER.setNavBtnsListeners();
 }
-function displayHome(_ignore) {
-  get.currentMain().replaceWith(get.home);
+function displayHome() {
+  RENDER.currentMain().replaceWith(RENDER.home);
   document.getElementById("rotiseria").addEventListener("click", (event) => {
     urlRoute(event);
   });
 
-  if (get.currentNavBar() != null) {
-    get.currentNavBar().remove();
+  if (RENDER.currentNavBar() != null) {
+    RENDER.currentNavBar().remove();
   }
-  if (get.currentHeader() != null) {
-    get.currentHeader().remove();
+  if (RENDER.currentHeader() != null) {
+    RENDER.currentHeader().remove();
   }
 }
 function displayRotiseria() {
   if (window.location.pathname === "/rotiseria") {
-    get.currentMain().replaceWith(get.rotiseriaHome);
+    RENDER.currentMain().replaceWith(RENDER.rotiseriaHome);
 
-    if (get.currentHeaderLogo() == null) {
+    if (RENDER.currentHeaderLogo() == null) {
       displayHeader();
     }
 
-    if (get.currentNavBar() == null) {
+    if (RENDER.currentNavBar() == null) {
       displayNavBar();
     }
   } else {
     displayMenu(window.location.pathname);
   }
 }
-function displayMenu(btnPressedId) {
+function displayMenu(path) {
   let menu = getMenu();
-  let btnPressed = btnPressedId;
-  if (btnPressed == "/rotiseria/pizza") {
-    get.currentMain().replaceWith(getNewMain(menu.getPizzas()));
-  } else if (btnPressed == "/rotiseria/burger") {
-    get.currentMain().replaceWith(getNewMain(menu.getHamburguesas()));
-  } else if (btnPressed == "/rotiseria/frita") {
-    get.currentMain().replaceWith(getNewMain(menu.getFritas()));
+  if (path == "/rotiseria/pizza") {
+    RENDER.currentMain().replaceWith(getNewMain(menu.getPizzas()));
+  } else if (path == "/rotiseria/burger") {
+    RENDER.currentMain().replaceWith(getNewMain(menu.getHamburguesas()));
+  } else if (path == "/rotiseria/frita") {
+    RENDER.currentMain().replaceWith(getNewMain(menu.getFritas()));
   } else {
-    get.root.innerHTML = " ";
-    get.root.appendChild(get.error404);
+    RENDER.root.innerHTML = " ";
+    RENDER.root.appendChild(get.error404);
   }
 }
 function getNewMain(comida) {
