@@ -11,15 +11,18 @@ export function displayPage(location) {
 
 export function displayRotiseria(path) {
   if (path === "/rotiseria") {
-    displayHeader();
-    let main = document.getElementsByTagName("main")[0];
-    main.classList.remove("bg-[url('../assets/homeBg.jpg')]");
-    main.classList.add("bg-black");
-    main.classList.add("text-white", "font-extrabold", "text-center");
+    let main = document.createElement("main");
+    if (document.getElementById("/") == null) {
+      displayHeader();
+    }
+    main.classList.add("rotiseriaHome");
     main.innerHTML = `Bienvenido a nuestra rotiseria! <br> 
     debajo tenes los botones para navegar por nuestro menu <br> 
     esperamos que te de hambre :D!`;
-    displayNavBar();
+    document.getElementsByTagName("main")[0].replaceWith(main);
+    if (document.getElementById("nav") == null) {
+      displayNavBar();
+    }
   } else {
     displayMenu(path);
   }
@@ -82,14 +85,12 @@ function getMain(comida) {
 }
 
 export function displayHome(_ignore) {
-  let home = document.getElementsByTagName("main")[0];
-  home.classList.add(
-    "flex",
-    "h-[100vh]",
-    "flex-col",
-    "justify-center",
-    "bg-[url('../assets/homeBg.jpg')]"
-  );
+  let main = document.getElementsByTagName("main")[0];
+  console.log(main.remove());
+  main.remove();
+  console.log(main.remove());
+  let home = document.createElement("main");
+  home.classList.add("home");
   home.innerHTML = `
   <button
     id="rotiseria"
@@ -108,6 +109,21 @@ export function displayHome(_ignore) {
   document.getElementById("rotiseria").addEventListener("click", (event) => {
     urlRoute(event);
   });
+
+  if (document.getElementById("nav") != null) {
+    document
+      .getElementById("index")
+      .removeChild(document.getElementById("nav"));
+  }
+  if (
+    document.getElementById("index").getElementsByTagName("header")[0] != null
+  ) {
+    document
+      .getElementById("index")
+      .removeChild(
+        document.getElementById("index").getElementsByTagName("header")[0]
+      );
+  }
 }
 export function displayNavBar() {
   let index = document.getElementById("index");

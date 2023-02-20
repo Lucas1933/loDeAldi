@@ -22,4 +22,15 @@
   .foodDivs {
     @apply my-4 flex h-[450px] w-[90%] flex-col justify-end justify-self-center  rounded-lg border-4 border-solid border-primary bg-cover bg-center bg-no-repeat shadow-lg shadow-primary;
   }
+
+  .rotiseriaHome {
+    @apply flex h-[100vh]  flex-col justify-center bg-black text-center font-extrabold text-white;
+  }
+  .home {
+    @apply flex
+    h-[100vh]
+    flex-col
+    justify-center
+    bg-[url('../assets/homeBg.jpg')];
+  }
 }

@@ -3,6 +3,7 @@ import { urlRoute } from "./router.js";
 export function getNavBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("navBar");
+  navBar.id = "nav";
   navBar.innerHTML = ` 
     <div class="navBarIcons">
       <button>
