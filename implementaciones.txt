@@ -1,0 +1,2 @@
+crear variables.js e importarlas para evtiranos el "document.index etc etc" y colocar solo la c
+variable INDEX algo asi vos me entendes. eso a nivel codigo.
