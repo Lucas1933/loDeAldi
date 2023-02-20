@@ -1,7 +1,5 @@
 import { getMenu } from "./menu.js";
 import { getBurguerExtras } from "./menu.js";
-import { getNavBar } from "./navBar.js";
-import { setBtnsListeners } from "./navBar.js";
 import { urlRoute } from "./router.js";
 import { ROUTES } from "./routes.js";
 import { get } from "./variables.js";
@@ -86,36 +84,25 @@ function getMain(comida) {
 }
 
 export function displayHome(_ignore) {
-  let main = document.getElementsByTagName("main")[0];
-  main.replaceWith(get.home);
+  get.currentMain().replaceWith(get.home);
   document.getElementById("rotiseria").addEventListener("click", (event) => {
     urlRoute(event);
   });
 
-  if (document.getElementById("nav") != null) {
-    document
-      .getElementById("index")
-      .removeChild(document.getElementById("nav"));
+  if (get.currentNavBar() != null) {
+    get.currentNavBar().remove();
   }
-  if (
-    document.getElementById("index").getElementsByTagName("header")[0] != null
-  ) {
-    document
-      .getElementById("index")
-      .removeChild(
-        document.getElementById("index").getElementsByTagName("header")[0]
-      );
+  if (get.currentHeader() != null) {
+    get.currentHeader().remove();
   }
 }
 export function displayNavBar() {
-  get.root.appendChild(getNavBar());
-  setBtnsListeners();
+  get.root.appendChild(get.navBar);
+  get.setNavBtnsListeners();
 }
 export function displayHeader() {
   get.root.appendChild(get.header);
-  get.header
-    .getElementsByTagName("img")[0]
-    .addEventListener("click", (event) => {
-      urlRoute(event);
-    });
+  get.currentHeaderLogo().addEventListener("click", (event) => {
+    urlRoute(event);
+  });
 }
