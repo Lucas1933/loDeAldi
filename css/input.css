@@ -26,7 +26,7 @@
     py-4;
   }
   .foodDivs {
-    @apply my-4 flex h-[450px] w-[90%] flex-col justify-end justify-self-center  rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
+    @apply my-4 flex h-[450px] w-[90%] animate-wiggle flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
   }
 
   .rotiseriaHome {

@@ -3,3 +3,4 @@ variable INDEX algo asi vos me entendes. eso a nivel codigo.
 
 la descripcion de las hamburguesas oculta al menos que clickeadas, considerar el EXTRAS tambien
 
+que los botones de rotiseria y pasteleria sean uno solo similar al dark mode switch

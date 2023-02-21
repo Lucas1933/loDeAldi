@@ -1113,6 +1113,20 @@ video {
   display: flex;
   height: 450px;
   width: 90%;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-1deg);
+  }
+
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+.foodDivs {
+  animation: wiggle 2s ease-in-out infinite;
   flex-direction: column;
   justify-content: flex-end;
   justify-self: center;
