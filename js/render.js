@@ -18,6 +18,7 @@ export const RENDER = {
   currentHeaderLogo: () => {
     return document.getElementById("index").getElementsByTagName("img")[0];
   },
+  setHeaderListeners: setHeaderListeners,
   setNavBtnsListeners: setNavBtnsListeners,
 };
 
@@ -113,8 +114,56 @@ function getHome() {
 }
 function getHeader() {
   let header = document.createElement("header");
-  header.innerHTML = `<div class="fixed top-0 flex w-full justify-center z-50">
-    <img id="/" class="w-40" src="./assets/logo.png" alt="" />
-  </div>`;
+  header.innerHTML = `  <div
+  class="fixed top-0 z-50 flex w-full justify-evenly rounded-xl bg-black shadow-xl"
+>
+  <div class="flex items-center justify-center">
+    <img
+      id="/"
+      class="w-40"
+      src="./assets/icons/header/logo.png"
+      alt=""
+    />
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <img
+      id="/rotiseria"
+      class="w-12 rounded-lg border-2 border-solid border-white"
+      src="./assets/icons/header/rotiseria.svg"
+      alt=""
+    />
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <img
+    id="/pasteleria"
+      class="w-12 rounded-lg border-2 border-solid border-white"
+      src="./assets/icons/header/pasteleria.svg"
+      alt=""
+    />
+  </div>
+</div>`;
   return header;
+}
+
+function setHeaderListeners() {
+  let rotiseriaIcon = document.getElementById("/rotiseria");
+  let pasteleriaIcon = document.getElementById("/pasteleria");
+  let logo = document.getElementById("/");
+  logo.addEventListener("click", (event) => {
+    urlRoute(event);
+  });
+  rotiseriaIcon.addEventListener("click", (event) => {
+    urlRoute(event);
+    if (!rotiseriaIcon.classList.contains("bg-primary")) {
+      rotiseriaIcon.classList.add("bg-primary");
+      pasteleriaIcon.classList.remove("bg-pink-300");
+    }
+  });
+  pasteleriaIcon.addEventListener("click", (event) => {
+    urlRoute(event);
+    if (!pasteleriaIcon.classList.contains("bg-pink-300")) {
+      pasteleriaIcon.classList.add("bg-pink-300");
+      rotiseriaIcon.classList.remove("bg-primary");
+    }
+  });
 }

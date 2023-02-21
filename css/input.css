@@ -27,10 +27,11 @@
     @apply flex h-[100vh]  flex-col justify-center bg-black text-center font-extrabold text-white;
   }
   .home {
-    @apply flex
-    h-[100vh]
-    flex-col
-    justify-center
+    @apply /*
     bg-[url('../assets/homeBg.jpg')];
+    */
+    flex
+    h-[100vh]
+    flex-col justify-center bg-black;
   }
 }

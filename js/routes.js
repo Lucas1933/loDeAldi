@@ -44,9 +44,7 @@ const ROUTES = {
 };
 function displayHeader() {
   RENDER.root.appendChild(RENDER.header);
-  RENDER.currentHeaderLogo().addEventListener("click", (event) => {
-    urlRoute(event);
-  });
+  RENDER.setHeaderListeners();
 }
 function displayNavBar() {
   RENDER.root.appendChild(RENDER.navBar);
