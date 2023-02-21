@@ -1096,6 +1096,19 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.pasteleriaHome {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 168 212 / var(--tw-bg-opacity));
+  text-align: center;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .home {
   display: flex;
   height: 100vh;

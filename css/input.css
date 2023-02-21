@@ -26,6 +26,9 @@
   .rotiseriaHome {
     @apply flex h-[100vh]  flex-col justify-center bg-black text-center font-extrabold text-white;
   }
+  .pasteleriaHome {
+    @apply flex h-[100vh]  flex-col justify-center bg-pink-300 text-center font-extrabold text-white;
+  }
   .home {
     @apply /*
     bg-[url('../assets/homeBg.jpg')];

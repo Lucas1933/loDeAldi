@@ -5,6 +5,7 @@ export const RENDER = {
   header: getHeader(),
   home: getHome(),
   rotiseriaHome: getRotiseriaHome(),
+  pastileriaHome: getPasteleriaHome(),
   error404: getError404(),
   currentNavBar: () => {
     return document.getElementById("index").getElementsByTagName("nav")[0];
@@ -34,6 +35,12 @@ function getRotiseriaHome() {
     debajo tenes los botones para navegar por nuestro menu <br> 
     esperamos que te de hambre :D!`;
   return rotiseriaHome;
+}
+function getPasteleriaHome() {
+  let pasteleriaHome = document.createElement("main");
+  pasteleriaHome.classList.add("pasteleriaHome");
+  pasteleriaHome.innerHTML = `Las cosas dulces mas ricas!`;
+  return pasteleriaHome;
 }
 function setNavBtnsListeners() {
   let btnsDivs = Array.from(document.getElementsByClassName("navBarIcons"));

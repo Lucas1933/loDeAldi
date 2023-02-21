@@ -64,6 +64,12 @@ function displayHome() {
   }
 }
 function displayRotiseria() {
+  if (window.location.pathname === "/rotiseria") {
+    RENDER.currentMain().replaceWith(RENDER.rotiseriaHome);
+  } else {
+    displayMenu(window.location.pathname);
+  }
+
   if (RENDER.currentHeaderLogo() == null) {
     displayHeader();
   }
@@ -71,11 +77,20 @@ function displayRotiseria() {
   if (RENDER.currentNavBar() == null) {
     displayNavBar();
   }
+}
+function displayPasteleria() {
+  if (RENDER.currentHeaderLogo() == null) {
+    displayHeader();
+  }
 
-  if (window.location.pathname === "/rotiseria") {
-    RENDER.currentMain().replaceWith(RENDER.rotiseriaHome);
+  if (RENDER.currentNavBar() != null) {
+    RENDER.currentNavBar().remove();
+  }
+
+  if (window.location.pathname === "/pasteleria") {
+    RENDER.currentMain().replaceWith(RENDER.pastileriaHome);
   } else {
-    displayMenu(window.location.pathname);
+    /* displayMenuPasteleria(window.location.pathname); */
   }
 }
 function displayMenu(path) {
