@@ -1100,10 +1100,7 @@ video {
   grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 0.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 57 57 / var(--tw-bg-opacity));
-  background-image: url('../assets/icons/rotiseriaBgLINES.png');
-  background-repeat: repeat;
+  background-image: url('../assets/wavesR.svg');
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1rem;
@@ -1139,10 +1136,7 @@ video {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 57 57 / var(--tw-bg-opacity));
-  background-image: url('../assets/icons/rotiseriaBgLINES.png');
-  background-repeat: repeat;
+  background-image: url('../assets/wavesR.svg');
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;
@@ -1154,8 +1148,7 @@ video {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 168 212 / var(--tw-bg-opacity));
+  background-image: url('../assets/wavesP.svg');
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;

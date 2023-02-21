@@ -21,7 +21,7 @@
     grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
     grid-rows-3
     gap-1
-    bg-[#403939] bg-[url('../assets/icons/rotiseriaBgLINES.png')] bg-repeat
+    bg-wavesRotiseria
     px-4
     py-4;
   }
@@ -30,10 +30,10 @@
   }
 
   .rotiseriaHome {
-    @apply flex h-[100vh]  flex-col justify-center bg-[#403939] bg-[url('../assets/icons/rotiseriaBgLINES.png')] bg-repeat  text-center font-extrabold text-white;
+    @apply flex h-[100vh]  flex-col justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
   }
   .pasteleriaHome {
-    @apply flex h-[100vh]  flex-col justify-center bg-pink-300 text-center font-extrabold text-white;
+    @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria text-center font-extrabold text-white;
   }
   .home {
     @apply /*
