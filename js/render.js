@@ -5,7 +5,7 @@ export const RENDER = {
   header: getHeader(),
   home: getHome(),
   rotiseriaHome: getRotiseriaHome(),
-  pastileriaHome: getPasteleriaHome(),
+  pasteleriaHome: getPasteleriaHome(),
   error404: getError404(),
   currentNavBar: () => {
     return document.getElementById("index").getElementsByTagName("nav")[0];
@@ -15,9 +15,6 @@ export const RENDER = {
   },
   currentHeader: () => {
     return document.getElementById("index").getElementsByTagName("header")[0];
-  },
-  currentHeaderLogo: () => {
-    return document.getElementById("index").getElementsByTagName("img")[0];
   },
   setHeaderListeners: setHeaderListeners,
   setNavBtnsListeners: setNavBtnsListeners,
@@ -96,22 +93,22 @@ function getNavBar() {
 }
 function setNavBtnsBgColor(btnTriggerEvent, btnsDivs) {
   btnsDivs.forEach((cadaBtnDiv) => {
-    cadaBtnDiv.classList.remove("bg-primary");
+    cadaBtnDiv.classList.remove("bg-secondary-R");
   });
-  btnTriggerEvent.target.parentNode.parentNode.classList.add("bg-primary");
+  btnTriggerEvent.target.parentNode.parentNode.classList.add("bg-secondary-R");
 }
 function getHome() {
   let home = document.createElement("main");
   home.classList.add("home");
   home.innerHTML = `
     <button
-      id="rotiseria"
+      id="/rotiseria"
       class="mx-4 mb-4 border-2 border-solid border-black bg-black font-semibold text-white"
     >
       Rotiseria
     </button>
     <button
-      id="pasteleria"
+      id="/pasteleria"
       class="mx-4 border-2 border-solid border-pink-700 bg-pink-500 font-semibold text-white"
     >
       Pasteleria
@@ -122,7 +119,7 @@ function getHome() {
 function getHeader() {
   let header = document.createElement("header");
   header.innerHTML = `  <div
-  class="fixed top-0 z-50 flex w-full justify-evenly rounded-xl bg-black shadow-xl"
+  class=""
 >
   <div class="flex items-center justify-center">
     <img
@@ -161,16 +158,16 @@ function setHeaderListeners() {
   });
   rotiseriaIcon.addEventListener("click", (event) => {
     urlRoute(event);
-    if (!rotiseriaIcon.classList.contains("bg-primary")) {
-      rotiseriaIcon.classList.add("bg-primary");
-      pasteleriaIcon.classList.remove("bg-pink-300");
+    if (!rotiseriaIcon.classList.contains("bg-secondary-R")) {
+      rotiseriaIcon.classList.add("bg-secondary-R");
+      pasteleriaIcon.classList.remove("bg-secondary-P");
     }
   });
   pasteleriaIcon.addEventListener("click", (event) => {
     urlRoute(event);
-    if (!pasteleriaIcon.classList.contains("bg-pink-300")) {
-      pasteleriaIcon.classList.add("bg-pink-300");
-      rotiseriaIcon.classList.remove("bg-primary");
+    if (!pasteleriaIcon.classList.contains("bg-secondary-P")) {
+      pasteleriaIcon.classList.add("bg-secondary-P");
+      rotiseriaIcon.classList.remove("bg-secondary-R");
     }
   });
 }

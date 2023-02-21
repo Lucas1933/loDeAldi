@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 @layer components {
+  .headerRotiseria {
+    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R shadow-xl;
+  }
+  .headerPasteleria {
+    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-white bg-primary-P shadow-xl;
+  }
   .navBar {
-    @apply fixed bottom-0 z-30 flex  w-full justify-evenly bg-black pt-1;
+    @apply fixed bottom-0 z-30 flex  w-full justify-evenly rounded-t-lg border-4 border-b-0 border-solid border-black bg-primary-R pt-1;
   }
   .navBarIcons {
-    @apply mx-2 mb-1 flex grow justify-center rounded-lg border-4 border-solid border-primary bg-black py-2;
+    @apply mx-2 mb-1 flex grow justify-center rounded-lg border-4 border-solid border-secondary-R bg-primary-R py-2;
   }
   .foodGrid {
     @apply mb-16
@@ -15,16 +21,16 @@
     grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
     grid-rows-3
     gap-1
-    bg-black
+    bg-[#403939] bg-[url('../assets/icons/rotiseriaBgLINES.png')] bg-repeat
     px-4
     py-4;
   }
   .foodDivs {
-    @apply my-4 flex h-[450px] w-[90%] flex-col justify-end justify-self-center  rounded-lg border-4 border-solid border-primary bg-cover bg-center bg-no-repeat shadow-lg shadow-primary;
+    @apply my-4 flex h-[450px] w-[90%] flex-col justify-end justify-self-center  rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
   }
 
   .rotiseriaHome {
-    @apply flex h-[100vh]  flex-col justify-center bg-black text-center font-extrabold text-white;
+    @apply flex h-[100vh]  flex-col justify-center bg-[#403939] bg-[url('../assets/icons/rotiseriaBgLINES.png')] bg-repeat  text-center font-extrabold text-white;
   }
   .pasteleriaHome {
     @apply flex h-[100vh]  flex-col justify-center bg-pink-300 text-center font-extrabold text-white;

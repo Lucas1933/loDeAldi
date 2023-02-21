@@ -13,22 +13,22 @@ const ROUTES = {
   },
   "/rotiseria": {
     display: () => {
-      displayRotiseria("home");
+      displayRotiseria();
     },
   },
   "/rotiseria/pizza": {
     display: () => {
-      displayRotiseria("/rotiseria/pizza");
+      displayRotiseria();
     },
   },
   "/rotiseria/frita": {
     display: () => {
-      displayRotiseria("/rotiseria/frita");
+      displayRotiseria();
     },
   },
   "/rotiseria/burger": {
     display: () => {
-      displayRotiseria("/rotiseria/burger");
+      displayRotiseria();
     },
   },
   "/pasteleria": {
@@ -43,8 +43,23 @@ const ROUTES = {
   },
 };
 function displayHeader() {
-  RENDER.root.appendChild(RENDER.header);
-  RENDER.setHeaderListeners();
+  if (window.location.pathname.includes("/pasteleria")) {
+    if (RENDER.currentHeader() != null) {
+      RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
+    } else {
+      RENDER.root.appendChild(RENDER.header);
+      RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
+      RENDER.setHeaderListeners();
+    }
+  } else if (window.location.pathname.includes("/rotiseria")) {
+    if (RENDER.currentHeader() != null) {
+      RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
+    } else {
+      RENDER.root.appendChild(RENDER.header);
+      RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
+      RENDER.setHeaderListeners();
+    }
+  }
 }
 function displayNavBar() {
   RENDER.root.appendChild(RENDER.navBar);
@@ -52,7 +67,7 @@ function displayNavBar() {
 }
 function displayHome() {
   RENDER.currentMain().replaceWith(RENDER.home);
-  document.getElementById("rotiseria").addEventListener("click", (event) => {
+  document.getElementById("/rotiseria").addEventListener("click", (event) => {
     urlRoute(event);
   });
 
@@ -64,34 +79,26 @@ function displayHome() {
   }
 }
 function displayRotiseria() {
+  if (RENDER.currentNavBar() == null) {
+    displayNavBar();
+  }
   if (window.location.pathname === "/rotiseria") {
     RENDER.currentMain().replaceWith(RENDER.rotiseriaHome);
   } else {
     displayMenu(window.location.pathname);
   }
-
-  if (RENDER.currentHeaderLogo() == null) {
-    displayHeader();
-  }
-
-  if (RENDER.currentNavBar() == null) {
-    displayNavBar();
-  }
+  displayHeader();
 }
 function displayPasteleria() {
-  if (RENDER.currentHeaderLogo() == null) {
-    displayHeader();
-  }
-
   if (RENDER.currentNavBar() != null) {
     RENDER.currentNavBar().remove();
   }
-
   if (window.location.pathname === "/pasteleria") {
-    RENDER.currentMain().replaceWith(RENDER.pastileriaHome);
+    RENDER.currentMain().replaceWith(RENDER.pasteleriaHome);
   } else {
     /* displayMenuPasteleria(window.location.pathname); */
   }
+  displayHeader();
 }
 function displayMenu(path) {
   let menu = getMenu();
@@ -119,7 +126,7 @@ function getNewMain(comida) {
       style="background-image: url('${cadaComida.src}')"
       class="foodDivs"
     >
-      <div class="bg-primary text-center  text-black">
+      <div class="bg-secondary-R text-center  text-black">
         <h1 class="font-extrabold">${cadaComida.nombre}</h1>
         <p class="font-semibold text-lg">$${cadaComida.precio}</p>
         <p>${cadaComida.descripcion}</p>
@@ -130,9 +137,10 @@ function getNewMain(comida) {
           style="background-image: url('${cadaComida.src}')"
           class="foodDivs"
         >
-        <div class="grow"><p class="font-extrabold rounded-r-lg rounded-b-lg bg-primary text-center inline-block w-16 ">Incluye fritas!</p></div>
+        <div class="grow">
+        <p class="font-extrabold rounded-r-lg rounded-b-lg bg-secondary-R text-center inline-block w-16 ">Incluye fritas!</p></div>
 
-          <div class="bg-primary text-center text-black">
+          <div class="bg-secondary-R text-center text-black">
             <h1 class="font-extrabold">${cadaComida.nombre}</h1>
             <p class="text-lg font-semibold">$${cadaComida.precio}</p>
             <p>${cadaComida.descripcion}</p>

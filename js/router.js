@@ -13,11 +13,11 @@ async function urlLocationHandler() {
   if (location.length == 0) {
     location = "/";
   }
-  try {
-    displayRoute(location);
-  } catch (error) {
+  /* try { */
+  displayRoute(location);
+  /* } catch (error) {
     displayRoute(404);
-  }
+  } */
 }
 export function routerInit() {
   window.onpopstate = urlLocationHandler;
