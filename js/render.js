@@ -94,8 +94,14 @@ function getNavBar() {
 function setNavBtnsBgColor(btnTriggerEvent, btnsDivs) {
   btnsDivs.forEach((cadaBtnDiv) => {
     cadaBtnDiv.classList.remove("bg-secondary-R");
+    cadaBtnDiv.firstElementChild.firstElementChild.classList.remove(
+      "animate-bounce"
+    );
   });
   btnTriggerEvent.target.parentNode.parentNode.classList.add("bg-secondary-R");
+  btnTriggerEvent.target.parentNode.parentNode.firstElementChild.firstElementChild.classList.add(
+    "animate-bounce"
+  );
 }
 function getHome() {
   let home = document.createElement("main");
