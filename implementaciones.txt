@@ -4,3 +4,6 @@ variable INDEX algo asi vos me entendes. eso a nivel codigo.
 la descripcion de las hamburguesas oculta al menos que clickeadas, considerar el EXTRAS tambien
 
 que los botones de rotiseria y pasteleria sean uno solo similar al dark mode switch
+
+calculador de costo de envio por ubicacion de google maps 
+al mandar un wsp usando el icono de la app se envia la ubicacion (previamente permitida por el usario)
