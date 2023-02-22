@@ -35,8 +35,6 @@ export const RENDER = {
       let rotiseriaIcon = document.getElementById("/pasteleria");
       let pasteleriaIcon = document.getElementById("/rotiseria");
       let logo = document.getElementById("/");
-      let switchContainer = document.getElementById("switchContainer");
-      let switchElement = switchContainer.firstElementChild;
       logo.addEventListener("click", (event) => {
         urlRoute(event);
       });
@@ -73,23 +71,6 @@ export const RENDER = {
           .getElementsByClassName("slideSwitchP")[0]
           .classList.add("hidden");
       });
-
-      /* rotiseriaIcon.addEventListener("click", (event) => {
-        urlRoute(event); */
-      /* changeBgColors(event, rotiseriaIcon, pasteleriaIcon); */
-      /*  if (!rotiseriaIcon.classList.contains("bg-secondary-R")) {
-          rotiseriaIcon.classList.add("bg-secondary-R");
-          pasteleriaIcon.classList.remove("bg-secondary-P");
-        } */
-      /*  }); */
-      /* pasteleriaIcon.addEventListener("click", (event) => {
-        urlRoute(event); */
-      /*    changeBgColors(event, rotiseriaIcon, pasteleriaIcon); */
-      /*     if (!pasteleriaIcon.classList.contains("bg-secondary-P")) {
-          pasteleriaIcon.classList.add("bg-secondary-P");
-          rotiseriaIcon.classList.remove("bg-secondary-R");
-        } */
-      /* }); */
     }
     setListeners();
   },
