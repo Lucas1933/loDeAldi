@@ -178,7 +178,7 @@ function getHeader() {
     
   >
     <div
-      class="flex w-12 justify-center rounded-full border-4 border-solid border-secondary-R"
+      class="flex w-12 bg-primary-R animate-slideR justify-center rounded-full border-4 border-solid border-secondary-R"
     >
       <img
       
@@ -194,7 +194,7 @@ function getHeader() {
       id="/rotiseria"
     >
       <div
-        class="flex w-12 justify-center rounded-full border-2 border-solid border-pink-900"
+        class="  animate-slide flex w-12 justify-center rounded-full border-2 border-solid border-pink-900 bg-primary-P"
       >
         <img
          
