@@ -17,61 +17,44 @@ export const RENDER = {
     return document.getElementById("index").getElementsByTagName("header")[0];
   },
   setHeaderListeners: () => {
-    /* function changeBgColors(event, rotiseriaIcon, pasteleriaIcon) {
-      let iconID = event.target.id;
-      if (iconID == "/rotiseria") {
-        if (!rotiseriaIcon.classList.contains("bg-secondary-R")) {
-          rotiseriaIcon.classList.add("bg-secondary-R");
-          pasteleriaIcon.classList.remove("bg-secondary-P");
-        }
-      } else {
-        if (!pasteleriaIcon.classList.contains("bg-secondary-P")) {
-          pasteleriaIcon.classList.add("bg-secondary-P");
-          rotiseriaIcon.classList.remove("bg-secondary-R");
-        }
-      }
-    } */
     function setListeners() {
       let rotiseriaIcon = document.getElementById("/pasteleria");
       let pasteleriaIcon = document.getElementById("/rotiseria");
       let logo = document.getElementById("/");
+      let switchR = document.getElementsByClassName("slideSwitchR")[0];
+      let switchP = document.getElementsByClassName("slideSwitchP")[0];
       logo.addEventListener("click", (event) => {
         urlRoute(event);
       });
       if (window.location.pathname.includes("/rotiseria")) {
-        document
-          .getElementsByClassName("slideSwitchR")[0]
-          .classList.remove("hidden");
-        document
-          .getElementsByClassName("slideSwitchP")[0]
-          .classList.add("hidden");
+        switchR.classList.remove("hidden");
+        rotiseriaIcon.addEventListener("click", (event) => {
+          urlRoute(event);
+          switchR.classList.add("hidden");
+          switchP.classList.remove("hidden");
+        });
+        pasteleriaIcon.addEventListener("click", (event) => {
+          urlRoute(event);
+          switchR.classList.remove("hidden");
+          switchP.classList.add("hidden");
+        });
+        switchP.classList.add("hidden");
       } else {
-        document
-          .getElementsByClassName("slideSwitchR")[0]
-          .classList.add("hidden");
-        document
-          .getElementsByClassName("slideSwitchP")[0]
-          .classList.remove("hidden");
+        rotiseriaIcon.addEventListener("click", (event) => {
+          urlRoute(event);
+          switchR.classList.add("hidden");
+          switchP.classList.remove("hidden");
+        });
+        switchR.classList.add("hidden");
+        switchP.classList.remove("hidden");
+        pasteleriaIcon.addEventListener("click", (event) => {
+          urlRoute(event);
+          switchR.classList.remove("hidden");
+          switchP.classList.add("hidden");
+        });
       }
-      rotiseriaIcon.addEventListener("click", (event) => {
-        urlRoute(event);
-        document
-          .getElementsByClassName("slideSwitchP")[0]
-          .classList.remove("hidden");
-        document
-          .getElementsByClassName("slideSwitchR")[0]
-          .classList.add("hidden");
-      });
-      pasteleriaIcon.addEventListener("click", (event) => {
-        urlRoute(event);
-        document
-          .getElementsByClassName("slideSwitchR")[0]
-          .classList.remove("hidden");
-        document
-          .getElementsByClassName("slideSwitchP")[0]
-          .classList.add("hidden");
-      });
     }
+
     setListeners();
   },
   setNavBtnsListeners: () => {
@@ -180,34 +163,6 @@ function getNavBar() {
 }
 function getHeader() {
   let header = document.createElement("header");
-  /* header.innerHTML = `  <div
-  class=""
->
-  <div class="flex items-center justify-center">
-    <img
-      id="/"
-      class="w-40"
-      src="./assets/icons/header/logo.png"
-      alt=""
-    />
-  </div>
-  <div class="flex flex-col items-center justify-center">
-    <img
-      id="/rotiseria"
-      class="w-12 rounded-lg border-2 border-solid border-white"
-      src="./assets/icons/header/rotiseria.svg"
-      alt=""
-    />
-  </div>
-  <div class="flex flex-col items-center justify-center">
-    <img
-    id="/pasteleria"
-      class="w-12 rounded-lg border-2 border-solid border-white"
-      src="./assets/icons/header/pasteleria.svg"
-      alt=""
-    />
-  </div>
-</div>`; */
   header.innerHTML = `<div class="headerRotiseria">
   <div class="flex items-center justify-center">
     <img
@@ -218,7 +173,8 @@ function getHeader() {
     />
   </div>
   <div class="flex grow justify-center" id="switchContainer">
-      <div
+       <div
+      
     class="slideSwitchR"
     
   >
