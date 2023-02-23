@@ -47,7 +47,10 @@ function displayHeader() {
     if (RENDER.currentHeader() != null) {
       RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
     } else {
+      let start = performance.now();
       RENDER.root.appendChild(RENDER.header);
+      let timeTaken = performance.now() - start;
+      console.log(timeTaken);
       RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
       RENDER.setHeaderListeners();
     }
@@ -55,7 +58,10 @@ function displayHeader() {
     if (RENDER.currentHeader() != null) {
       RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
     } else {
+      let start = performance.now();
       RENDER.root.appendChild(RENDER.header);
+      let timeTaken = performance.now() - start;
+      console.log(timeTaken);
       RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
       RENDER.setHeaderListeners();
     }

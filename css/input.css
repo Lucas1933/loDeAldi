@@ -4,13 +4,13 @@
 
 @layer components {
   .slideSwitchR {
-    @apply flex  items-center justify-center rounded-l-xl rounded-r-xl border-2 border-solid border-white;
+    @apply flex  items-center justify-center rounded-l-full rounded-r-full border-2 border-solid border-secondary-R;
   }
   .slideSwitchP {
-    @apply flex flex-row-reverse items-center justify-center rounded-l-xl rounded-r-xl border-2 border-solid border-pink-500;
+    @apply flex flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-2 border-solid border-pink-900;
   }
   .headerRotiseria {
-    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R py-1 shadow-xl;
+    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R  shadow-xl;
   }
   .headerPasteleria {
     @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-white bg-primary-P shadow-xl;

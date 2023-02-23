@@ -171,23 +171,23 @@ function getHeader() {
       alt=""
     />
   </div>
-  <div class="flex grow justify-center" id="switchContainer">
+  <div class="flex grow justify-center py-1" id="switchContainer">
        <div
        id="/pasteleria"
     class="slideSwitchR"
     
   >
     <div
-      class="flex w-12 justify-center rounded-full border-2 border-solid relative"
+      class="flex w-12 justify-center rounded-full border-4 border-solid border-secondary-R"
     >
       <img
       
-        class="w-8 "
+        class="w-8 py-1 "
         src="./assets/icons/header/rotiseria.svg"
         alt=""
       />
     </div>
-    <p class="block text-white">Rotiseria</p>
+    <p class="block text-white pl-1 pr-2">Rotiseria</p>
   </div>
     <div
       class="slideSwitchP"
@@ -198,13 +198,13 @@ function getHeader() {
       >
         <img
          
-          class="w-8"
+          class="w-8 h-11 py-1"
           src="./assets/icons/header/pasteleria.svg"
           alt=""
         />
       </div>
 
-      <p class="text-pink-200">Pasteleria</p>
+      <p class="text-pink-200 px-1">Pasteleria</p>
     </div>
   </div>
 </div>`;
