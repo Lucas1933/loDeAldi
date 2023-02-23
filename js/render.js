@@ -28,33 +28,32 @@ export const RENDER = {
       });
       if (window.location.pathname.includes("/rotiseria")) {
         switchR.classList.remove("hidden");
-        rotiseriaIcon.addEventListener("click", (event) => {
+        switchR.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.add("hidden");
           switchP.classList.remove("hidden");
         });
-        pasteleriaIcon.addEventListener("click", (event) => {
+        switchP.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.remove("hidden");
           switchP.classList.add("hidden");
         });
         switchP.classList.add("hidden");
       } else {
-        rotiseriaIcon.addEventListener("click", (event) => {
+        switchR.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.add("hidden");
           switchP.classList.remove("hidden");
         });
         switchR.classList.add("hidden");
         switchP.classList.remove("hidden");
-        pasteleriaIcon.addEventListener("click", (event) => {
+        switchP.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.remove("hidden");
           switchP.classList.add("hidden");
         });
       }
     }
-
     setListeners();
   },
   setNavBtnsListeners: () => {
@@ -174,16 +173,16 @@ function getHeader() {
   </div>
   <div class="flex grow justify-center" id="switchContainer">
        <div
-      
+       id="/pasteleria"
     class="slideSwitchR"
     
   >
     <div
-      class="flex w-12 justify-center rounded-full border-2 border-solid"
+      class="flex w-12 justify-center rounded-full border-2 border-solid relative"
     >
       <img
-      id="/pasteleria"
-        class="w-8"
+      
+        class="w-8 "
         src="./assets/icons/header/rotiseria.svg"
         alt=""
       />
@@ -192,13 +191,13 @@ function getHeader() {
   </div>
     <div
       class="slideSwitchP"
-      
+      id="/rotiseria"
     >
       <div
         class="flex w-12 justify-center rounded-full border-2 border-solid border-pink-900"
       >
         <img
-         id="/rotiseria"
+         
           class="w-8"
           src="./assets/icons/header/pasteleria.svg"
           alt=""

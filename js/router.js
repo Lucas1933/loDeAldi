@@ -3,7 +3,7 @@ import { displayRoute } from "./routes.js";
 export function urlRoute(event) {
   event = event || window.event;
   event.preventDefault();
-  window.history.pushState({}, "", event.target.id);
+  window.history.pushState({}, "", event.target.id || event.currentTarget.id);
   urlLocationHandler();
 }
 
