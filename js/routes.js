@@ -67,10 +67,7 @@ function displayNavBar() {
 }
 function displayHome() {
   RENDER.currentMain().replaceWith(RENDER.home);
-  document.getElementById("/rotiseria").addEventListener("click", (event) => {
-    urlRoute(event);
-  });
-
+  RENDER.setHomeListeners();
   if (RENDER.currentNavBar() != null) {
     RENDER.currentNavBar().remove();
   }

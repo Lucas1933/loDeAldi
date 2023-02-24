@@ -7,6 +7,16 @@ export const RENDER = {
   home: getHome(),
   rotiseriaHome: getRotiseriaHome(),
   pasteleriaHome: getPasteleriaHome(),
+  setHomeListeners: () => {
+    document.getElementById("/rotiseria").addEventListener("click", (event) => {
+      urlRoute(event);
+    });
+    document
+      .getElementById("/pasteleria")
+      .addEventListener("click", (event) => {
+        urlRoute(event);
+      });
+  },
   getMenu: (path) => {
     getMenu(path);
   },
