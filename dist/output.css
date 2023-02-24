@@ -1280,6 +1280,8 @@ video {
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-image: url('../assets/bgHome.svg');
+  background-size: contain;
 }
 
 .collapse {
@@ -1542,11 +1544,6 @@ video {
 .bg-primary-R {
   --tw-bg-opacity: 1;
   background-color: rgb(41 35 35 / var(--tw-bg-opacity));
-}
-
-.bg-primary-P {
-  --tw-bg-opacity: 1;
-  background-color: rgb(205 69 217 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#5a1760\] {

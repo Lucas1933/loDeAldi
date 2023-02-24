@@ -10,7 +10,7 @@
     @apply flex flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-2 border-solid border-pink-900;
   }
   .headerRotiseria {
-    @apply bg-wavesHeaderR fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R bg-contain shadow-xl;
+    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R bg-wavesHeaderR bg-contain shadow-xl;
   }
   .headerPasteleria {
     @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-white bg-wavesHeaderP bg-contain shadow-xl;
@@ -60,11 +60,8 @@
     @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria bg-repeat-y text-center font-extrabold text-white;
   }
   .home {
-    @apply /*
-    bg-[url('../assets/homeBg.jpg')];
-    */
-    flex
-    h-[100vh]
-    flex-col justify-center bg-white;
+    @apply flex    h-[100vh]
+    flex-col
+    justify-center bg-white bg-[url('../assets/bgHome.svg')] bg-contain;
   }
 }
