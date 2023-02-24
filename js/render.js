@@ -279,6 +279,7 @@ function getMenu(path) {
     RENDER.root.innerHTML = " ";
     RENDER.root.appendChild(get.error404);
   }
+  addWiggle();
 }
 function getNewMain(comida) {
   let comidaArray = comida;
@@ -317,4 +318,12 @@ function getNewMain(comida) {
   });
 
   return main;
+}
+
+function addWiggle() {
+  for (let i = 0; i < RENDER.currentMain().children.length; i++) {
+    RENDER.currentMain().children[i].addEventListener("animationend", () => {
+      RENDER.currentMain().children[i].classList.add("animate-wiggle");
+    });
+  }
 }
