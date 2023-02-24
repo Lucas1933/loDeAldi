@@ -60,10 +60,12 @@ export const RENDER = {
     function setNavBtnsBgColor(btnTriggerEvent, btnsDivs) {
       btnsDivs.forEach((cadaBtnDiv) => {
         cadaBtnDiv.classList.remove("bg-secondary-R");
+
         cadaBtnDiv.firstElementChild.firstElementChild.classList.remove(
           "animate-bounce"
         );
       });
+
       btnTriggerEvent.target.parentNode.parentNode.classList.add(
         "bg-secondary-R"
       );
@@ -118,8 +120,35 @@ function getRotiseriaHome() {
 }
 function getPasteleriaHome() {
   let pasteleriaHome = document.createElement("main");
-  pasteleriaHome.classList.add("pasteleriaHome");
-  pasteleriaHome.innerHTML = `Las cosas dulces mas ricas!`;
+  pasteleriaHome.classList.add("pasteleriaGrid");
+  pasteleriaHome.innerHTML = `        <div class="pasteleriaDivsHome">
+  <div class="flex h-full w-full">
+    <div
+      class="pasteleriaDivs"
+      style="background-image: url('./assets/pasteleria/2.png')"
+    ></div>
+    <div
+      class="pasteleriaDivs"
+      style="background-image: url('./assets/pasteleria/3.png')"
+    ></div>
+  </div>
+
+  <p class="text-center text-xl">Tortas</p>
+</div>
+<div class="pasteleriaDivsHome">
+  <div class="flex h-full w-full">
+    <div
+      class="pasteleriaDivs"
+      style="background-image: url('./assets/pasteleria/2.png')"
+    ></div>
+    <div
+      class="pasteleriaDivs"
+      style="background-image: url('./assets/pasteleria/3.png')"
+    ></div>
+  </div>
+
+  <p class="text-center text-xl">Tortas</p>
+</div>`;
   return pasteleriaHome;
 }
 function getNavBar() {
@@ -141,7 +170,7 @@ function getNavBar() {
         <button>
           <img
             id="/rotiseria/pizza"
-            class="h-12 w-12"
+            class="h-12 w-12 "
             src="../../assets/icons/navBarIcons/pizzaIcon.svg"
             alt=""
           />

@@ -28,8 +28,26 @@
     grid-rows-3
     gap-1
     bg-wavesRotiseria
+    bg-repeat-y
     px-4
     py-4;
+  }
+  .pasteleriaGrid {
+    @apply mb-16
+    grid
+    grid-cols-[repeat(auto-fit,minmax(240px,2fr))]
+    grid-rows-3
+    gap-1
+    bg-wavesPasteleria
+    bg-repeat-y
+    px-4
+    py-4;
+  }
+  .pasteleriaDivs {
+    @apply h-full  w-[100%]  justify-self-center  border-4 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
+  }
+  .pasteleriaDivsHome {
+    @apply my-4 flex h-[250px] w-[100%] animate-wiggle flex-col  justify-evenly   justify-self-center rounded-lg border-4 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
   }
   .foodDivs {
     @apply my-4 flex h-[450px] w-[90%] animate-wiggle flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
@@ -39,7 +57,7 @@
     @apply flex h-[100vh]  flex-col justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
   }
   .pasteleriaHome {
-    @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria text-center font-extrabold text-white;
+    @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria bg-repeat-y text-center font-extrabold text-white;
   }
   .home {
     @apply /*
