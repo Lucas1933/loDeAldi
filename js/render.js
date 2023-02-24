@@ -37,6 +37,7 @@ export const RENDER = {
           urlRoute(event);
           switchR.classList.remove("hidden");
           switchP.classList.add("hidden");
+          RENDER.resetNavBar();
         });
         switchP.classList.add("hidden");
       } else {
@@ -54,6 +55,7 @@ export const RENDER = {
         });
       }
     }
+
     setListeners();
   },
   setNavBtnsListeners: () => {
@@ -87,7 +89,22 @@ export const RENDER = {
         });
       });
     }
+    window.onpopstate = () => {
+      document
+        .getElementById("/rotiseria/pizza")
+        .classList.remove("animate-bounce");
+    };
     setNavBtnsListeners();
+  },
+  resetNavBar: () => {
+    let icons = [];
+    icons.push(document.getElementById("/rotiseria/pizza"));
+    icons.push(document.getElementById("/rotiseria/burger"));
+    icons.push(document.getElementById("/rotiseria/frita"));
+    icons.forEach((cadaIcono) => {
+      cadaIcono.classList.remove("animate-bounce");
+      cadaIcono.parentElement.parentElement.classList.remove("bg-secondary-R");
+    });
   },
 };
 
@@ -113,9 +130,10 @@ function getHome() {
 function getRotiseriaHome() {
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
-  rotiseriaHome.innerHTML = `Bienvenido a nuestra rotiseria! <br> 
-    debajo tenes los botones para navegar por nuestro menu <br> 
-    esperamos que te de hambre :D!`;
+  rotiseriaHome.innerHTML = `
+  <div class="border-solid border-2 w-[70%] border-secondary-R" >Estamos abiertos!</div>
+  
+  De jueves a domingo a partir de las 19:00hs hasta las 00:00hs`;
   return rotiseriaHome;
 }
 function getPasteleriaHome() {

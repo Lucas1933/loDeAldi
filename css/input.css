@@ -54,7 +54,7 @@
   }
 
   .rotiseriaHome {
-    @apply flex h-[100vh]  flex-col justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
+    @apply flex h-[100vh]  flex-col items-center justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
   }
   .pasteleriaHome {
     @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria bg-repeat-y text-center font-extrabold text-white;

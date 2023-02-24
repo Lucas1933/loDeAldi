@@ -96,7 +96,7 @@ function displayPasteleria() {
   if (window.location.pathname === "/pasteleria") {
     RENDER.currentMain().replaceWith(RENDER.pasteleriaHome);
   } else {
-    /* displayMenuPasteleria(window.location.pathname); */
+    /* displayMenuPasteleria(window.location.pathname); "/pasteleria/tortas etc"*/
   }
   displayHeader();
 }
