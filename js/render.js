@@ -1,4 +1,5 @@
 import { urlRoute } from "./router.js";
+import { getMenu as getMenuClass, getBurguerExtras } from "./menu.js";
 export const RENDER = {
   root: document.getElementById("index"),
   navBar: getNavBar(),
@@ -6,6 +7,9 @@ export const RENDER = {
   home: getHome(),
   rotiseriaHome: getRotiseriaHome(),
   pasteleriaHome: getPasteleriaHome(),
+  getMenu: (path) => {
+    getMenu(path);
+  },
   error404: getError404(),
   currentNavBar: () => {
     return document.getElementById("index").getElementsByTagName("nav")[0];
@@ -260,5 +264,57 @@ function getHeader() {
 function getError404() {
   let main = document.createElement("main");
   main.innerHTML = "404 not found";
+  return main;
+}
+
+function getMenu(path) {
+  let menu = getMenuClass();
+  if (path == "/rotiseria/pizza") {
+    RENDER.currentMain().replaceWith(getNewMain(menu.getPizzas()));
+  } else if (path == "/rotiseria/burger") {
+    RENDER.currentMain().replaceWith(getNewMain(menu.getHamburguesas()));
+  } else if (path == "/rotiseria/frita") {
+    RENDER.currentMain().replaceWith(getNewMain(menu.getFritas()));
+  } else {
+    RENDER.root.innerHTML = " ";
+    RENDER.root.appendChild(get.error404);
+  }
+}
+function getNewMain(comida) {
+  let comidaArray = comida;
+  let main = document.createElement("main");
+  main.classList.add("foodGrid");
+  if (comidaArray[0].type == "hamburguesa") {
+    main.appendChild(getBurguerExtras());
+  }
+  comidaArray.forEach((cadaComida) => {
+    if (cadaComida.type != "hamburguesa") {
+      main.innerHTML += `<div
+      style="background-image: url('${cadaComida.src}')"
+      class="foodDivs"
+    >
+      <div class="bg-secondary-R text-center  text-black">
+        <h1 class="font-extrabold">${cadaComida.nombre}</h1>
+        <p class="font-semibold text-lg">$${cadaComida.precio}</p>
+        <p>${cadaComida.descripcion}</p>
+      </div>
+    </div>`;
+    } else {
+      main.innerHTML += `<div
+          style="background-image: url('${cadaComida.src}')"
+          class="foodDivs"
+        >
+        <div class="grow">
+        <p class="font-extrabold rounded-r-lg rounded-b-lg bg-secondary-R text-center inline-block w-16 ">Incluye fritas!</p></div>
+
+          <div class="bg-secondary-R text-center text-black">
+            <h1 class="font-extrabold">${cadaComida.nombre}</h1>
+            <p class="text-lg font-semibold">$${cadaComida.precio}</p>
+            <p>${cadaComida.descripcion}</p>
+          </div>
+        </div>`;
+    }
+  });
+
   return main;
 }
