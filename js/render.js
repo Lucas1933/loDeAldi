@@ -245,7 +245,7 @@ function getHeader() {
       id="/rotiseria"
     >
       <div
-        class="  animate-slide flex w-12 justify-center rounded-full border-2 border-solid border-pink-900 bg-primary-P"
+        class="  animate-slide flex w-12 justify-center rounded-full border-2 border-solid border-pink-900 bg-[#5a1760]"
       >
         <img
          

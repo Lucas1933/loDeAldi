@@ -10,10 +10,10 @@
     @apply flex flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-2 border-solid border-pink-900;
   }
   .headerRotiseria {
-    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R  shadow-xl;
+    @apply bg-wavesHeaderR fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R bg-contain shadow-xl;
   }
   .headerPasteleria {
-    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-white bg-primary-P shadow-xl;
+    @apply fixed top-0 z-50 flex w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-white bg-wavesHeaderP bg-contain shadow-xl;
   }
   .navBar {
     @apply fixed bottom-0 z-30 flex  w-full justify-evenly rounded-t-lg border-4 border-b-0 border-solid border-black bg-primary-R pt-1;
