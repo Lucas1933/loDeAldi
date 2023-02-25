@@ -233,12 +233,12 @@ function getHeader() {
   <div class="flex items-center justify-center">
     <img
       id="/"
-      class="w-40"
+      class="w-36"
       src="./assets/icons/header/logo.png"
       alt=""
     />
   </div>
-  <div class="flex grow justify-center py-1" id="switchContainer">
+  <div class="flex grow justify-center items-center py-1" id="switchContainer">
        <div
        id="/pasteleria"
     class="slideSwitchR"
@@ -254,7 +254,7 @@ function getHeader() {
         alt=""
       />
     </div>
-    <p class="block text-white pl-1 pr-2">Rotiseria</p>
+    <p class="block text-white pl-1 pr-4">Rotiseria</p>
   </div>
     <div
       class="slideSwitchP"
@@ -310,7 +310,7 @@ function getNewMain(comida) {
       style="background-image: url('${cadaComida.src}')"
       class="foodDivs"
     >
-      <div class="bg-secondary-R text-center  text-black">
+      <div class="bg-secondary-R text-center shrink  text-black h-fit">
         <h1 class="font-extrabold">${cadaComida.nombre}</h1>
         <p class="font-semibold text-lg">$${cadaComida.precio}</p>
         <p>${cadaComida.descripcion}</p>
@@ -323,12 +323,14 @@ function getNewMain(comida) {
         >
         <div class="grow">
         <p class="font-extrabold rounded-r-lg rounded-b-lg bg-secondary-R text-center inline-block w-16 ">Incluye fritas!</p></div>
+      <div class="flex flex-col justify-end">
+        <div class="bg-secondary-R text-center shrink  text-black h-fit">
+          <h1 class="font-bold">${cadaComida.nombre}</h1>
+          <p class="text-lg font-extrabold">$${cadaComida.precio}</p>
+          <p class="font-semibold text-sm">${cadaComida.descripcion}</p>
+        </div>
+      </div>
 
-          <div class="bg-secondary-R text-center text-black">
-            <h1 class="font-extrabold">${cadaComida.nombre}</h1>
-            <p class="text-lg font-semibold">$${cadaComida.precio}</p>
-            <p>${cadaComida.descripcion}</p>
-          </div>
         </div>`;
     }
   });
