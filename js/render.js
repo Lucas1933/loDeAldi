@@ -126,18 +126,24 @@ function getHome() {
   let home = document.createElement("main");
   home.classList.add("home");
   home.innerHTML = `
-    <button
-      id="/rotiseria"
-      class="mx-4 mb-4 border-2 border-solid border-black bg-black font-semibold text-white"
-    >
-      Rotiseria
-    </button>
-    <button
-      id="/pasteleria"
-      class="mx-4 border-2 border-solid border-pink-700 bg-pink-500 font-semibold text-white"
-    >
-      Pasteleria
-    </button>
+  <div class="flex h-[50%] w-full items-center justify-evenly">
+  <button
+    id="/rotiseria"
+    class="mr-8 rounded-lg border-4 border-solid border-secondary-R bg-black py-1 px-1 font-semibold text-white"
+  >
+    <div class="">
+      <img src="./assets/icons/header/rotiseria.svg" alt="" />
+    </div>
+    <p>Rotiseria</p>
+  </button>
+  <button
+    id="/pasteleria"
+    class="rounded-lg border-4 border-solid border-secondary-P bg-primary-P font-semibold text-white"
+  >
+    <div><img src="./assets/icons/header/pasteleria.svg" alt="" /></div>
+    <p>Pasteleria</p>
+  </button>
+</div>
   `;
   return home;
 }

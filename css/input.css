@@ -60,8 +60,6 @@
     @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria bg-repeat-y text-center font-extrabold text-white;
   }
   .home {
-    @apply flex    h-[100vh]
-    flex-col
-    justify-center bg-white bg-[url('../assets/bgHome.svg')] bg-contain;
+    @apply flex  h-[100vh]  bg-white bg-[url('../assets/bgHome.svg')] bg-contain;
   }
 }
