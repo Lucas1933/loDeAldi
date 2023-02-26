@@ -1,15 +1,8 @@
 import { urlRoute } from "./router.js";
 import { ELEMENT } from "./elements.js";
 export const RENDER = {
-  root: ELEMENT.root,
-  navBar: ELEMENT.navBar,
-  header: ELEMENT.header,
-  home: ELEMENT.home,
-  rotiseriaHome: ELEMENT.rotiseriaHome,
-  pasteleriaHome: ELEMENT.pasteleriaHome,
-  error404: ELEMENT.error404,
   getMenu: (path) => {
-    ELEMENT.getMenu(path);
+    return ELEMENT.menu[path];
   },
 
   currentNavBar: () => {
@@ -132,7 +125,13 @@ export const RENDER = {
     }
     setNavBtnsListeners();
   },
-
+  setFoodCardsWiggleAnimation: () => {
+    for (let i = 0; i < RENDER.currentMain().children.length; i++) {
+      RENDER.currentMain().children[i].addEventListener("animationend", () => {
+        RENDER.currentMain().children[i].classList.add("animate-wiggle");
+      });
+    }
+  },
   resetNavBar: () => {
     let icons = [];
     icons.push(document.getElementById("/rotiseria/pizza"));

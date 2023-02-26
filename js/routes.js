@@ -1,4 +1,5 @@
 import { RENDER } from "./render.js";
+import { ELEMENT } from "./elements.js";
 export function displayRoute(location) {
   ROUTES[location].display();
 }
@@ -40,7 +41,7 @@ const ROUTES = {
   },
 };
 function displayHome() {
-  RENDER.currentMain().replaceWith(RENDER.home);
+  RENDER.currentMain().replaceWith(ELEMENT.home);
   RENDER.setHomeListeners();
   if (RENDER.currentNavBar() != null) {
     RENDER.currentNavBar().remove();
@@ -54,9 +55,10 @@ function displayRotiseria() {
     displayNavBar();
   }
   if (window.location.pathname === "/rotiseria") {
-    RENDER.currentMain().replaceWith(RENDER.rotiseriaHome);
+    RENDER.currentMain().replaceWith(ELEMENT.rotiseriaHome);
   } else {
-    RENDER.getMenu(window.location.pathname);
+    RENDER.currentMain().replaceWith(RENDER.getMenu(window.location.pathname));
+    RENDER.setFoodCardsWiggleAnimation();
   }
   displayHeader();
 }
@@ -65,7 +67,7 @@ function displayPasteleria() {
     RENDER.currentNavBar().remove();
   }
   if (window.location.pathname === "/pasteleria") {
-    RENDER.currentMain().replaceWith(RENDER.pasteleriaHome);
+    RENDER.currentMain().replaceWith(ELEMENT.pasteleriaHome);
   } else {
     /* displayMenuPasteleria(window.location.pathname); "/pasteleria/tortas etc"*/
   }
@@ -76,7 +78,7 @@ function displayHeader() {
     if (RENDER.currentHeader() != null) {
       RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
     } else {
-      RENDER.root.appendChild(RENDER.header);
+      ELEMENT.root.appendChild(ELEMENT.header);
       RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
       RENDER.setHeaderListeners();
     }
@@ -84,13 +86,13 @@ function displayHeader() {
     if (RENDER.currentHeader() != null) {
       RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
     } else {
-      RENDER.root.appendChild(RENDER.header);
+      ELEMENT.root.appendChild(ELEMENT.header);
       RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
       RENDER.setHeaderListeners();
     }
   }
 }
 function displayNavBar() {
-  RENDER.root.appendChild(RENDER.navBar);
+  ELEMENT.root.appendChild(ELEMENT.navBar);
   RENDER.setNavBtnsListeners();
 }

@@ -1,5 +1,5 @@
-import { getMenu as MENU } from "./menu.js";
-import { RENDER } from "./render.js";
+import { getMenu as get_Menu } from "./menu.js";
+const MENU = get_Menu();
 export const ELEMENT = {
   root: document.getElementById("index"),
   navBar: getNavBar(),
@@ -8,8 +8,10 @@ export const ELEMENT = {
   rotiseriaHome: getRotiseriaHome(),
   pasteleriaHome: getPasteleriaHome(),
   error404: getError404(),
-  getMenu: (path) => {
-    getMenu(path);
+  menu: {
+    "/rotiseria/pizza": getMenu(MENU.pizzas),
+    "/rotiseria/burger": getMenu(MENU.hamburguesas),
+    "/rotiseria/frita": getMenu(MENU.fritas),
   },
 };
 
@@ -145,7 +147,7 @@ function getHeader() {
           alt=""
         />
       </div>
-      <p class="block text-white pl-1 pr-4">Rotiseria</p>
+      <p class="block text-white px-3">Rotiseria</p>
     </div>
       <div
         class="slideSwitchP"
@@ -162,7 +164,7 @@ function getHeader() {
           />
         </div>
   
-        <p class="text-pink-200 px-1">Pasteleria</p>
+        <p class="text-pink-200 px-2">Pasteleria</p>
       </div>
     </div>
   </div>`;
@@ -173,13 +175,12 @@ function getError404() {
   main.innerHTML = "404 not found";
   return main;
 }
-function getMenu(path) {
-  function getNewMain(comida) {
-    let comidaArray = comida;
+function getMenu(comidaArray) {
+  function getNewMain(comidaArray) {
     let main = document.createElement("main");
     main.classList.add("foodGrid");
     if (comidaArray[0].type == "hamburguesa") {
-      main.appendChild(menu.getBurguerExtras);
+      main.appendChild(MENU.getBurguerExtras);
     }
     comidaArray.forEach((cadaComida) => {
       if (cadaComida.type != "hamburguesa") {
@@ -214,20 +215,5 @@ function getMenu(path) {
 
     return main;
   }
-  function addWiggle() {
-    for (let i = 0; i < RENDER.currentMain().children.length; i++) {
-      RENDER.currentMain().children[i].addEventListener("animationend", () => {
-        RENDER.currentMain().children[i].classList.add("animate-wiggle");
-      });
-    }
-  }
-  let menu = MENU();
-  if (path == "/rotiseria/pizza") {
-    RENDER.currentMain().replaceWith(getNewMain(menu.pizzas));
-  } else if (path == "/rotiseria/burger") {
-    RENDER.currentMain().replaceWith(getNewMain(menu.hamburguesas));
-  } else if (path == "/rotiseria/frita") {
-    RENDER.currentMain().replaceWith(getNewMain(menu.fritas));
-  }
-  addWiggle();
+  return getNewMain(comidaArray);
 }
