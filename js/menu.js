@@ -1,28 +1,9 @@
-class Menu {
-  pizzas = [];
-  hamburguesas = [];
-  fritas = [];
-  constructor() {}
-  addPizza(pizza) {
-    this.pizzas.push(pizza);
-  }
-  addHamburguesa(hamburguesa) {
-    this.hamburguesas.push(hamburguesa);
-  }
-  addFrita(frita) {
-    this.fritas.push(frita);
-  }
-
-  getPizzas() {
-    return this.pizzas;
-  }
-  getHamburguesas() {
-    return this.hamburguesas;
-  }
-  getFritas() {
-    return this.fritas;
-  }
-}
+const MENU = {
+  pizzas: [],
+  hamburguesas: [],
+  fritas: [],
+  getBurguerExtras: getBurguerExtras(),
+};
 
 class Comida {
   constructor(nombre, precio, descripcion, id, src, type) {
@@ -35,30 +16,31 @@ class Comida {
   }
 }
 export function getMenu() {
-  let menu = new Menu();
-  menu.addPizza(
+  MENU.pizzas.push(
     new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg", "pizza")
   );
-  menu.addPizza(
+  MENU.pizzas.push(
     new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg", "pizza")
   );
-  menu.addPizza(
+  MENU.pizzas.push(
     new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/404.png", "pizza")
   );
-  menu.addPizza(
+  MENU.pizzas.push(
     new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg", "pizza")
   );
-  menu.addPizza(
+
+  MENU.pizzas.push(
     new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/404.png", "pizza")
   );
-  menu.addPizza(
+  MENU.pizzas.push(
     new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg", "pizza")
   );
-  menu.addPizza(
+
+  MENU.pizzas.push(
     new Comida("Napolitana", 1400, "", 7, "./assets/pizzas/7.jpeg", "pizza")
   );
 
-  menu.addHamburguesa(
+  MENU.hamburguesas.push(
     new Comida(
       "Simple",
       750,
@@ -68,7 +50,7 @@ export function getMenu() {
       "hamburguesa"
     )
   );
-  menu.addHamburguesa(
+  MENU.hamburguesas.push(
     new Comida(
       "Cuarto de Libra",
       950,
@@ -78,7 +60,7 @@ export function getMenu() {
       "hamburguesa"
     )
   );
-  menu.addHamburguesa(
+  MENU.hamburguesas.push(
     new Comida(
       "Completa Clasica",
       950,
@@ -88,7 +70,7 @@ export function getMenu() {
       "hamburguesa"
     )
   );
-  menu.addHamburguesa(
+  MENU.hamburguesas.push(
     new Comida(
       "Cheddar y Panceta",
       950,
@@ -98,7 +80,7 @@ export function getMenu() {
       "hamburguesa"
     )
   );
-  menu.addHamburguesa(
+  MENU.hamburguesas.push(
     new Comida(
       "Cebolla y Morron asado",
       950,
@@ -109,10 +91,10 @@ export function getMenu() {
     )
   );
 
-  menu.addFrita(
+  MENU.fritas.push(
     new Comida("Fritas", 700, " ", 1, "./assets/fritas/404.png", "frita")
   );
-  menu.addFrita(
+  MENU.fritas.push(
     new Comida(
       "Panceta, cheddar y verdeo",
       850,
@@ -122,13 +104,13 @@ export function getMenu() {
       "frita"
     )
   );
-  menu.addFrita(
+  MENU.fritas.push(
     new Comida("Salsa Picante", 850, " ", 3, "./assets/fritas/404.png", "frita")
   );
-  return menu;
-}
 
-export function getBurguerExtras() {
+  return MENU;
+}
+function getBurguerExtras() {
   let aside = document.createElement("aside");
   aside.classList.add(
     "flex",

@@ -1,9 +1,6 @@
 import { RENDER } from "./render.js";
-import { urlRoute } from "./router.js";
-import { getMenu } from "./menu.js";
-import { getBurguerExtras } from "./menu.js";
 export function displayRoute(location) {
-  ROUTES[location].display(location);
+  ROUTES[location].display();
 }
 const ROUTES = {
   "/": {
@@ -42,29 +39,6 @@ const ROUTES = {
     },
   },
 };
-function displayHeader() {
-  if (window.location.pathname.includes("/pasteleria")) {
-    if (RENDER.currentHeader() != null) {
-      RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
-    } else {
-      RENDER.root.appendChild(RENDER.header);
-      RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
-      RENDER.setHeaderListeners();
-    }
-  } else if (window.location.pathname.includes("/rotiseria")) {
-    if (RENDER.currentHeader() != null) {
-      RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
-    } else {
-      RENDER.root.appendChild(RENDER.header);
-      RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
-      RENDER.setHeaderListeners();
-    }
-  }
-}
-function displayNavBar() {
-  RENDER.root.appendChild(RENDER.navBar);
-  RENDER.setNavBtnsListeners();
-}
 function displayHome() {
   RENDER.currentMain().replaceWith(RENDER.home);
   RENDER.setHomeListeners();
@@ -96,4 +70,27 @@ function displayPasteleria() {
     /* displayMenuPasteleria(window.location.pathname); "/pasteleria/tortas etc"*/
   }
   displayHeader();
+}
+function displayHeader() {
+  if (window.location.pathname.includes("/pasteleria")) {
+    if (RENDER.currentHeader() != null) {
+      RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
+    } else {
+      RENDER.root.appendChild(RENDER.header);
+      RENDER.currentHeader().firstElementChild.className = "headerPasteleria";
+      RENDER.setHeaderListeners();
+    }
+  } else if (window.location.pathname.includes("/rotiseria")) {
+    if (RENDER.currentHeader() != null) {
+      RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
+    } else {
+      RENDER.root.appendChild(RENDER.header);
+      RENDER.currentHeader().firstElementChild.className = "headerRotiseria";
+      RENDER.setHeaderListeners();
+    }
+  }
+}
+function displayNavBar() {
+  RENDER.root.appendChild(RENDER.navBar);
+  RENDER.setNavBtnsListeners();
 }
