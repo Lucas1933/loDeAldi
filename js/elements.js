@@ -52,7 +52,7 @@ function getRotiseriaHome() {
 function getPasteleriaHome() {
   let pasteleriaHome = document.createElement("main");
   pasteleriaHome.classList.add("pasteleriaGrid");
-  pasteleriaHome.innerHTML = `        <div class="pasteleriaDivsHome">
+  /* pasteleriaHome.innerHTML = `        <div class="pasteleriaDivsHome">
     <div class="flex h-full w-full">
       <div
         class="pasteleriaDivs"
@@ -79,7 +79,24 @@ function getPasteleriaHome() {
     </div>
   
     <p class="text-center text-xl">Tortas</p>
-  </div>`;
+  </div>`; */
+  pasteleriaHome.innerHTML = ` <div class="pasteleriaDivsHome ">
+  <div class="flex h-full w-full">
+    <div
+      class="pasteleriaDivs"
+      style="background-image: url('./assets/hamburguesas/404.png')"
+    ></div>
+    </div>
+    </div>
+    <div class="pasteleriaDivsHome ">
+    <div class="flex h-full w-full">
+      <div
+        class="pasteleriaDivs"
+        style="background-image: url('./assets/hamburguesas/404.png')"
+      ></div>
+      </div>
+      </div>
+    `;
   return pasteleriaHome;
 }
 function getNavBar() {
