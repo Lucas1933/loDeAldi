@@ -30,7 +30,7 @@ export function getMenu() {
   );
 
   MENU.pizzas.push(
-    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/404.png", "pizza")
+    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/5.jpeg", "pizza")
   );
   MENU.pizzas.push(
     new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg", "pizza")

@@ -32,6 +32,9 @@
     pb-24
     pt-16;
   }
+  .foodDivs {
+    @apply my-4 flex h-[400px] w-[90%] animate-zoomIn flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
+  }
   .pasteleriaGrid {
     @apply mb-16
     grid
@@ -48,9 +51,6 @@
   }
   .pasteleriaDivsHome {
     @apply my-4 flex h-[250px] w-[100%] animate-wiggle flex-col  justify-evenly   justify-self-center rounded-lg border-4 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
-  }
-  .foodDivs {
-    @apply my-4 flex h-[400px] w-[90%] animate-zoomIn flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
   }
 
   .rotiseriaHome {
