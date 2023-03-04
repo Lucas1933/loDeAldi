@@ -1,6 +1,7 @@
 import { RENDER } from "./render.js";
 import { ELEMENT } from "./elements.js";
 export function displayRoute(location) {
+  window.scrollTo(0, 0);
   ROUTES[location].display();
 }
 const ROUTES = {
@@ -30,6 +31,11 @@ const ROUTES = {
     },
   },
   "/pasteleria": {
+    display: () => {
+      displayPasteleria();
+    },
+  },
+  "/pasteleria/tortas": {
     display: () => {
       displayPasteleria();
     },
@@ -68,8 +74,12 @@ function displayPasteleria() {
   }
   if (window.location.pathname === "/pasteleria") {
     RENDER.currentMain().replaceWith(ELEMENT.pasteleriaHome);
+    RENDER.setPasteleriaHomeListeners();
   } else {
-    /* displayMenuPasteleria(window.location.pathname); "/pasteleria/tortas etc"*/
+    RENDER.currentMain().replaceWith(
+      ELEMENT.pasteleria[window.location.pathname]
+    );
+    RENDER.setGaleria();
   }
   displayHeader();
 }

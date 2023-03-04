@@ -1,5 +1,48 @@
 import { getMenu as get_Menu } from "./menu.js";
 const MENU = get_Menu();
+const PASTELERIA_URLS = {
+  tortas: [
+    "../assets/pasteleria/tortas/1.jpg",
+    "../assets/pasteleria/tortas/2.jpg",
+    "../assets/pasteleria/tortas/3.jpg",
+    "../assets/pasteleria/tortas/4.jpg",
+    "../assets/pasteleria/tortas/5.jpg",
+    "../assets/pasteleria/tortas/6.jpg",
+    "../assets/pasteleria/tortas/7.jpg",
+    "../assets/pasteleria/tortas/8.jpg",
+    "../assets/pasteleria/tortas/9.jpg",
+    "../assets/pasteleria/tortas/10.jpg",
+    "../assets/pasteleria/tortas/11.jpg",
+    "../assets/pasteleria/tortas/12.jpg",
+    "../assets/pasteleria/tortas/13.jpg",
+    "../assets/pasteleria/tortas/14.jpg",
+    "../assets/pasteleria/tortas/15.jpg",
+    "../assets/pasteleria/tortas/16.jpg",
+    "../assets/pasteleria/tortas/17.jpg",
+    "../assets/pasteleria/tortas/18.jpg",
+    "../assets/pasteleria/tortas/19.jpg",
+    "../assets/pasteleria/tortas/20.jpg",
+    "../assets/pasteleria/tortas/21.jpg",
+    "../assets/pasteleria/tortas/22.jpg",
+    "../assets/pasteleria/tortas/23.jpg",
+    "../assets/pasteleria/tortas/24.jpg",
+    "../assets/pasteleria/tortas/25.jpg",
+    "../assets/pasteleria/tortas/26.jpg",
+    "../assets/pasteleria/tortas/27.jpg",
+    "../assets/pasteleria/tortas/28.jpg",
+    "../assets/pasteleria/tortas/29.jpg",
+    "../assets/pasteleria/tortas/30.jpg",
+    "../assets/pasteleria/tortas/31.jpg",
+    "../assets/pasteleria/tortas/32.jpg",
+    "../assets/pasteleria/tortas/33.jpg",
+    "../assets/pasteleria/tortas/34.jpg",
+    "../assets/pasteleria/tortas/35.jpg",
+    "../assets/pasteleria/tortas/36.jpg",
+    "../assets/pasteleria/tortas/37.jpg",
+  ],
+  muffins: [],
+  tartas: [],
+};
 export const ELEMENT = {
   root: document.getElementById("index"),
   navBar: getNavBar(),
@@ -12,6 +55,11 @@ export const ELEMENT = {
     "/rotiseria/pizza": getMenu(MENU.pizzas),
     "/rotiseria/burger": getMenu(MENU.hamburguesas),
     "/rotiseria/frita": getMenu(MENU.fritas),
+  },
+  pasteleria: {
+    "/pasteleria/tortas": getGaleria(PASTELERIA_URLS.tortas),
+    "/pasteleria/muffins": getGaleria(PASTELERIA_URLS.muffins),
+    "/pasteleria/tartas": getGaleria(PASTELERIA_URLS.tartas),
   },
 };
 
@@ -51,53 +99,55 @@ function getRotiseriaHome() {
 }
 function getPasteleriaHome() {
   let pasteleriaHome = document.createElement("main");
-  pasteleriaHome.classList.add("pasteleriaGrid");
-  /* pasteleriaHome.innerHTML = `        <div class="pasteleriaDivsHome">
-    <div class="flex h-full w-full">
-      <div
-        class="pasteleriaDivs"
-        style="background-image: url('./assets/pasteleria/2.png')"
-      ></div>
-      <div
-        class="pasteleriaDivs"
-        style="background-image: url('./assets/pasteleria/3.png')"
-      ></div>
-    </div>
-  
-    <p class="text-center text-xl">Tortas</p>
-  </div>
-  <div class="pasteleriaDivsHome">
-    <div class="flex h-full w-full">
-      <div
-        class="pasteleriaDivs"
-        style="background-image: url('./assets/pasteleria/2.png')"
-      ></div>
-      <div
-        class="pasteleriaDivs"
-        style="background-image: url('./assets/pasteleria/3.png')"
-      ></div>
-    </div>
-  
-    <p class="text-center text-xl">Tortas</p>
-  </div>`; */
-  pasteleriaHome.innerHTML = ` <div class="pasteleriaDivsHome ">
-  <div class="flex h-full w-full">
-    <div
-      class="pasteleriaDivs"
-      style="background-image: url('./assets/hamburguesas/404.png')"
-    ></div>
-    </div>
-    </div>
-    <div class="pasteleriaDivsHome ">
-    <div class="flex h-full w-full">
-      <div
-        class="pasteleriaDivs"
-        style="background-image: url('./assets/hamburguesas/404.png')"
-      ></div>
-      </div>
-      </div>
-    `;
+  pasteleriaHome.classList.add("pasteleriaHome");
+  pasteleriaHome.innerHTML = ` <div
+  id="/pasteleria/tortas"
+  class="pasteleriaHomeDivs flex flex-col justify-end"
+  style="background-image: url('./assets/pasteleria/2.png')"
+>
+  <div><p>Tortas</p></div>
+</div>
+<div
+  class="pasteleriaHomeDivs flex flex-col justify-end"
+  style="background-image: url('./assets/pasteleria/1.png')"
+>
+  <div><p>Muffins</p></div>
+</div>
+<div
+  class="pasteleriaHomeDivs"
+  style="background-image: url('./assets/pasteleria/tortas/1.jpg')"
+></div>`;
   return pasteleriaHome;
+}
+function getGaleria(backGroundImages) {
+  let main = document.createElement("main");
+  let modal = document.createElement("div");
+  main.classList.add("pasteleriaGaleriaGrid");
+  backGroundImages.forEach((cadaBg) => {
+    main.innerHTML += `  <div
+    class="pasteleriaGaleriaDivs"
+    style="background-image: url('${cadaBg}')"
+  ></div>`;
+  });
+  modal.id = "modalCarousel";
+  modal.classList.add("pasteleriaGaleriaModal", "hidden");
+  modal.innerHTML = `
+<div class="pasteleriaGaleriaCarousel">
+</div>
+<button id="next" class="absolute right-0 bottom-0 z-10 h-full w-10">
+<img
+src="./assets/pasteleria/arrow-right-svgrepo-com.svg"
+alt=""
+/></button
+><button
+id="prev"
+class="absolute left-0 bottom-0 z-10 h-full w-10  rotate-180"
+>
+<img src="./assets/pasteleria/arrow-right-svgrepo-com.svg" alt="" />
+</button>
+`;
+  main.appendChild(modal);
+  return main;
 }
 function getNavBar() {
   let navBar = document.createElement("nav");

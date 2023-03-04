@@ -50,6 +50,14 @@ export const RENDER = {
     rotiseriaBtn.classList.add("animate-zoomInOut");
     pasteleriaBtn.classList.add("animate-zoomInOut");
   },
+  setPasteleriaHomeListeners: () => {
+    RENDER.currentMain().firstElementChild.addEventListener(
+      "click",
+      (event) => {
+        urlRoute(event);
+      }
+    );
+  },
   setHeaderListeners: () => {
     function setListeners() {
       let rotiseriaIcon = document.getElementById("/pasteleria");
@@ -140,6 +148,56 @@ export const RENDER = {
     icons.forEach((cadaIcono) => {
       cadaIcono.classList.remove("animate-bounce");
       cadaIcono.parentElement.parentElement.classList.remove("bg-secondary-R");
+    });
+  },
+  setGaleria: () => {
+    let galeriaDivs = Array.from(
+      document.getElementsByClassName("pasteleriaGaleriaDivs")
+    );
+    let carouselDiv = document.getElementsByClassName(
+      "pasteleriaGaleriaCarousel"
+    )[0];
+    let modalCarousel = document.getElementById("modalCarousel");
+    let urls = [];
+    let nextBtn = document.getElementById("next");
+    let prevBtn = document.getElementById("prev");
+    for (let i = 0; i < galeriaDivs.length; i++) {
+      galeriaDivs[i].addEventListener("click", (event) => {
+        let index = galeriaDivs.indexOf(event.target);
+        galeriaDivs.slice(index).forEach((cadaDiv) => {
+          urls.push(cadaDiv.style.backgroundImage);
+        });
+
+        galeriaDivs.slice(0, index).forEach((cadaDiv) => {
+          urls.push(cadaDiv.style.backgroundImage);
+        });
+        modalCarousel.classList.remove("hidden");
+        carouselDiv.style = `background-image: ${urls[0]};`;
+      });
+    }
+
+    nextBtn.addEventListener("click", () => {
+      let currentIndex = urls.indexOf(carouselDiv.style.backgroundImage);
+      let nextIndex = currentIndex + 1;
+      if (nextIndex >= urls.length) {
+        nextIndex = 0;
+      }
+      carouselDiv.style = `background-image: ${urls[nextIndex]};`;
+    });
+    prevBtn.addEventListener("click", () => {
+      let currentIndex = urls.indexOf(carouselDiv.style.backgroundImage);
+      let prevIndex = currentIndex - 1;
+      if (prevIndex < 0) {
+        prevIndex = urls.length - 1;
+      }
+      carouselDiv.style = `background-image: ${urls[prevIndex]};`;
+    });
+
+    modalCarousel.addEventListener("click", (event) => {
+      if (event.target.id == "modalCarousel") {
+        urls = [];
+        modalCarousel.classList.add("hidden");
+      }
     });
   },
 };

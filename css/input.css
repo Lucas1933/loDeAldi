@@ -3,23 +3,29 @@
 @tailwind utilities;
 
 @layer components {
-  .slideSwitchR {
-    @apply flex  h-[100%] items-center  justify-center rounded-l-full rounded-r-full border-2 border-solid border-secondary-R;
-  }
-  .slideSwitchP {
-    @apply flex h-[100%] flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-2 border-solid border-pink-900;
-  }
+  /* header */
   .headerRotiseria {
     @apply fixed top-0 z-50 flex h-[9%] w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-black bg-primary-R bg-wavesHeaderR bg-contain  shadow-xl;
   }
   .headerPasteleria {
     @apply fixed top-0 z-50 flex h-[9%] w-full justify-evenly rounded-b-lg border-4 border-t-0 border-solid border-white bg-wavesHeaderP bg-contain shadow-xl;
   }
+  .slideSwitchR {
+    @apply flex  h-[100%] items-center  justify-center rounded-l-full rounded-r-full border-2 border-solid border-secondary-R;
+  }
+  .slideSwitchP {
+    @apply flex h-[100%] flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-2 border-solid border-pink-900;
+  }
+  /* navBarRotiseria */
   .navBar {
     @apply fixed bottom-0 z-30 flex h-[13%] w-full justify-evenly rounded-t-lg border-4 border-b-0 border-solid border-black bg-primary-R pt-1;
   }
   .navBarIcons {
     @apply mx-2 mb-1 flex grow justify-center rounded-lg border-4 border-solid border-secondary-R bg-primary-R py-1;
+  }
+  /* rotiseria */
+  .rotiseriaHome {
+    @apply flex h-[100vh]  flex-col items-center justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
   }
   .foodGrid {
     @apply grid
@@ -35,30 +41,33 @@
   .foodDivs {
     @apply my-4 flex h-[400px] w-[90%] animate-zoomIn flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
   }
-  .pasteleriaGrid {
-    @apply mb-16
-    grid
-    grid-cols-[repeat(auto-fit,minmax(240px,2fr))]
-    grid-rows-3
-    gap-1
+  /* pasteleria */
+  .pasteleriaHome {
+    @apply flex h-[100vh] flex-col items-center justify-center bg-wavesPasteleria bg-repeat-y pt-12 text-center font-extrabold text-white;
+  }
+  .pasteleriaHomeDivs {
+    @apply my-4 flex h-[70vh] w-[35vh] animate-wiggle flex-col  justify-evenly   justify-self-center rounded-lg border-4 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
+  }
+  .pasteleriaGaleriaModal {
+    @apply fixed top-0 right-0 left-0 bottom-0 z-[51] flex h-[100vh]  w-full flex-col items-center justify-center overflow-x-hidden bg-black bg-opacity-50;
+  }
+  .pasteleriaGaleriaGrid {
+    @apply grid grid-cols-3
+    gap-4
+    overflow-x-hidden
     bg-wavesPasteleria
     bg-repeat-y
-    px-4
-    py-4;
+    py-2
+    px-2
+    pt-16;
   }
-  .pasteleriaDivs {
-    @apply h-full  w-[100%]  justify-self-center  border-4 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
+  .pasteleriaGaleriaDivs {
+    @apply h-40 w-28 animate-zoomIn justify-self-center rounded-lg border-2 border-solid border-secondary-P bg-cover bg-center bg-no-repeat;
   }
-  .pasteleriaDivsHome {
-    @apply my-4 flex h-[250px] w-[100%] animate-wiggle flex-col  justify-evenly   justify-self-center rounded-lg border-4 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
+  .pasteleriaGaleriaCarousel {
+    @apply h-[70vh] w-[50vh] bg-cover bg-center bg-no-repeat;
   }
-
-  .rotiseriaHome {
-    @apply flex h-[100vh]  flex-col items-center justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
-  }
-  .pasteleriaHome {
-    @apply flex h-[100vh] flex-col justify-center bg-wavesPasteleria bg-repeat-y text-center font-extrabold text-white;
-  }
+  /* home */
   .home {
     @apply flex h-[100vh] flex-col justify-center  bg-white bg-[url('../assets/bgHome.svg')] bg-contain;
   }
