@@ -1039,7 +1039,7 @@ video {
   top: 0px;
   z-index: 50;
   display: flex;
-  height: 9%;
+  height: 8%;
   width: 100%;
   justify-content: space-evenly;
   border-bottom-right-radius: 0.5rem;
@@ -1063,7 +1063,7 @@ video {
   top: 0px;
   z-index: 50;
   display: flex;
-  height: 9%;
+  height: 8%;
   width: 100%;
   justify-content: space-evenly;
   border-bottom-right-radius: 0.5rem;
@@ -1118,7 +1118,7 @@ video {
   bottom: 0px;
   z-index: 30;
   display: flex;
-  height: 13%;
+  height: 11%;
   width: 100%;
   justify-content: space-evenly;
   border-top-left-radius: 0.5rem;

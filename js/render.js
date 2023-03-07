@@ -62,33 +62,43 @@ export const RENDER = {
   },
   setHeaderListeners: () => {
     function setListeners() {
-      let rotiseriaIcon = document.getElementById("/pasteleria");
-      let pasteleriaIcon = document.getElementById("/rotiseria");
+      let homeIcon = document.getElementsByClassName("homeIcon")[0];
       let logo = document.getElementById("/");
       let switchR = document.getElementsByClassName("slideSwitchR")[0];
       let switchP = document.getElementsByClassName("slideSwitchP")[0];
       logo.addEventListener("click", (event) => {
         urlRoute(event);
       });
+      homeIcon.addEventListener("click", (event) => {
+        urlRoute(event);
+        try {
+          RENDER.resetNavBar();
+        } catch {}
+      });
       if (window.location.pathname.includes("/rotiseria")) {
+        homeIcon.id = "/rotiseria";
         switchR.classList.remove("hidden");
         switchR.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.add("hidden");
           switchP.classList.remove("hidden");
+          homeIcon.id = "/pasteleria";
         });
         switchP.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.remove("hidden");
           switchP.classList.add("hidden");
+          homeIcon.id = "/rotiseria";
           RENDER.resetNavBar();
         });
         switchP.classList.add("hidden");
       } else {
+        homeIcon.id = "/pasteleria";
         switchR.addEventListener("click", (event) => {
           urlRoute(event);
           switchR.classList.add("hidden");
           switchP.classList.remove("hidden");
+          homeIcon.id = "/pasteleria";
         });
         switchR.classList.add("hidden");
         switchP.classList.remove("hidden");
@@ -96,6 +106,7 @@ export const RENDER = {
           urlRoute(event);
           switchR.classList.remove("hidden");
           switchP.classList.add("hidden");
+          homeIcon.id = "/rotiseria";
         });
       }
     }
