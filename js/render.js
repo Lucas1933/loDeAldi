@@ -51,12 +51,14 @@ export const RENDER = {
     pasteleriaBtn.classList.add("animate-zoomInOut");
   },
   setPasteleriaHomeListeners: () => {
-    RENDER.currentMain().firstElementChild.addEventListener(
-      "click",
-      (event) => {
-        urlRoute(event);
-      }
+    let pasteleriaHomeDivs = Array.from(
+      document.getElementsByClassName("pasteleriaHomeDivs")
     );
+    pasteleriaHomeDivs.forEach((cadaDiv) => {
+      cadaDiv.addEventListener("click", (event) => {
+        urlRoute(event);
+      });
+    });
   },
   setHeaderListeners: () => {
     function setListeners() {

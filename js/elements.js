@@ -40,8 +40,18 @@ const PASTELERIA_URLS = {
     "../assets/pasteleria/tortas/36.jpg",
     "../assets/pasteleria/tortas/37.jpg",
   ],
-  muffins: [],
-  tartas: [],
+  muffins: [
+    "../assets/pasteleria/tortas/1.jpg",
+    "../assets/pasteleria/tortas/2.jpg",
+    "../assets/pasteleria/tortas/3.jpg",
+    "../assets/pasteleria/tortas/4.jpg",
+  ],
+  tartas: [
+    "../assets/pasteleria/tortas/1.jpg",
+    "../assets/pasteleria/tortas/2.jpg",
+    "../assets/pasteleria/tortas/3.jpg",
+    "../assets/pasteleria/tortas/4.jpg",
+  ],
 };
 export const ELEMENT = {
   root: document.getElementById("index"),
@@ -108,15 +118,17 @@ function getPasteleriaHome() {
   <div><p>Tortas</p></div>
 </div>
 <div
+  id="/pasteleria/muffins"
   class="pasteleriaHomeDivs flex flex-col justify-end"
   style="background-image: url('./assets/pasteleria/1.png')"
 >
   <div><p>Muffins</p></div>
 </div>
 <div
-  class="pasteleriaHomeDivs"
+  id="/pasteleria/tartas"
+  class="pasteleriaHomeDivs flex flex-col justify-end"
   style="background-image: url('./assets/pasteleria/tortas/1.jpg')"
-></div>`;
+><div><p>Tartas</p></div></div>`;
   return pasteleriaHome;
 }
 function getGaleria(backGroundImages) {

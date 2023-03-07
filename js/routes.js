@@ -40,6 +40,16 @@ const ROUTES = {
       displayPasteleria();
     },
   },
+  "/pasteleria/muffins": {
+    display: () => {
+      displayPasteleria();
+    },
+  },
+  "/pasteleria/tartas": {
+    display: () => {
+      displayPasteleria();
+    },
+  },
   404: {
     display: () => {
       RENDER.currentMain().replaceWith(RENDER.error404);
