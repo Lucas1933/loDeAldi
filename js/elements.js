@@ -1,22 +1,7 @@
 import { getMenu as get_Menu } from "./menu.js";
+/* import { PASTELERIA_URLS } from "./pasteleriaUrls.js"; */
 const MENU = get_Menu();
-const PASTELERIA_URLS = {
-  tortas: [
-    "https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400",
-  ],
-  muffins: [
-    "../assets/pasteleria/tortas/1.jpg",
-    "../assets/pasteleria/tortas/2.jpg",
-    "../assets/pasteleria/tortas/3.jpg",
-    "../assets/pasteleria/tortas/4.jpg",
-  ],
-  tartas: [
-    "../assets/pasteleria/tortas/1.jpg",
-    "../assets/pasteleria/tortas/2.jpg",
-    "../assets/pasteleria/tortas/3.jpg",
-    "../assets/pasteleria/tortas/4.jpg",
-  ],
-};
+
 export const ELEMENT = {
   root: document.getElementById("index"),
   navBar: getNavBar(),
@@ -31,9 +16,9 @@ export const ELEMENT = {
     "/rotiseria/frita": getMenu(MENU.fritas),
   },
   pasteleria: {
-    "/pasteleria/tortas": getGaleria(PASTELERIA_URLS.tortas),
-    "/pasteleria/muffins": getGaleria(PASTELERIA_URLS.muffins),
-    "/pasteleria/tartas": getGaleria(PASTELERIA_URLS.tartas),
+    "/pasteleria/tortas": await getGaleria("tortas"),
+    "/pasteleria/muffins": await getGaleria("muffins"),
+    "/pasteleria/tartas": await getGaleria("tartas"),
   },
 };
 
@@ -59,6 +44,15 @@ function getHome() {
       <p>Pasteleria</p>
     </button>
   </div>
+  <div class="flex">
+  <a class="w-72" target="_blank" href="https://www.facebook.com/profile.php?id=100064257603226"
+    ><img src="./assets/logos/facebook-svgrepo-com.svg" alt="" /></a
+  ><a class="w-72" target="_blank" href="https://www.instagram.com/lodealdi_/"
+    ><img src="./assets/logos/instagram-1-svgrepo-com.svg" alt="" /></a
+  ><a class="w-72" target="_blank" href="https://wa.me/1168963001"
+    ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+  /></a>
+</div>
     `;
   return home;
 }
@@ -95,16 +89,36 @@ function getPasteleriaHome() {
 ><div><p>Tartas</p></div></div>`;
   return pasteleriaHome;
 }
-function getGaleria(backGroundImages) {
+async function getGaleria(elemento) {
   let main = document.createElement("main");
   let modal = document.createElement("div");
+  let divs;
+  let respuesta = await fetch("../pasteleria_urls.json").then((res) =>
+    res.json()
+  );
+  let pasteleria = respuesta.pasteleria;
   main.classList.add("pasteleriaGaleriaGrid");
-  backGroundImages.forEach((cadaBg) => {
-    main.innerHTML += `  <div
-    class="pasteleriaGaleriaDivs"
-    style="background-image: url('${cadaBg}')"
-  ></div>`;
-  });
+  async function loadingDivs() {
+    for (let i = 0; i < pasteleria[elemento].length; i++) {
+      main.innerHTML += `  <div
+    class="pasteleriaGaleriaDivs flex flex-col justify-center items-center"
+  ><img class="animate-spin w-8" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>`;
+    }
+  }
+  await loadingDivs();
+  divs = await Array.from(main.getElementsByClassName("pasteleriaGaleriaDivs"));
+  async function insertBg(bgSrc, div) {
+    let src = bgSrc;
+    let image = new Image();
+    image.addEventListener("load", () => {
+      div.setAttribute("style", `background-image: url(${src});`);
+      div.firstChild.remove();
+    });
+    image.src = src;
+  }
+  for (let i = 0; i < pasteleria[elemento].length; i++) {
+    await insertBg(pasteleria[elemento][i], divs[i]);
+  }
   modal.id = "modalCarousel";
   modal.classList.add("pasteleriaGaleriaModal", "hidden");
   modal.innerHTML = `
