@@ -2,43 +2,7 @@ import { getMenu as get_Menu } from "./menu.js";
 const MENU = get_Menu();
 const PASTELERIA_URLS = {
   tortas: [
-    "../assets/pasteleria/tortas/1.jpg",
-    "../assets/pasteleria/tortas/2.jpg",
-    "../assets/pasteleria/tortas/3.jpg",
-    "../assets/pasteleria/tortas/4.jpg",
-    "../assets/pasteleria/tortas/5.jpg",
-    "../assets/pasteleria/tortas/6.jpg",
-    "../assets/pasteleria/tortas/7.jpg",
-    "../assets/pasteleria/tortas/8.jpg",
-    "../assets/pasteleria/tortas/9.jpg",
-    "../assets/pasteleria/tortas/10.jpg",
-    "../assets/pasteleria/tortas/11.jpg",
-    "../assets/pasteleria/tortas/12.jpg",
-    "../assets/pasteleria/tortas/13.jpg",
-    "../assets/pasteleria/tortas/14.jpg",
-    "../assets/pasteleria/tortas/15.jpg",
-    "../assets/pasteleria/tortas/16.jpg",
-    "../assets/pasteleria/tortas/17.jpg",
-    "../assets/pasteleria/tortas/18.jpg",
-    "../assets/pasteleria/tortas/19.jpg",
-    "../assets/pasteleria/tortas/20.jpg",
-    "../assets/pasteleria/tortas/21.jpg",
-    "../assets/pasteleria/tortas/22.jpg",
-    "../assets/pasteleria/tortas/23.jpg",
-    "../assets/pasteleria/tortas/24.jpg",
-    "../assets/pasteleria/tortas/25.jpg",
-    "../assets/pasteleria/tortas/26.jpg",
-    "../assets/pasteleria/tortas/27.jpg",
-    "../assets/pasteleria/tortas/28.jpg",
-    "../assets/pasteleria/tortas/29.jpg",
-    "../assets/pasteleria/tortas/30.jpg",
-    "../assets/pasteleria/tortas/31.jpg",
-    "../assets/pasteleria/tortas/32.jpg",
-    "../assets/pasteleria/tortas/33.jpg",
-    "../assets/pasteleria/tortas/34.jpg",
-    "../assets/pasteleria/tortas/35.jpg",
-    "../assets/pasteleria/tortas/36.jpg",
-    "../assets/pasteleria/tortas/37.jpg",
+    "https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400",
   ],
   muffins: [
     "../assets/pasteleria/tortas/1.jpg",
@@ -251,7 +215,7 @@ function getHeader() {
     class= "homeIcon flex flex-col items-center justify-center">
     <img     
     class="w-12"
-    src="./assets/home-svgrepo-com.svg"
+    src="./assets/icons/header/home-svgrepo-com.svg"
     alt=""
     />
   </div>

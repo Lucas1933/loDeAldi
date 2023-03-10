@@ -1051,7 +1051,7 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(41 35 35 / var(--tw-bg-opacity));
-  background-image: url('../assets/headerWaveR.svg');
+  background-image: url('../assets/backgrounds/headerWaveR.svg');
   background-size: contain;
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1073,7 +1073,7 @@ video {
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  background-image: url('../assets/pasteleria/headerWaveP.svg');
+  background-image: url('../assets/backgrounds/headerWaveP.svg');
   background-size: contain;
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1159,7 +1159,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../assets/wavesR.svg');
+  background-image: url('../assets/backgrounds/wavesR.svg');
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;
@@ -1171,7 +1171,7 @@ video {
   grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 0.25rem;
-  background-image: url('../assets/wavesR.svg');
+  background-image: url('../assets/backgrounds/wavesR.svg');
   background-repeat: repeat-y;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1225,7 +1225,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../assets/wavesP.svg');
+  background-image: url('../assets/backgrounds/wavesP.svg');
   background-repeat: repeat-y;
   padding-top: 3rem;
   text-align: center;
@@ -1296,7 +1296,7 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   overflow-x: hidden;
-  background-image: url('../assets/wavesP.svg');
+  background-image: url('../assets/backgrounds/wavesP.svg');
   background-repeat: repeat-y;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
@@ -1349,7 +1349,7 @@ video {
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  background-image: url('../assets/bgHome.svg');
+  background-image: url('../assets/backgrounds/bgHome.svg');
   background-size: contain;
 }
 

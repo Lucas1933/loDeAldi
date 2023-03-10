@@ -17,27 +17,76 @@ class Comida {
 }
 export function getMenu() {
   MENU.pizzas.push(
-    new Comida("Muzzarella", 1100, "", 1, "./assets/pizzas/1.jpeg", "pizza")
+    new Comida(
+      "Muzzarella",
+      1100,
+      "",
+      1,
+      "./assets/rotiseria/pizzas/1.jpeg",
+      "pizza"
+    )
   );
   MENU.pizzas.push(
-    new Comida("Jamon y Morron", 1400, "", 2, "./assets/pizzas/2.jpeg", "pizza")
+    new Comida(
+      "Jamon y Morron",
+      1400,
+      "",
+      2,
+      "./assets/rotiseria/pizzas/2.jpeg",
+      "pizza"
+    )
   );
   MENU.pizzas.push(
-    new Comida("Calabresa", 1400, "", 3, "./assets/pizzas/404.png", "pizza")
+    new Comida(
+      "Calabresa",
+      1400,
+      "",
+      3,
+      "./assets/rotiseria/pizzas/404.png",
+      "pizza"
+    )
   );
   MENU.pizzas.push(
-    new Comida("Choclo", 1400, "", 4, "./assets/pizzas/4.jpeg", "pizza")
+    new Comida(
+      "Choclo",
+      1400,
+      "",
+      4,
+      "./assets/rotiseria/pizzas/4.jpeg",
+      "pizza"
+    )
   );
 
   MENU.pizzas.push(
-    new Comida("Huevo Duro", 1400, "", 5, "./assets/pizzas/5.jpeg", "pizza")
+    new Comida(
+      "Huevo Duro",
+      1400,
+      "",
+      5,
+      "./assets/rotiseria/pizzas/5.jpeg",
+      "pizza"
+    )
   );
   MENU.pizzas.push(
-    new Comida("Huevo Frito", 1400, "", 6, "./assets/pizzas/6.jpeg", "pizza")
+    new Comida(
+      "Huevo Frito",
+      1400,
+      "",
+      6,
+      "./assets/rotiseria/pizzas/6.jpeg",
+      "pizza"
+    )
   );
 
   MENU.pizzas.push(
-    new Comida("Napolitana", 1400, "", 7, "./assets/pizzas/7.jpeg", "pizza")
+    new Comida(
+      "Napolitana",
+      1400,
+      "",
+      7,
+      "./assets/rotiseria/pizzas/7.jpeg",
+      "pizza"
+    )
   );
 
   MENU.hamburguesas.push(
@@ -46,7 +95,7 @@ export function getMenu() {
       750,
       "(1 Medallon de carne de 150g en pan de papa)",
       1,
-      "./assets/hamburguesas/404.png",
+      "./assets/rotiseria/hamburguesas/404.png",
       "hamburguesa"
     )
   );
@@ -56,7 +105,7 @@ export function getMenu() {
       950,
       "(Salsa de ketchup y cebolla, queso cheddar, 1 medallon de carne 150g en pan de papa)",
       2,
-      "./assets/hamburguesas/404.png",
+      "./assets/rotiseria/hamburguesas/404.png",
       "hamburguesa"
     )
   );
@@ -66,7 +115,7 @@ export function getMenu() {
       950,
       "(Lechuga, tomate, jamon,queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       3,
-      "./assets/hamburguesas/3.jpeg",
+      "./assets/rotiseria/hamburguesas/3.jpeg",
       "hamburguesa"
     )
   );
@@ -76,7 +125,7 @@ export function getMenu() {
       950,
       "(Panceta crocante, cebolla caramelizada, queso cheddar, 1 medallon de carne de 150g en pan de papa)",
       4,
-      "./assets/hamburguesas/4.png",
+      "./assets/rotiseria/hamburguesas/4.png",
       "hamburguesa"
     )
   );
@@ -86,13 +135,20 @@ export function getMenu() {
       950,
       "(Morron asado, cebolla caramelizada, queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       5,
-      "./assets/hamburguesas/5.jpeg",
+      "./assets/rotiseria/hamburguesas/5.jpeg",
       "hamburguesa"
     )
   );
 
   MENU.fritas.push(
-    new Comida("Fritas", 700, " ", 1, "./assets/fritas/404.png", "frita")
+    new Comida(
+      "Fritas",
+      700,
+      " ",
+      1,
+      "./assets/rotiseria/fritas/404.png",
+      "frita"
+    )
   );
   MENU.fritas.push(
     new Comida(
@@ -100,12 +156,19 @@ export function getMenu() {
       850,
       " ",
       2,
-      "./assets/fritas/2.jpeg",
+      "./assets/rotiseria/fritas/2.jpeg",
       "frita"
     )
   );
   MENU.fritas.push(
-    new Comida("Salsa Picante", 850, " ", 3, "./assets/fritas/404.png", "frita")
+    new Comida(
+      "Salsa Picante",
+      850,
+      " ",
+      3,
+      "./assets/rotiseria/fritas/404.png",
+      "frita"
+    )
   );
 
   return MENU;
