@@ -62,7 +62,13 @@ function getRotiseriaHome() {
   rotiseriaHome.innerHTML = `
     <div class="border-solid border-2 w-[70%] border-secondary-R" >Estamos abiertos!</div>
     
-    De jueves a domingo a partir de las 19:00hs hasta las 00:00hs`;
+     Jueves a domingo a partir de las 19:00hs hasta las 00:00hs
+    <div class="flex">
+
+    <a class="w-20 mt-4 animate-bounce" target="_blank" href="https://wa.me/1168963001"
+      ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+    /></a>
+  </div>`;
   return rotiseriaHome;
 }
 function getPasteleriaHome() {
@@ -71,22 +77,32 @@ function getPasteleriaHome() {
   pasteleriaHome.innerHTML = ` <div
   id="/pasteleria/tortas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('./assets/pasteleria/2.png')"
+  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 >
   <div><p>Tortas</p></div>
 </div>
 <div
   id="/pasteleria/muffins"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('./assets/pasteleria/1.png')"
+  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 >
   <div><p>Muffins</p></div>
 </div>
 <div
   id="/pasteleria/tartas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('./assets/pasteleria/tortas/1.jpg')"
-><div><p>Tartas</p></div></div>`;
+  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
+><div><p>Tartas</p></div>
+</div>
+<div
+  id="/pasteleria/tartas"
+  class="pasteleriaHomeDivs flex flex-col justify-end"
+  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
+><div><p>Tartas</p></div>
+</div>
+<a class="w-20 mt-4 animate-bounce fixed bottom-0 right-0" target="_blank" href="https://wa.me/1168963001"
+><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+/></a>`;
   return pasteleriaHome;
 }
 async function getGaleria(elemento) {
