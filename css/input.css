@@ -25,7 +25,7 @@
   }
   /* rotiseria */
   .rotiseriaHome {
-    @apply flex h-[100vh]  flex-col items-center justify-center  bg-wavesRotiseria text-center font-extrabold text-white;
+    @apply flex h-[100vh] flex-col  items-center justify-evenly bg-wavesRotiseria  py-16 text-center font-extrabold text-white;
   }
   .foodGrid {
     @apply grid

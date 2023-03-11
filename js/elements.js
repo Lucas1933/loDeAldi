@@ -60,15 +60,41 @@ function getRotiseriaHome() {
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
   rotiseriaHome.innerHTML = `
-    <div class="border-solid border-2 w-[70%] border-secondary-R" >Estamos abiertos!</div>
-    
-     Jueves a domingo a partir de las 19:00hs hasta las 00:00hs
-    <div class="flex">
-
-    <a class="w-20 mt-4 animate-bounce" target="_blank" href="https://wa.me/+541168963001"
-      ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
-    /></a>
-  </div>`;
+  <div class="flex w-[70%] items-center justify-center">
+  <img
+    class="w-14 animate-wiggleFast"
+    src="./assets/rotiseria/lamparitaOn.svg"
+    alt=""
+  />
+  <p class="text-center">Estamos Abiertos!</p>
+  <img
+    class="w-14 animate-wiggleFast"
+    src="./assets/rotiseria/lamparitaOn.svg"
+    alt=""
+  />
+</div>
+<div>
+  <iframe
+    class="w-52 border-2 border-solid border-secondary-R"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2502027044397!2d-58.815310822261345!3d-34.67363422657602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc951f43a6974d%3A0x6e91e3e3d0438454!2sLoDeAldi!5e0!3m2!1ses!2sar!4v1678540267066!5m2!1ses!2sar"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+<div class="flex flex-col items-center">
+  <img class="w-28" src="./assets/rotiseria/delivery.webp" alt="" />
+  <p>Contamos con delivery segun la zona, consultanos!</p>
+</div>
+<div class="flex">
+  <a
+    class="mt-4 w-20 animate-bounce"
+    target="_blank"
+    href="https://wa.me/+541168963001"
+    ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+  /></a>
+</div>
+<p>Jueves a domingo a partir de las 19:00hs hasta las 00:00hs</p>`;
   return rotiseriaHome;
 }
 function getPasteleriaHome() {
@@ -167,7 +193,7 @@ function getNavBar() {
           <button>
             <img
               id="/rotiseria/burger"
-              class="h-12 w-12"
+              class="h-10 w-10"
               src="../../assets/icons/navBarIcons/burgerIcon.svg"
               alt=""
             />
@@ -177,7 +203,7 @@ function getNavBar() {
           <button>
             <img
               id="/rotiseria/pizza"
-              class="h-12 w-12 "
+              class="h-10 w-10 "
               src="../../assets/icons/navBarIcons/pizzaIcon.svg"
               alt=""
             />
@@ -187,7 +213,7 @@ function getNavBar() {
           <button>
             <img
               id="/rotiseria/frita"
-              class="h-12 w-12"
+              class="h-10 w-10"
               src="../../assets/icons/navBarIcons/fritaIcon.svg"
               alt=""
             />
