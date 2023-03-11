@@ -49,7 +49,7 @@ function getHome() {
     ><img src="./assets/logos/facebook-svgrepo-com.svg" alt="" /></a
   ><a class="w-72" target="_blank" href="https://www.instagram.com/lodealdi_/"
     ><img src="./assets/logos/instagram-1-svgrepo-com.svg" alt="" /></a
-  ><a class="w-72" target="_blank" href="https://wa.me/1168963001"
+  ><a class="w-72" target="_blank" href="https://wa.me/+541168963001"
     ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
   /></a>
 </div>
@@ -65,7 +65,7 @@ function getRotiseriaHome() {
      Jueves a domingo a partir de las 19:00hs hasta las 00:00hs
     <div class="flex">
 
-    <a class="w-20 mt-4 animate-bounce" target="_blank" href="https://wa.me/1168963001"
+    <a class="w-20 mt-4 animate-bounce" target="_blank" href="https://wa.me/+541168963001"
       ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
     /></a>
   </div>`;
@@ -100,7 +100,7 @@ function getPasteleriaHome() {
   style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 ><div><p>Tartas</p></div>
 </div>
-<a class="w-20 mt-4 animate-bounce fixed bottom-0 right-0" target="_blank" href="https://wa.me/1168963001"
+<a class="w-20 mt-4 animate-bounce fixed bottom-0 right-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
 /></a>`;
   return pasteleriaHome;
