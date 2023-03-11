@@ -138,7 +138,10 @@ async function getGaleria(elemento) {
   modal.id = "modalCarousel";
   modal.classList.add("pasteleriaGaleriaModal", "hidden");
   modal.innerHTML = `
-<div class="pasteleriaGaleriaCarousel">
+  <div class="flex justify-end w-full"><img id="closeButton" class="w-10 mr-10 z-20" src="./assets/pasteleria/close-circle-svgrepo-com.svg" alt=""></div>
+<div class="pasteleriaGaleriaCarousel flex justify-end items-start">
+
+
 </div>
 <button id="next" class="absolute right-0 bottom-0 z-10 h-full w-10">
 <img

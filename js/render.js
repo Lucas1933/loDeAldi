@@ -174,6 +174,7 @@ export const RENDER = {
     let urls = [];
     let nextBtn = document.getElementById("next");
     let prevBtn = document.getElementById("prev");
+    let closeButton = document.getElementById("closeButton");
     for (let i = 0; i < galeriaDivs.length; i++) {
       galeriaDivs[i].addEventListener("click", (event) => {
         let index = galeriaDivs.indexOf(event.target);
@@ -211,6 +212,10 @@ export const RENDER = {
         urls = [];
         modalCarousel.classList.add("hidden");
       }
+    });
+    closeButton.addEventListener("click", (event) => {
+      urls = [];
+      modalCarousel.classList.add("hidden");
     });
   },
 };
