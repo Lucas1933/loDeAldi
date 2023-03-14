@@ -16,8 +16,9 @@ export const RENDER = {
   },
 
   setHomeListeners: () => {
-    const rotiseriaBtn = document.getElementById("/rotiseria");
-    const pasteleriaBtn = document.getElementById("/pasteleria");
+    const rotiseriaBtn = document.querySelector('[href="/rotiseria"]');
+    const pasteleriaBtn = document.querySelector('[href="/pasteleria"]');
+
     rotiseriaBtn.addEventListener("click", (event) => {
       urlRoute(event);
     });
@@ -62,52 +63,30 @@ export const RENDER = {
   },
   setHeaderListeners: () => {
     function setListeners() {
-      let homeIcon = document.getElementsByClassName("homeIcon")[0];
-      let logo = document.getElementById("/");
-      let switchR = document.getElementsByClassName("slideSwitchR")[0];
-      let switchP = document.getElementsByClassName("slideSwitchP")[0];
+      let logo = document.querySelector('[href="/"]');
+      let switchR = document.querySelector('[class="slideSwitchR"]');
+      let switchP = document.querySelector('[class="slideSwitchP"]');
+      let header = RENDER.currentHeader().firstElementChild;
+
       logo.addEventListener("click", (event) => {
         urlRoute(event);
       });
-      homeIcon.addEventListener("click", (event) => {
+      switchR.addEventListener("click", (event) => {
         urlRoute(event);
-        try {
-          RENDER.resetNavBar();
-        } catch {}
-      });
-      if (window.location.pathname.includes("/rotiseria")) {
-        homeIcon.id = "/rotiseria";
-        switchR.classList.remove("hidden");
-        switchR.addEventListener("click", (event) => {
-          urlRoute(event);
-          switchR.classList.add("hidden");
-          switchP.classList.remove("hidden");
-          homeIcon.id = "/pasteleria";
-        });
-        switchP.addEventListener("click", (event) => {
-          urlRoute(event);
-          switchR.classList.remove("hidden");
-          switchP.classList.add("hidden");
-          homeIcon.id = "/rotiseria";
-          RENDER.resetNavBar();
-        });
-        switchP.classList.add("hidden");
-      } else {
-        homeIcon.id = "/pasteleria";
-        switchR.addEventListener("click", (event) => {
-          urlRoute(event);
-          switchR.classList.add("hidden");
-          switchP.classList.remove("hidden");
-          homeIcon.id = "/pasteleria";
-        });
-        switchR.classList.add("hidden");
         switchP.classList.remove("hidden");
-        switchP.addEventListener("click", (event) => {
-          urlRoute(event);
-          switchR.classList.remove("hidden");
-          switchP.classList.add("hidden");
-          homeIcon.id = "/rotiseria";
-        });
+        switchR.classList.add("hidden");
+      });
+      switchP.addEventListener("click", (event) => {
+        urlRoute(event);
+        switchR.classList.remove("hidden");
+        switchP.classList.add("hidden");
+      });
+      switchP.classList.add("hidden");
+      switchR.classList.add("hidden");
+      if (header.classList.contains("headerRotiseria")) {
+        switchR.classList.remove("hidden");
+      } else {
+        switchP.classList.remove("hidden");
       }
     }
 
@@ -117,22 +96,19 @@ export const RENDER = {
     function setNavBtnsBgColor(btnTriggerEvent, btnsDivs) {
       btnsDivs.forEach((cadaBtnDiv) => {
         cadaBtnDiv.classList.remove("bg-secondary-R");
-
-        cadaBtnDiv.firstElementChild.firstElementChild.classList.remove(
-          "animate-bounce"
-        );
+        cadaBtnDiv.classList.add("mt-2");
+        cadaBtnDiv.firstElementChild.classList.remove("animate-bounce");
       });
 
-      btnTriggerEvent.target.parentNode.parentNode.classList.add(
-        "bg-secondary-R"
-      );
-      btnTriggerEvent.target.parentNode.parentNode.firstElementChild.firstElementChild.classList.add(
-        "animate-bounce"
-      );
+      btnTriggerEvent.currentTarget.parentNode.classList.add("bg-secondary-R");
+      btnTriggerEvent.currentTarget.parentNode.classList.remove("mt-2");
+      btnTriggerEvent.currentTarget.classList.add("animate-bounce");
     }
     function setNavBtnsListeners() {
       let btnsDivs = Array.from(document.getElementsByClassName("navBarIcons"));
       let btns = [];
+      btnsDivs[3].classList.add("bg-secondary-R");
+      btnsDivs[3].firstElementChild.classList.add("animate-bounce");
       btnsDivs.forEach((cadaDiv) => {
         btns.push(cadaDiv.firstElementChild);
       });
@@ -144,6 +120,7 @@ export const RENDER = {
         });
       });
     }
+
     setNavBtnsListeners();
   },
   setFoodCardsWiggleAnimation: () => {

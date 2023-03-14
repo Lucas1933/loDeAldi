@@ -26,23 +26,24 @@ function getHome() {
   let home = document.createElement("main");
   home.classList.add("home");
   home.innerHTML = `
+  <div><img src="./assets/icons/header/logo.png" alt=""></div>
     <div class="flex h-[50%] w-full items-center justify-evenly">
-    <button
-      id="/rotiseria"
+    <a
+      href="/rotiseria"
       class="mr-8 rounded-lg border-4 border-solid border-secondary-R bg-black py-1 px-1 w-20 font-semibold text-white "
     >
-      <div class="">
+      
         <img src="./assets/icons/header/rotiseria.svg" alt="" />
-      </div>
+      
       <p>Rotiseria</p>
-    </button>
-    <button
-      id="/pasteleria"
+    </a>
+    <a
+      href="/pasteleria"
       class="rounded-lg  w-20  border-4 border-solid border-secondary-P bg-primary-P font-semibold text-white"
     >
-      <div><img src="./assets/icons/header/pasteleria.svg" alt="" /></div>
+      <img src="./assets/icons/header/pasteleria.svg" alt="" />
       <p>Pasteleria</p>
-    </button>
+    </a>
   </div>
   <div class="flex">
   <a class="w-72" target="_blank" href="https://www.facebook.com/profile.php?id=100064257603226"
@@ -100,32 +101,32 @@ function getRotiseriaHome() {
 function getPasteleriaHome() {
   let pasteleriaHome = document.createElement("main");
   pasteleriaHome.classList.add("pasteleriaHome");
-  pasteleriaHome.innerHTML = ` <div
-  id="/pasteleria/tortas"
+  pasteleriaHome.innerHTML = ` <a
+  href="/pasteleria/tortas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
   style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 >
   <div><p>Tortas</p></div>
-</div>
-<div
-  id="/pasteleria/muffins"
+</a>
+<a
+  href="/pasteleria/muffins"
   class="pasteleriaHomeDivs flex flex-col justify-end"
   style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 >
   <div><p>Muffins</p></div>
-</div>
-<div
-  id="/pasteleria/tartas"
+</a>
+<a
+  href="/pasteleria/tartas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
   style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 ><div><p>Tartas</p></div>
-</div>
-<div
-  id="/pasteleria/tartas"
+</a>
+<a
+  href="/pasteleria/tartas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
   style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 ><div><p>Tartas</p></div>
-</div>
+</a>
 <a class="w-20 mt-4 animate-bounce fixed bottom-0 right-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
 /></a>`;
@@ -186,56 +187,57 @@ class="absolute left-0 bottom-0 z-10 h-full w-10  rotate-180"
 }
 function getNavBar() {
   let navBar = document.createElement("nav");
-  navBar.classList.add("navBar");
+  navBar.classList.add("flex", "justify-center");
   navBar.id = "nav";
   navBar.innerHTML = ` 
-        <div class="navBarIcons">
-          <button>
-            <img
-              id="/rotiseria/burger"
-              class="h-10 w-10"
-              src="../../assets/icons/navBarIcons/burgerIcon.svg"
-              alt=""
-            />
-          </button>
-        </div>
-        <div class="navBarIcons">
-          <button>
-            <img
-              id="/rotiseria/pizza"
-              class="h-10 w-10 "
-              src="../../assets/icons/navBarIcons/pizzaIcon.svg"
-              alt=""
-            />
-          </button>
-        </div>
-        <div class="navBarIcons">
-          <button>
-            <img
-              id="/rotiseria/frita"
-              class="h-10 w-10"
-              src="../../assets/icons/navBarIcons/fritaIcon.svg"
-              alt=""
-            />
-          </button>
-        </div>
+  <div class="navBar flex-row-reverse">
+  <div class="flex grow justify-center">
+    <a class="navBarIcons" href="/rotiseria/burger">
+    
+      <img
+      class=""
+        
+        src="../../assets/icons/navBarIcons/burgerIcon.svg"
+        alt=""
+      />
+    </a>
+    <a class="navBarIcons" href="/rotiseria/pizza" >
+      <img
+      class=""
+        
+        src="../../assets/icons/navBarIcons/pizzaIcon.svg"
+        alt=""
+      />
+    </a>
+    <a class="navBarIcons" href="/rotiseria/frita">
+      <img
+      class=""
+        
+        src="../../assets/icons/navBarIcons/fritaIcon.svg"
+        alt=""
+      />
+    </a>
+    <a class="navBarIcons" href="/rotiseria">
+      <img class="" src="./assets/icons/header/home-svgrepo-com.svg" alt="" />
+    </a>
+  </div>
+</div>
       `;
   return navBar;
 }
 function getHeader() {
   let header = document.createElement("header");
   header.innerHTML = `<div class="headerRotiseria">
-    <div class="flex items-center justify-center">
+    <a class="flex items-center justify-center" href="/">
       <img
-        id="/"
         class="w-36"
         src="./assets/icons/header/logo.png"
         alt=""
       />
-    </div>
+    </a>
     <div class="flex grow justify-evenly items-center py-1" id="switchContainer">
-         <div
-         id="/pasteleria"
+         <a
+         href="/pasteleria"
       class="slideSwitchR"
       
     >
@@ -250,11 +252,12 @@ function getHeader() {
         />
       </div>
       <p class="block text-white px-3">Rotiseria</p>
-    </div>
+    </a>
 
-      <div
+      <a
+      href="/rotiseria"
         class="slideSwitchP"
-        id="/rotiseria"
+        
       >
         <div
           class="  animate-slide flex w-12 justify-center rounded-full border-2 border-solid border-pink-900 bg-[#5a1760]"
@@ -268,16 +271,8 @@ function getHeader() {
         </div>
   
         <p class="text-pink-200 px-2">Pasteleria</p>
-      </div>
+      </a>
     </div>
-    <div 
-    class= "homeIcon flex flex-col items-center justify-center">
-    <img     
-    class="w-12"
-    src="./assets/icons/header/home-svgrepo-com.svg"
-    alt=""
-    />
-  </div>
   </div>`;
   return header;
 }

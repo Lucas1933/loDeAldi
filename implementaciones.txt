@@ -7,3 +7,5 @@ que los botones de rotiseria y pasteleria sean uno solo similar al dark mode swi
 
 calculador de costo de envio por ubicacion de google maps 
 al mandar un wsp usando el icono de la app se envia la ubicacion (previamente permitida por el usario)
+
+menu de vuelta atras en cada seccion, home que solo regrese al home, home de cada seccion en la parte baja de la pantalla
