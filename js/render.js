@@ -129,6 +129,13 @@ export const RENDER = {
 
     setNavBtnsListeners();
   },
+  setNavPasteleriaListeners: () => {
+    let pasteleriaHomeButton =
+      RENDER.currentNavBar().firstElementChild.firstElementChild;
+    pasteleriaHomeButton.addEventListener("click", (event) => {
+      urlRoute(event);
+    });
+  },
   setFoodCardsWiggleAnimation: () => {
     for (let i = 0; i < RENDER.currentMain().children.length; i++) {
       RENDER.currentMain().children[i].addEventListener("animationend", () => {

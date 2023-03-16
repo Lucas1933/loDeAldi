@@ -5,6 +5,7 @@ const MENU = get_Menu();
 export const ELEMENT = {
   root: document.getElementById("index"),
   navBar: getNavBar(),
+  navBarPasteleria: getNavBarPasteleria(),
   header: getHeader(),
   home: getHome(),
   rotiseriaHome: getRotiseriaHome(),
@@ -129,7 +130,9 @@ function getPasteleriaHome() {
 </a>
 <a class="w-20 mt-4 animate-bounce fixed bottom-0 right-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
-/></a>`;
+/></a>
+`;
+
   return pasteleriaHome;
 }
 async function getGaleria(elemento) {
@@ -182,7 +185,9 @@ class="absolute left-0 bottom-0 z-10 h-full w-10  rotate-180"
 <img src="./assets/pasteleria/arrow-right-svgrepo-com.svg" alt="" />
 </button>
 `;
+
   main.appendChild(modal);
+
   return main;
 }
 function getNavBar() {
@@ -224,6 +229,20 @@ function getNavBar() {
 </div>
       `;
   return navBar;
+}
+function getNavBarPasteleria() {
+  let nav = document.createElement("nav");
+  nav.innerHTML = `<div class="fixed-bottom flex w-full justify-end">
+  <a
+    class="mr-10 rounded-lg rounded-b-none border-x-2 border-t-4 border-white bg-primary-P"
+    href="/pasteleria"
+    ><img
+      class="w-14"
+      src="./assets/icons/header/home-svgrepo-com.svg"
+      alt=""
+  /></a>
+  </div>`;
+  return nav;
 }
 function getHeader() {
   let header = document.createElement("header");
