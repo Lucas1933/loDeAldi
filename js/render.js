@@ -93,30 +93,27 @@ export const RENDER = {
     setListeners();
   },
   setNavBtnsListeners: () => {
-    function setNavBtnsBgColor(btnTriggerEvent, btnsDivs) {
-      btnsDivs.forEach((cadaBtnDiv) => {
-        cadaBtnDiv.classList.remove("bg-secondary-R");
-        cadaBtnDiv.classList.add("mt-2");
-        cadaBtnDiv.firstElementChild.classList.remove("animate-bounce");
+    function setNavBtnsBgColor(anchorBtnPressed, anchorBtns) {
+      anchorBtns.forEach((cadaBtn) => {
+        cadaBtn.classList.remove("bg-secondary-R");
+        cadaBtn.classList.add("mt-2");
+        cadaBtn.firstElementChild.classList.remove("animate-bounce");
       });
 
-      btnTriggerEvent.currentTarget.parentNode.classList.add("bg-secondary-R");
-      btnTriggerEvent.currentTarget.parentNode.classList.remove("mt-2");
-      btnTriggerEvent.currentTarget.classList.add("animate-bounce");
+      anchorBtnPressed.classList.add("bg-secondary-R");
+      anchorBtnPressed.classList.remove("mt-2");
+      anchorBtnPressed.firstElementChild.classList.add("animate-bounce");
     }
     function setNavBtnsListeners() {
-      let btnsDivs = Array.from(document.getElementsByClassName("navBarIcons"));
-      let btns = [];
-      btnsDivs[3].classList.add("bg-secondary-R");
-      btnsDivs[3].firstElementChild.classList.add("animate-bounce");
-      btnsDivs.forEach((cadaDiv) => {
-        btns.push(cadaDiv.firstElementChild);
-      });
-
-      btns.forEach((cadaBtn) => {
-        cadaBtn.addEventListener("click", (btnTriggerEvent) => {
-          setNavBtnsBgColor(btnTriggerEvent, btnsDivs);
-          urlRoute(btnTriggerEvent);
+      let anchorBtns = Array.from(
+        document.getElementsByClassName("navBarIcons")
+      );
+      anchorBtns[3].classList.add("bg-secondary-R");
+      anchorBtns[3].firstElementChild.classList.add("animate-bounce");
+      anchorBtns.forEach((cadaBtn) => {
+        cadaBtn.addEventListener("click", (anchorBtnPressed) => {
+          urlRoute(anchorBtnPressed);
+          setNavBtnsBgColor(anchorBtnPressed.currentTarget, anchorBtns);
         });
       });
     }
