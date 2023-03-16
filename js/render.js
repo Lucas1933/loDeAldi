@@ -93,6 +93,16 @@ export const RENDER = {
     setListeners();
   },
   setNavBtnsListeners: () => {
+    function resetNavBtns(anchorBtns) {
+      anchorBtns.forEach((cadaBtn) => {
+        cadaBtn.classList.remove("bg-secondary-R");
+        cadaBtn.classList.add("mt-2");
+        cadaBtn.firstElementChild.classList.remove("animate-bounce");
+      });
+      anchorBtns[3].classList.remove("mt-2");
+      anchorBtns[3].classList.add("bg-secondary-R");
+      anchorBtns[3].firstElementChild.classList.add("animate-bounce");
+    }
     function setNavBtnsBgColor(anchorBtnPressed, anchorBtns) {
       anchorBtns.forEach((cadaBtn) => {
         cadaBtn.classList.remove("bg-secondary-R");
@@ -108,8 +118,7 @@ export const RENDER = {
       let anchorBtns = Array.from(
         document.getElementsByClassName("navBarIcons")
       );
-      anchorBtns[3].classList.add("bg-secondary-R");
-      anchorBtns[3].firstElementChild.classList.add("animate-bounce");
+      resetNavBtns(anchorBtns);
       anchorBtns.forEach((cadaBtn) => {
         cadaBtn.addEventListener("click", (anchorBtnPressed) => {
           urlRoute(anchorBtnPressed);
@@ -127,16 +136,7 @@ export const RENDER = {
       });
     }
   },
-  resetNavBar: () => {
-    let icons = [];
-    icons.push(document.getElementById("/rotiseria/pizza"));
-    icons.push(document.getElementById("/rotiseria/burger"));
-    icons.push(document.getElementById("/rotiseria/frita"));
-    icons.forEach((cadaIcono) => {
-      cadaIcono.classList.remove("animate-bounce");
-      cadaIcono.parentElement.parentElement.classList.remove("bg-secondary-R");
-    });
-  },
+
   setGaleria: () => {
     let galeriaDivs = Array.from(
       document.getElementsByClassName("pasteleriaGaleriaDivs")
