@@ -81,6 +81,7 @@ function displayPasteleria() {
     RENDER.currentMain().replaceWith(ELEMENT.pasteleriaHome);
     RENDER.currentMain().appendChild(ELEMENT.navBarPasteleria);
     RENDER.setPasteleriaHomeListeners();
+    ELEMENT.root.classList.add("flex", "flex-col");
   } else {
     RENDER.currentMain().replaceWith(
       ELEMENT.pasteleria[window.location.pathname]

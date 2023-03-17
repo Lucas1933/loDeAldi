@@ -1219,13 +1219,13 @@ video {
 
 .pasteleriaHome {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url('../assets/backgrounds/wavesP.svg');
+  background-size: cover;
   background-repeat: repeat-y;
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;
@@ -1236,7 +1236,7 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: flex;
-  height: 70vh;
+  height: 40vh;
   width: 35vh;
 }
 
@@ -1391,16 +1391,6 @@ video {
   z-index: 50;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1414,6 +1404,10 @@ video {
   margin-right: 2rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -1422,20 +1416,12 @@ video {
   margin-top: 1rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
+.mr-6 {
+  margin-right: 1.5rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -1523,10 +1509,6 @@ video {
   width: 4rem;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .max-w-sm {
   max-width: 24rem;
 }
@@ -1591,6 +1573,20 @@ video {
   animation: wiggleFast 1s  infinite;
 }
 
+@keyframes sideToSide {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+
+  0% {
+    transform: translateX(40px);
+  }
+}
+
+.animate-sideToSide {
+  animation: sideToSide 1s ease-in-out;
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -1643,6 +1639,20 @@ video {
 
 .animate-zoomInOut {
   animation: zoomInOut 1s ease-in-out;
+}
+
+@keyframes sideToSideReverse {
+  0%, 100% {
+    transform: translateX(40px);
+  }
+
+  0% {
+    transform: translateX(0px);
+  }
+}
+
+.animate-sideToSideReverse {
+  animation: sideToSideReverse 1s ease-in-out;
 }
 
 @keyframes wiggle {
@@ -1845,6 +1855,10 @@ video {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-center {

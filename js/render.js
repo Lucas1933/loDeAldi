@@ -125,6 +125,16 @@ export const RENDER = {
           setNavBtnsBgColor(anchorBtnPressed.currentTarget, anchorBtns);
         });
       });
+      let delivery = document.getElementById("delivery");
+      delivery.addEventListener("animationend", () => {
+        if (delivery.classList.contains("animate-sideToSide")) {
+          delivery.classList.remove("animate-sideToSide");
+          delivery.classList.add("animate-sideToSideReverse");
+        } else {
+          delivery.classList.remove("animate-sideToSideReverse");
+          delivery.classList.add("animate-sideToSide");
+        }
+      });
     }
 
     setNavBtnsListeners();

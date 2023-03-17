@@ -91,14 +91,14 @@ function getRotiseriaHome() {
 <div class="flex flex-col items-center justify-center my-8 ">
 <div class ="flex flex-row-reverse justify-center items-center">  
 <a
-class=" w-20 "
+class=" w-20 pl-4 z-10"
 target="_blank"
 href="https://wa.me/+541168963001"
 >
 <img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
 />
 </a>
-<img class="w-28 mr-4" src="./assets/rotiseria/delivery.webp" alt="" />
+<img id="delivery" class="w-28 mr-4 animate-sideToSide" src="./assets/rotiseria/delivery.webp" alt="" />
 </div>
   
   <p>Contamos con delivery segun la zona, consultanos!</p>
@@ -113,28 +113,28 @@ function getPasteleriaHome() {
   pasteleriaHome.innerHTML = ` <a
   href="/pasteleria/tortas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
+  style="background-image: url('https://lh3.googleusercontent.com/byYEUS8lEt_5e_Qdf3lJ_-mSGGOmACFSr69y8sLgRBn2IxcAnghd1pWWog9DapuZRK0z6MS8SlFXKA0Ft9Ye66TYtEgpZ7XcR4nvrl7iv0ndKaJB1oDRt-qg9zf_6bWF9YQ0FipWDQ=w2400')"
 >
   <div><p>Tortas</p></div>
 </a>
 <a
   href="/pasteleria/muffins"
-  class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
+  class="pasteleriaHomeDivs  flex flex-col justify-end"
+  style="background-image: url('https://lh3.googleusercontent.com/OOJG2wkvVtHl3PPd6e1MeFzibCIBEGkNL4mMpOt43VMmHaxMkTRMw03NZNm5q01sDMj4MTer369qYDpdrKo7HM5mvcblhvwWvJnHh1X-uu_HjnguESQsi1tLF0PHPdCAkysh3iMEIQ=w2400')"
 >
   <div><p>Muffins</p></div>
 </a>
 <a
   href="/pasteleria/tartas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
+  style="background-image: url('https://lh3.googleusercontent.com/O3EzwysJu8QTvW1Je30Irr8DBOATdn_WMcskw6opIWBx3H6-gxGmeCsHCaWKsRNRHUl7D-pnVdGWR9oTOXyb5hG17jCqGCADlbdtADb59FigaeNS5lUum2cP9dypHGwGOFvx7TESDg=w2400')"
 ><div><p>Tartas</p></div>
 </a>
 <a
-  href="/pasteleria/tartas"
+  href="/pasteleria/cosas-dulces"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
-><div><p>Tartas</p></div>
+  style="background-image: url('./assets/pasteleria/mas.webp')"
+><div><p>Postres, alfajores y mas!</p></div>
 </a>
 <a class="w-12 mt-4 animate-bounce fixed top-14 right-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
@@ -242,7 +242,7 @@ function getNavBarPasteleria() {
   let nav = document.createElement("nav");
   nav.innerHTML = `<div class="fixed-bottom flex w-full justify-end">
   <a
-    class="mr-10 rounded-lg rounded-b-none border-x-2 border-t-4 border-[#FA7268] bg-[#001220]"
+    class="mr-6 rounded-lg rounded-b-none border-x-2 border-t-4 border-[#FA7268] bg-[#001220]"
     href="/pasteleria"
     ><img
       class="w-14"

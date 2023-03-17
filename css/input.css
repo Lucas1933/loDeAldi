@@ -43,10 +43,10 @@
   }
   /* pasteleria */
   .pasteleriaHome {
-    @apply flex h-[100vh] flex-col items-center justify-center bg-wavesPasteleria  bg-repeat-y pt-12 text-center font-extrabold text-white;
+    @apply flex flex-col items-center justify-center bg-wavesPasteleria bg-cover bg-repeat-y  pt-14  text-center font-extrabold text-white;
   }
   .pasteleriaHomeDivs {
-    @apply my-4 flex h-[70vh] w-[35vh] animate-wiggle flex-col  justify-evenly   justify-self-center rounded-lg border-2 border-solid border-secondary-P bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-P;
+    @apply my-4 flex h-[40vh] w-[35vh] animate-wiggle flex-col justify-evenly  justify-self-center   rounded-lg border-2 border-solid border-secondary-P bg-cover bg-center bg-no-repeat  shadow-lg shadow-secondary-P;
   }
   .pasteleriaGaleriaModal {
     @apply fixed top-0 right-0 left-0 bottom-0 z-[51] flex h-[100vh]  w-full flex-col items-center justify-center overflow-x-hidden bg-black bg-opacity-50;
