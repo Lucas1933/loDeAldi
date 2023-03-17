@@ -62,20 +62,22 @@ function getRotiseriaHome() {
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
   rotiseriaHome.innerHTML = `
-  <div class="flex w-[70%] items-center justify-center">
-  <img
-    class="w-14 animate-wiggleFast"
-    src="./assets/rotiseria/lamparitaOn.svg"
-    alt=""
-  />
-  <p class="text-center">Estamos Abiertos!</p>
-  <img
-    class="w-14 animate-wiggleFast"
-    src="./assets/rotiseria/lamparitaOn.svg"
-    alt=""
-  />
-</div>
-<div>
+  <div class="flex w-[70%] flex-col items-center justify-evenly">
+  <div class="flex justify-center items-center mb-4">  <img
+  class="w-14 animate-wiggleFast"
+  src="./assets/rotiseria/lamparitaOn.svg"
+  alt=""
+/>
+<p class="text-center">Estamos Abiertos!</p>
+<img
+  class="w-14 animate-wiggleFast"
+  src="./assets/rotiseria/lamparitaOn.svg"
+  alt=""
+/></div>
+  <div class = "flex mb-4"> <img class = "w-8 pr-2" src="./assets/rotiseria/calendar-svgrepo-com.svg"> <p>Jueves a domingo </p></div>
+  <div class = "flex mb-4"> <img class = "w-8 pr-2" src="./assets/rotiseria/clock-svgrepo-com.svg"> <p>19:00hs - 00:00hs </p></div>
+  <div class = "flex mb-4 justify-center items-center"> <img class = "w-14 pr-2" src="./assets/rotiseria/gps-location-map-svgrepo-com.svg"> <p>Hipolito Yirigoyen <br> y <br> San Juan</p></div>
+  <div>
   <iframe
     class="w-52 border-2 border-solid border-secondary-R"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2502027044397!2d-58.815310822261345!3d-34.67363422657602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc951f43a6974d%3A0x6e91e3e3d0438454!2sLoDeAldi!5e0!3m2!1ses!2sar!4v1678540267066!5m2!1ses!2sar"
@@ -84,19 +86,25 @@ function getRotiseriaHome() {
     referrerpolicy="no-referrer-when-downgrade"
   ></iframe>
 </div>
-<div class="flex flex-col items-center">
-  <img class="w-28" src="./assets/rotiseria/delivery.webp" alt="" />
+</div>
+
+<div class="flex flex-col items-center justify-center my-8 ">
+<div class ="flex flex-row-reverse justify-center items-center">  
+<a
+class=" w-20 "
+target="_blank"
+href="https://wa.me/+541168963001"
+>
+<img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+/>
+</a>
+<img class="w-28 mr-4" src="./assets/rotiseria/delivery.webp" alt="" />
+</div>
+  
   <p>Contamos con delivery segun la zona, consultanos!</p>
 </div>
-<div class="flex">
-  <a
-    class="mt-4 w-20 animate-bounce"
-    target="_blank"
-    href="https://wa.me/+541168963001"
-    ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
-  /></a>
-</div>
-<p>Jueves a domingo a partir de las 19:00hs hasta las 00:00hs</p>`;
+
+`;
   return rotiseriaHome;
 }
 function getPasteleriaHome() {
@@ -128,7 +136,7 @@ function getPasteleriaHome() {
   style="background-image: url('https://lh3.googleusercontent.com/LVAmvjvtbbIiy-L4-YDrxQOHexTFs4HsXRa2RRDTP_WMpwG8t_NRs2tdHaIvQFtQLZRB1izSMA0nt9tb3eI1FtI7GT5p18Q0KVKf7gXMQ872eQ2gINEbdWHqqWzXosS1k-S5EGt5=w2400')"
 ><div><p>Tartas</p></div>
 </a>
-<a class="w-20 mt-4 animate-bounce fixed bottom-0 right-0" target="_blank" href="https://wa.me/+541168963001"
+<a class="w-12 mt-4 animate-bounce fixed top-14 right-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
 /></a>
 `;
@@ -234,7 +242,7 @@ function getNavBarPasteleria() {
   let nav = document.createElement("nav");
   nav.innerHTML = `<div class="fixed-bottom flex w-full justify-end">
   <a
-    class="mr-10 rounded-lg rounded-b-none border-x-2 border-t-4 border-white bg-primary-P"
+    class="mr-10 rounded-lg rounded-b-none border-x-2 border-t-4 border-[#FA7268] bg-[#001220]"
     href="/pasteleria"
     ><img
       class="w-14"
@@ -261,7 +269,7 @@ function getHeader() {
       
     >
       <div
-        class="flex w-12 bg-primary-R animate-slideR justify-center rounded-full border-4 border-solid border-secondary-R"
+        class="flex w-12 bg-black animate-slideR justify-center rounded-full border-4 border-solid border-[#002233]"
       >
         <img
         
@@ -279,7 +287,7 @@ function getHeader() {
         
       >
         <div
-          class="  animate-slide flex w-12 justify-center rounded-full border-2 border-solid border-pink-900 bg-[#5a1760]"
+          class="  animate-slide flex w-12 justify-center rounded-full border-2 border-solid border-[#FA7268] bg-[#001220]"
         >
           <img
            
