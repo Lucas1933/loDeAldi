@@ -31,7 +31,7 @@ function getHome() {
     <div class="flex h-[50%] w-full items-center justify-evenly">
     <a
       href="/rotiseria"
-      class="mr-8 rounded-lg border-4 border-solid border-secondary-R bg-black py-1 px-1 w-20 font-semibold text-white "
+      class="rotiseriaBtn"
     >
       
         <img src="./assets/icons/header/rotiseria.svg" alt="" />
@@ -40,7 +40,7 @@ function getHome() {
     </a>
     <a
       href="/pasteleria"
-      class="rounded-lg  w-20  border-4 border-solid border-secondary-P bg-primary-P font-semibold text-white"
+      class="pasteleriaBtn"
     >
       <img src="./assets/icons/header/pasteleria.svg" alt="" />
       <p>Pasteleria</p>
@@ -136,7 +136,7 @@ function getPasteleriaHome() {
   style="background-image: url('./assets/pasteleria/mas.webp')"
 ><div><p>Postres, alfajores y mas!</p></div>
 </a>
-<a class="w-12 mt-4 animate-bounce fixed top-14 right-0" target="_blank" href="https://wa.me/+541168963001"
+<a class="w-16  mb-10 animate-bounce fixed bottom-0 left-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
 /></a>
 `;
@@ -201,7 +201,7 @@ class="absolute left-0 bottom-0 z-10 h-full w-10  rotate-180"
 function getNavBar() {
   let navBar = document.createElement("nav");
   navBar.classList.add("flex", "justify-center");
-  navBar.id = "nav";
+  navBar.id = "navRotiseria";
   navBar.innerHTML = ` 
   <div class="navBar flex-row-reverse">
   <div class="flex grow justify-center">
@@ -231,7 +231,7 @@ function getNavBar() {
       />
     </a>
     <a class="navBarIcons" href="/rotiseria">
-      <img class="" src="./assets/icons/header/home-svgrepo-com.svg" alt="" />
+    <img class="" src="./assets/icons/header/home-svgrepo-com.svg" alt="" />
     </a>
   </div>
 </div>
@@ -240,9 +240,10 @@ function getNavBar() {
 }
 function getNavBarPasteleria() {
   let nav = document.createElement("nav");
+  nav.id = "navPasteleria";
   nav.innerHTML = `<div class="fixed-bottom flex w-full justify-end">
   <a
-    class="mr-6 rounded-lg rounded-b-none border-x-2 border-t-4 border-[#FA7268] bg-[#001220]"
+    class="mr-6 rounded-lg  rounded-b-none border-x-2 border-t-4 border-[#FA7268] bg-[#001220]"
     href="/pasteleria"
     ><img
       class="w-14"
@@ -349,4 +350,6 @@ function getMenu(comidaArray) {
     return main;
   }
   return getNewMain(comidaArray);
+}
+{
 }

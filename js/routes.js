@@ -79,7 +79,6 @@ function displayRotiseria() {
 function displayPasteleria() {
   if (window.location.pathname === "/pasteleria") {
     RENDER.currentMain().replaceWith(ELEMENT.pasteleriaHome);
-    RENDER.currentMain().appendChild(ELEMENT.navBarPasteleria);
     RENDER.setPasteleriaHomeListeners();
     ELEMENT.root.classList.add("flex", "flex-col");
   } else {
@@ -111,18 +110,98 @@ function displayHeader() {
   }
 }
 function displayNavBar() {
-  let navs = Array.from(document.getElementsByTagName("nav"));
-  if (navs.length != 0) {
-    navs.forEach((cadaNav) => {
-      cadaNav.remove();
-    });
-  }
-
-  if (window.location.pathname.includes("/pasteleria")) {
-    ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
-    RENDER.setNavPasteleriaListeners();
-  } else {
-    ELEMENT.root.appendChild(ELEMENT.navBar);
-    RENDER.setNavBtnsListeners();
-  }
+  let nav = {
+    currentNav: RENDER.currentNavBar(),
+    displayNav: {
+      "/pasteleria": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          } else if (nav.currentNav.id != "navPasteleria") {
+            nav.currentNav.replaceWith(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          }
+        },
+      },
+      "/pasteleria/tortas": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          } else if (nav.currentNav.id != "navPasteleria") {
+            nav.currentNav.replaceWith(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          }
+        },
+      },
+      "/pasteleria/muffins": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          } else if (nav.currentNav.id != "navPasteleria") {
+            nav.currentNav.replaceWith(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          }
+        },
+      },
+      "/pasteleria/tartas": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          } else if (nav.currentNav.id != "navPasteleria") {
+            nav.currentNav.replaceWith(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          }
+        },
+      },
+      "/rotiseria": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          } else if (nav.currentNav.id != "navRotiseria") {
+            nav.currentNav.replaceWith(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          }
+        },
+      },
+      "/rotiseria/pizza": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          } else if (nav.currentNav.id != "navRotiseria") {
+            nav.currentNav.replaceWith(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          }
+        },
+      },
+      "/rotiseria/burger": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          } else if (nav.currentNav.id != "navRotiseria") {
+            nav.currentNav.replaceWith(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          }
+        },
+      },
+      "/rotiseria/frita": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          } else if (nav.currentNav.id != "navRotiseria") {
+            nav.currentNav.replaceWith(ELEMENT.navBar);
+            RENDER.setNavBtnsListeners();
+          }
+        },
+      },
+    },
+  };
+  nav.displayNav[window.location.pathname].display();
 }

@@ -3,19 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  /* header */
-  .headerRotiseria {
-    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly  rounded-b-lg border-2 border-t-0 border-solid border-[#0a3145] bg-black  bg-contain shadow-xl;
-  }
-  .headerPasteleria {
-    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly rounded-b-lg border-2  border-t-0 border-solid border-[#FA7268] bg-wavesHeaderP  shadow-xl;
-  }
-  .slideSwitchR {
-    @apply flex   h-[100%]  items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#002233];
-  }
-  .slideSwitchP {
-    @apply flex  h-[100%] flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#FA7268];
-  }
   /* navBarRotiseria */
   .navBar {
     @apply fixed bottom-0 z-30  flex h-[11%] w-full justify-evenly rounded-t-lg;
@@ -40,6 +27,12 @@
   }
   .foodDivs {
     @apply my-4 flex h-[400px] w-[90%] animate-zoomIn flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
+  }
+  .headerRotiseria {
+    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly  rounded-b-lg border-2 border-t-0 border-solid border-[#0a3145] bg-black  bg-contain shadow-xl;
+  }
+  .slideSwitchR {
+    @apply flex   h-[100%]  items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#002233];
   }
   /* pasteleria */
   .pasteleriaHome {
@@ -68,8 +61,20 @@
   .pasteleriaGaleriaCarousel {
     @apply h-[70vh] w-[50vh] bg-cover bg-center bg-no-repeat;
   }
+  .headerPasteleria {
+    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly rounded-b-lg border-2  border-t-0 border-solid border-[#FA7268] bg-wavesHeaderP  shadow-xl;
+  }
+  .slideSwitchP {
+    @apply flex  h-[100%] flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#FA7268];
+  }
   /* home */
   .home {
-    @apply flex h-[100vh] flex-col justify-center  bg-white bg-[url('../assets/backgrounds/bgHome.svg')] bg-contain;
+    @apply flex h-[100vh] flex-col justify-center  bg-white bg-[url('../assets/backgrounds/bgHome.svg')] bg-cover bg-repeat-y;
+  }
+  .rotiseriaBtn {
+    @apply mr-8 w-20 rounded-lg border-4 border-solid border-[#105e85] bg-black py-1 px-1 font-semibold text-white;
+  }
+  .pasteleriaBtn {
+    @apply w-20  rounded-lg  border-4 border-solid border-[#FA7268] bg-black font-semibold text-white;
   }
 }
