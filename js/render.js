@@ -94,14 +94,28 @@ export const RENDER = {
   },
   setNavBtnsListeners: () => {
     function resetNavBtns(anchorBtns) {
+      let fullPath = window.location.pathname;
+      let endPath = window.location.pathname.substring(
+        10,
+        window.location.pathname.length
+      );
       anchorBtns.forEach((cadaBtn) => {
         cadaBtn.classList.remove("bg-secondary-R");
         cadaBtn.classList.add("mt-2");
         cadaBtn.firstElementChild.classList.remove("animate-bounce");
       });
-      anchorBtns[3].classList.remove("mt-2");
-      anchorBtns[3].classList.add("bg-secondary-R");
-      anchorBtns[3].firstElementChild.classList.add("animate-bounce");
+
+      anchorBtns.forEach((cadaBtn) => {
+        if (fullPath == "/rotiseria") {
+          anchorBtns[3].classList.add("bg-secondary-R");
+          anchorBtns[3].classList.remove("mt-2");
+          anchorBtns[3].firstElementChild.classList.add("animate-bounce");
+        } else if (cadaBtn.href.includes(endPath)) {
+          cadaBtn.classList.add("bg-secondary-R");
+          cadaBtn.classList.remove("mt-2");
+          cadaBtn.firstElementChild.classList.add("animate-bounce");
+        }
+      });
     }
     function setNavBtnsBgColor(anchorBtnPressed, anchorBtns) {
       anchorBtns.forEach((cadaBtn) => {
@@ -109,7 +123,6 @@ export const RENDER = {
         cadaBtn.classList.add("mt-2");
         cadaBtn.firstElementChild.classList.remove("animate-bounce");
       });
-
       anchorBtnPressed.classList.add("bg-secondary-R");
       anchorBtnPressed.classList.remove("mt-2");
       anchorBtnPressed.firstElementChild.classList.add("animate-bounce");
