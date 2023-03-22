@@ -15,6 +15,25 @@ export const RENDER = {
     return document.getElementById("index").getElementsByTagName("header")[0];
   },
 
+  setRotiseriaHomeListeners: () => {
+    let delivery = document.getElementById("delivery");
+    let containsSideToSide = delivery.classList.contains("animate-sideToSide");
+    let containsSideToSideReverse = delivery.classList.contains(
+      "animate-sideToSideReverse"
+    );
+    if (!containsSideToSide && !containsSideToSideReverse) {
+      delivery.classList.add("animate-sideToSide");
+      delivery.addEventListener("animationend", () => {
+        if (delivery.classList.contains("animate-sideToSide")) {
+          delivery.classList.remove("animate-sideToSide");
+          delivery.classList.add("animate-sideToSideReverse");
+        } else {
+          delivery.classList.remove("animate-sideToSideReverse");
+          delivery.classList.add("animate-sideToSide");
+        }
+      });
+    }
+  },
   setHomeListeners: () => {
     const rotiseriaBtn = document.querySelector('[href="/rotiseria"]');
     const pasteleriaBtn = document.querySelector('[href="/pasteleria"]');
@@ -212,13 +231,3 @@ export const RENDER = {
     });
   },
 };
-/*       let delivery = document.getElementById("delivery");
-      delivery.addEventListener("animationend", () => {
-        if (delivery.classList.contains("animate-sideToSide")) {
-          delivery.classList.remove("animate-sideToSide");
-          delivery.classList.add("animate-sideToSideReverse");
-        } else {
-          delivery.classList.remove("animate-sideToSideReverse");
-          delivery.classList.add("animate-sideToSide");
-        }
-      }); */

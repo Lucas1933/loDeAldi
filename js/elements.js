@@ -20,6 +20,7 @@ export const ELEMENT = {
     "/pasteleria/tortas": await getGaleria("tortas"),
     "/pasteleria/muffins": await getGaleria("muffins"),
     "/pasteleria/tartas": await getGaleria("tartas"),
+    "/pasteleria/cosas-dulces": await getGaleria("cosas-dulces"),
   },
 };
 
@@ -98,7 +99,7 @@ href="https://wa.me/+541168963001"
 <img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
 />
 </a>
-<img id="delivery" class="w-28 mr-4 animate-sideToSide" src="./assets/rotiseria/delivery.webp" alt="" />
+<img id="delivery" class="w-28 mr-4" src="./assets/rotiseria/delivery.webp" alt="" />
 </div>
   
   <p>Contamos con delivery segun la zona, consultanos!</p>
@@ -350,6 +351,4 @@ function getMenu(comidaArray) {
     return main;
   }
   return getNewMain(comidaArray);
-}
-{
 }

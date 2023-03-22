@@ -2,6 +2,7 @@ import { RENDER } from "./render.js";
 import { ELEMENT } from "./elements.js";
 export function displayRoute(location) {
   window.scrollTo(0, 0);
+  console.log(location);
   ROUTES[location].display();
 }
 const ROUTES = {
@@ -50,6 +51,11 @@ const ROUTES = {
       displayPasteleria();
     },
   },
+  "/pasteleria/cosas-dulces": {
+    display: () => {
+      displayPasteleria();
+    },
+  },
   404: {
     display: () => {
       RENDER.currentMain().replaceWith(RENDER.error404);
@@ -69,6 +75,7 @@ function displayHome() {
 function displayRotiseria() {
   if (window.location.pathname === "/rotiseria") {
     RENDER.currentMain().replaceWith(ELEMENT.rotiseriaHome);
+    RENDER.setRotiseriaHomeListeners();
   } else {
     RENDER.currentMain().replaceWith(RENDER.getMenu(window.location.pathname));
     RENDER.setFoodCardsWiggleAnimation();
@@ -147,6 +154,17 @@ function displayNavBar() {
         },
       },
       "/pasteleria/tartas": {
+        display: () => {
+          if (nav.currentNav == null) {
+            ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          } else if (nav.currentNav.id != "navPasteleria") {
+            nav.currentNav.replaceWith(ELEMENT.navBarPasteleria);
+            RENDER.setNavPasteleriaListeners();
+          }
+        },
+      },
+      "/pasteleria/cosas-dulces": {
         display: () => {
           if (nav.currentNav == null) {
             ELEMENT.root.appendChild(ELEMENT.navBarPasteleria);
