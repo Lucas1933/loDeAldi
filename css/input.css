@@ -72,9 +72,9 @@
     @apply flex h-[100vh] flex-col justify-center  bg-white bg-[url('../assets/backgrounds/bgHome.svg')] bg-cover bg-repeat-y;
   }
   .rotiseriaBtn {
-    @apply mr-8 w-20 rounded-lg border-4 border-solid border-[#105e85] bg-black py-1 px-1 font-semibold text-white;
+    @apply mr-8 w-20 rounded-lg border-4 border-solid border-[#105e85] bg-black py-1 px-1 text-center font-semibold text-white lg:mr-32 lg:w-32;
   }
   .pasteleriaBtn {
-    @apply w-20  rounded-lg  border-4 border-solid border-[#FA7268] bg-black font-semibold text-white;
+    @apply w-20  rounded-lg  border-4 border-solid border-[#FA7268] bg-black text-center font-semibold text-white lg:w-32;
   }
 }

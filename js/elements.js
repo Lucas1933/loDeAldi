@@ -28,31 +28,36 @@ function getHome() {
   let home = document.createElement("main");
   home.classList.add("home");
   home.innerHTML = `
-  <div><img src="./assets/icons/header/logo.png" alt=""></div>
-    <div class="flex h-[50%] w-full items-center justify-evenly">
-    <a
-      href="/rotiseria"
-      class="rotiseriaBtn"
-    >
-      
-        <img src="./assets/icons/header/rotiseria.svg" alt="" />
-      
-      <p>Rotiseria</p>
-    </a>
-    <a
-      href="/pasteleria"
-      class="pasteleriaBtn"
-    >
-      <img src="./assets/icons/header/pasteleria.svg" alt="" />
-      <p>Pasteleria</p>
-    </a>
-  </div>
-  <div class="flex">
-  <a class="w-72" target="_blank" href="https://www.facebook.com/profile.php?id=100064257603226"
+  <div class="flex justify-center">
+  <img src="./assets/icons/header/logo.png" alt="" />
+</div>
+<div
+  class="flex h-[50%] w-full items-center justify-evenly lg:justify-center"
+>
+  <a href="/rotiseria" class="rotiseriaBtn">
+    <img src="./assets/icons/header/rotiseria.svg" alt="" />
+    <p>Rotiseria</p>
+  </a>
+  <a href="/pasteleria" class="pasteleriaBtn">
+    <img src="./assets/icons/header/pasteleria.svg" alt="" />
+    <p>Pasteleria</p>
+  </a>
+</div>
+<div class="flex justify-center">
+  <a
+    class="w-72 lg:w-32"
+    target="_blank"
+    href="https://www.facebook.com/profile.php?id=100064257603226"
     ><img src="./assets/logos/facebook-svgrepo-com.svg" alt="" /></a
-  ><a class="w-72" target="_blank" href="https://www.instagram.com/lodealdi_/"
+  ><a
+    class="w-72 lg:w-32"
+    target="_blank"
+    href="https://www.instagram.com/lodealdi_/"
     ><img src="./assets/logos/instagram-1-svgrepo-com.svg" alt="" /></a
-  ><a class="w-72" target="_blank" href="https://wa.me/+541168963001"
+  ><a
+    class="w-72 lg:w-32"
+    target="_blank"
+    href="https://wa.me/+541168963001"
     ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
   /></a>
 </div>
