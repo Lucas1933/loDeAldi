@@ -12,7 +12,7 @@
   }
   /* rotiseria */
   .rotiseriaHome {
-    @apply flex h-[100vh] flex-col items-center  justify-center bg-wavesRotiseria bg-repeat-y   text-center font-extrabold text-white;
+    @apply flex h-[100vh] flex-col items-center  justify-center bg-wavesRotiseria bg-repeat-y   text-center font-extrabold text-white  lg:bg-wavesRotiseriaLG lg:bg-cover;
   }
   .foodGrid {
     @apply grid
@@ -23,13 +23,19 @@
     bg-repeat-y
     px-4
     pb-24
-    pt-16;
+    pt-16
+    lg:grid-rows-1
+    lg:bg-wavesRotiseriaLG
+    lg:bg-cover
+    lg:bg-no-repeat
+    lg:px-0
+    lg:pb-52;
   }
   .foodDivs {
     @apply my-4 flex h-[400px] w-[90%] animate-zoomIn flex-col justify-end  justify-self-center rounded-lg border-4 border-solid border-secondary-R bg-cover bg-center bg-no-repeat shadow-lg shadow-secondary-R;
   }
   .headerRotiseria {
-    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly  rounded-b-lg border-2 border-t-0 border-solid border-[#0a3145] bg-black  bg-contain shadow-xl;
+    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly  rounded-b-lg border-2 border-t-0 border-solid border-[#0a3145] bg-black bg-contain  shadow-xl lg:border-[#1776a6];
   }
   .slideSwitchR {
     @apply flex   h-[100%]  items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#002233];
@@ -69,7 +75,7 @@
   }
   /* home */
   .home {
-    @apply flex h-[100vh] flex-col justify-center  bg-white bg-[url('../assets/backgrounds/bgHome.svg')] bg-cover bg-repeat-y;
+    @apply flex h-[100vh] flex-col justify-center  bg-white bg-[url('../assets/backgrounds/bgHome.svg')] bg-cover bg-repeat-y lg:bg-wavesHomeLG;
   }
   .rotiseriaBtn {
     @apply mr-8 w-20 rounded-lg border-4 border-solid border-[#105e85] bg-black py-1 px-1 text-center font-semibold text-white lg:mr-32 lg:w-32;

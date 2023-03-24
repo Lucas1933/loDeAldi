@@ -19,7 +19,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Muzzarella",
-      1100,
+      1200,
       "",
       1,
       "./assets/rotiseria/pizzas/1.jpeg",
@@ -39,6 +39,16 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Calabresa",
+      1500,
+      "",
+      3,
+      "./assets/rotiseria/pizzas/404.png",
+      "pizza"
+    )
+  );
+  MENU.pizzas.push(
+    new Comida(
+      "Salchicha",
       1400,
       "",
       3,
@@ -49,7 +59,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Choclo",
-      1400,
+      1500,
       "",
       4,
       "./assets/rotiseria/pizzas/4.jpeg",
@@ -70,7 +80,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Huevo Frito",
-      1400,
+      1500,
       "",
       6,
       "./assets/rotiseria/pizzas/6.jpeg",
@@ -81,7 +91,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Napolitana",
-      1400,
+      1450,
       "",
       7,
       "./assets/rotiseria/pizzas/7.jpeg",
@@ -92,7 +102,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Simple",
-      750,
+      1000,
       "(1 Medallon de carne de 150g en pan de papa)",
       1,
       "./assets/rotiseria/hamburguesas/404.png",
@@ -102,7 +112,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Cuarto de Libra",
-      950,
+      1300,
       "(Salsa de ketchup y cebolla, queso cheddar, 1 medallon de carne 150g en pan de papa)",
       2,
       "./assets/rotiseria/hamburguesas/404.png",
@@ -112,7 +122,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Completa Clasica",
-      950,
+      1300,
       "(Lechuga, tomate, jamon,queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       3,
       "./assets/rotiseria/hamburguesas/3.jpeg",
@@ -122,7 +132,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Cheddar y Panceta",
-      950,
+      1300,
       "(Panceta crocante, cebolla caramelizada, queso cheddar, 1 medallon de carne de 150g en pan de papa)",
       4,
       "./assets/rotiseria/hamburguesas/4.png",
@@ -132,7 +142,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Cebolla y Morron asado",
-      950,
+      1300,
       "(Morron asado, cebolla caramelizada, queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       5,
       "./assets/rotiseria/hamburguesas/5.jpeg",
@@ -153,7 +163,7 @@ export function getMenu() {
   MENU.fritas.push(
     new Comida(
       "Panceta, cheddar y verdeo",
-      850,
+      800,
       " ",
       2,
       "./assets/rotiseria/fritas/2.jpeg",
@@ -163,7 +173,7 @@ export function getMenu() {
   MENU.fritas.push(
     new Comida(
       "Salsa Picante",
-      850,
+      800,
       " ",
       3,
       "./assets/rotiseria/fritas/404.png",
@@ -206,8 +216,8 @@ function getBurguerExtras() {
           class="block max-w-sm rounded-lg bg-white p-6 shadow-lg"
           style="width: 300px"
         >
-          Otro medallon = $250 <br />
-          Papas con cheddar, panceta y verdeo = $200
+          Otro medallon = $300 <br />
+          Papas con cheddar, panceta y verdeo = $250
         </div>
       </div>
     </div>`;

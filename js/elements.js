@@ -67,49 +67,99 @@ function getHome() {
 function getRotiseriaHome() {
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
-  rotiseriaHome.innerHTML = `
-  <div class="flex w-[70%] flex-col items-center justify-evenly">
-  <div class="flex justify-center items-center mb-4">  <img
-  class="w-14 animate-wiggleFast"
-  src="./assets/rotiseria/lamparitaOn.svg"
-  alt=""
-/>
-<p class="text-center">Estamos Abiertos!</p>
-<img
-  class="w-14 animate-wiggleFast"
-  src="./assets/rotiseria/lamparitaOn.svg"
-  alt=""
-/></div>
-  <div class = "flex mb-4"> <img class = "w-8 pr-2" src="./assets/rotiseria/calendar-svgrepo-com.svg"> <p>Jueves a domingo </p></div>
-  <div class = "flex mb-4"> <img class = "w-8 pr-2" src="./assets/rotiseria/clock-svgrepo-com.svg"> <p>19:00hs - 00:00hs </p></div>
-  <div class = "flex mb-4 justify-center items-center"> <img class = "w-14 pr-2" src="./assets/rotiseria/gps-location-map-svgrepo-com.svg"> <p>Hipolito Yirigoyen <br> y <br> San Juan</p></div>
-  <div>
-  <iframe
-    class="w-52 border-2 border-solid border-secondary-R"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2502027044397!2d-58.815310822261345!3d-34.67363422657602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc951f43a6974d%3A0x6e91e3e3d0438454!2sLoDeAldi!5e0!3m2!1ses!2sar!4v1678540267066!5m2!1ses!2sar"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-</div>
-
-<div class="flex flex-col items-center justify-center my-8 ">
-<div class ="flex flex-row-reverse justify-center items-center">  
-<a
-class=" w-20 pl-4 z-10"
-target="_blank"
-href="https://wa.me/+541168963001"
+  rotiseriaHome.innerHTML = ` <div
+  class="mb-4 flex items-center justify-center max-sm:hidden lg:pb-10"
 >
-<img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
-/>
-</a>
-<img id="delivery" class="w-28 mr-4" src="./assets/rotiseria/delivery.webp" alt="" />
+  <img
+    class="w-14 animate-wiggleFast"
+    src="./assets/rotiseria/lamparitaOn.svg"
+    alt=""
+  />
+  <p class="text-center">Estamos Abiertos!</p>
+  <img
+    class="w-14 animate-wiggleFast"
+    src="./assets/rotiseria/lamparitaOn.svg"
+    alt=""
+  />
 </div>
-  
-  <p>Contamos con delivery segun la zona, consultanos!</p>
-</div>
+<div class="lg:mt-10 lg:flex lg:justify-evenly">
+  <div
+    class="flex flex-col items-center justify-evenly lg:mr-20 lg:w-[30%]"
+  >
+    <div class="mb-4 flex items-center justify-center lg:hidden">
+      <img
+        class="w-14 animate-wiggleFast"
+        src="./assets/rotiseria/lamparitaOn.svg"
+        alt=""
+      />
+      <p class="text-center">Estamos Abiertos!</p>
+      <img
+        class="w-14 animate-wiggleFast"
+        src="./assets/rotiseria/lamparitaOn.svg"
+        alt=""
+      />
+    </div>
+    <div class="lg:flex-row"></div>
+    <div class="mb-4 flex">
+      <img
+        class="w-8 pr-2"
+        src="./assets/rotiseria/calendar-svgrepo-com.svg"
+      />
+      <p>Jueves a domingo</p>
+    </div>
+    <div class="mb-4 flex">
+      <img
+        class="w-8 pr-2"
+        src="./assets/rotiseria/clock-svgrepo-com.svg"
+      />
+      <p>19:00hs - 00:00hs</p>
+    </div>
+    <div class="mb-4 flex items-center justify-center">
+      <img
+        class="w-14 pr-2"
+        src="./assets/rotiseria/gps-location-map-svgrepo-com.svg"
+      />
+      <p>
+        Hipolito Yirigoyen <br />
+        y <br />
+        San Juan
+      </p>
+    </div>
 
+    <div>
+      <iframe
+        class="w-52 border-2 border-solid border-secondary-R"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2502027044397!2d-58.815310822261345!3d-34.67363422657602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc951f43a6974d%3A0x6e91e3e3d0438454!2sLoDeAldi!5e0!3m2!1ses!2sar!4v1678540267066!5m2!1ses!2sar"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="my-8 flex flex-col items-center justify-center">
+    <div class="flex flex-row-reverse items-center justify-center">
+      <a
+        class="z-10 w-20 pl-4"
+        target="_blank"
+        href="https://wa.me/+541168963001"
+      >
+        <img
+          src="./assets/logos/whatsapp-color-svgrepo-com.svg"
+          alt=""
+        />
+      </a>
+      <img
+        id="delivery"
+        class="mr-4 w-28"
+        src="./assets/rotiseria/delivery.webp"
+        alt=""
+      />
+    </div>
+
+    <p>Contamos con delivery segun la zona, consultanos!</p>
+  </div>
+</div>
 `;
   return rotiseriaHome;
 }
