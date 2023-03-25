@@ -34,8 +34,8 @@
       "https://lh3.googleusercontent.com/vHY8eYu6uJrfWvFq-TaaLuCMdqEx6u0jLsf1IuLJmWUPBzrYdtKh3LGW9iSCRPPQ5F4LP7Eu_-UBJ-LBdHcxK4jDDVJmTabA0XxhQ4vI9IXp4utCk3lU3rtuulkGA4DN0U1n4q80xg=w2400",
       "https://lh3.googleusercontent.com/mTfJi_dDafi4yEAMklJ0BXfyPLtXI3AOGStPEhuB_0th4T9V1VX5t3fWSpDU9M5yVaQnFWUwO9i0VKb0ML9vD0N_cKAfa5477Dn0pYIJzJqloeEB_TRuI771da8RiJgbWT1xLr8Clg=w2400"
     ],
-    "muffins": ["./assets/pronto.webp"],
-    "tartas": ["./assets/pronto.webp"],
-    "cosas-dulces": ["./assets/pronto.webp"]
+    "muffins": ["./assets/pasteleria/pronto.webp"],
+    "tartas": ["./assets/pasteleria/pronto.webp"],
+    "cosas-dulces": ["./assets/pasteleria/pronto.webp"]
   }
 }

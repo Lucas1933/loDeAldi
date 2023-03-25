@@ -2,7 +2,7 @@ import { RENDER } from "./render.js";
 import { ELEMENT } from "./elements.js";
 export function displayRoute(location) {
   window.scrollTo(0, 0);
-  console.log(location);
+
   ROUTES[location].display();
 }
 const ROUTES = {

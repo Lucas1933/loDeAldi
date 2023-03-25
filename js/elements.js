@@ -48,17 +48,17 @@ function getHome() {
     class="w-72 lg:w-32"
     target="_blank"
     href="https://www.facebook.com/profile.php?id=100064257603226"
-    ><img src="./assets/logos/facebook-svgrepo-com.svg" alt="" /></a
+    ><img src="./assets/homeLogos/facebook-svgrepo-com.svg" alt="" /></a
   ><a
     class="w-72 lg:w-32"
     target="_blank"
     href="https://www.instagram.com/lodealdi_/"
-    ><img src="./assets/logos/instagram-1-svgrepo-com.svg" alt="" /></a
+    ><img src="./assets/homeLogos/instagram-1-svgrepo-com.svg" alt="" /></a
   ><a
     class="w-72 lg:w-32"
     target="_blank"
     href="https://wa.me/+541168963001"
-    ><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+    ><img src="./assets/homeLogos/whatsapp-color-svgrepo-com.svg" alt=""
   /></a>
 </div>
     `;
@@ -67,21 +67,7 @@ function getHome() {
 function getRotiseriaHome() {
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
-  rotiseriaHome.innerHTML = ` <div
-  class="mb-4 flex items-center justify-center max-sm:hidden lg:pb-10"
->
-  <img
-    class="w-14 animate-wiggleFast"
-    src="./assets/rotiseria/lamparitaOn.svg"
-    alt=""
-  />
-  <p class="text-center">Estamos Abiertos!</p>
-  <img
-    class="w-14 animate-wiggleFast"
-    src="./assets/rotiseria/lamparitaOn.svg"
-    alt=""
-  />
-</div>
+  rotiseriaHome.innerHTML = ` 
 <div class="lg:mt-10 lg:flex lg:justify-evenly">
   <div
     class="flex flex-col items-center justify-evenly lg:mr-20 lg:w-[30%]"
@@ -91,21 +77,21 @@ function getRotiseriaHome() {
     <div class="mb-4 flex">
       <img
         class="w-10 pr-2"
-        src="./assets/rotiseria/calendar-svgrepo-com.svg"
+        src="./assets/rotiseria/homeIcons/calendar-svgrepo-com.svg"
       />
       <p class="text-xl">Jueves a domingo</p>
     </div>
     <div class="mb-4 flex">
       <img
         class="w-10 pr-2"
-        src="./assets/rotiseria/clock-svgrepo-com.svg"
+        src="./assets/rotiseria/homeIcons/clock-svgrepo-com.svg"
       />
       <p class="text-xl">19:00hs - 00:00hs</p>
     </div>
     <div class="mb-4 flex items-center justify-center">
       <img
         class="w-16 pr-2"
-        src="./assets/rotiseria/gps-location-map-svgrepo-com.svg"
+        src="./assets/rotiseria/homeIcons/gps-location-map-svgrepo-com.svg"
       />
       <p class="text-xl">
         Hipolito Yirigoyen <br />
@@ -133,14 +119,14 @@ function getRotiseriaHome() {
         href="https://wa.me/+541168963001"
       >
         <img
-          src="./assets/logos/whatsapp-color-svgrepo-com.svg"
+          src="./assets/homeLogos/whatsapp-color-svgrepo-com.svg"
           alt=""
         />
       </a>
       <img
         id="delivery"
         class="mr-4 w-28"
-        src="./assets/rotiseria/delivery.webp"
+        src="./assets/rotiseria/homeIcons/delivery.webp"
         alt=""
       />
     </div>
@@ -182,7 +168,7 @@ function getPasteleriaHome() {
 ><div><p>Postres, alfajores y mas!</p></div>
 </a>
 <a class="w-16  mb-10 animate-bounce fixed bottom-0 left-0" target="_blank" href="https://wa.me/+541168963001"
-><img src="./assets/logos/whatsapp-color-svgrepo-com.svg" alt=""
+><img src="./assets/homeLogos/whatsapp-color-svgrepo-com.svg" alt=""
 /></a>
 `;
 
@@ -276,7 +262,7 @@ function getNavBar() {
       />
     </a>
     <a class="navBarIcons" href="/rotiseria">
-    <img class="" src="./assets/icons/header/home-svgrepo-com.svg" alt="" />
+    <img class="" src="../../assets/icons/navBarIcons/home-svgrepo-com.svg" alt="" />
     </a>
   </div>
 </div>
@@ -292,7 +278,7 @@ function getNavBarPasteleria() {
     href="/pasteleria"
     ><img
       class="w-14"
-      src="./assets/icons/header/home-svgrepo-com.svg"
+      src="./assets/pasteleria/home-svgrepo-com.svg"
       alt=""
   /></a>
   </div>`;
