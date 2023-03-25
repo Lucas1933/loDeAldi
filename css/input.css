@@ -12,7 +12,7 @@
   }
   /* rotiseria */
   .rotiseriaHome {
-    @apply flex h-[100vh] flex-col items-center  justify-center bg-wavesRotiseria bg-repeat-y   text-center font-extrabold text-white  lg:bg-wavesRotiseriaLG lg:bg-cover;
+    @apply flex h-[100vh] flex-col items-center justify-center  bg-wavesRotiseria bg-repeat-y py-0  text-center font-extrabold text-white  lg:bg-wavesRotiseriaLG lg:bg-cover;
   }
   .foodGrid {
     @apply grid
@@ -38,7 +38,7 @@
     @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly  rounded-b-lg border-2 border-t-0 border-solid border-[#1776a6] bg-black bg-contain  shadow-xl;
   }
   .slideSwitchR {
-    @apply flex   h-[100%]  items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#1776a6];
+    @apply flex h-[100%]  items-center  justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#1776a6] text-xl;
   }
   /* pasteleria */
   .pasteleriaHome {
@@ -71,7 +71,7 @@
     @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly rounded-b-lg border-2  border-t-0 border-solid border-[#FA7268] bg-wavesHeaderP  shadow-xl;
   }
   .slideSwitchP {
-    @apply flex  h-[100%] flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#FA7268];
+    @apply flex h-[100%]  flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#FA7268] text-xl;
   }
   /* home */
   .home {

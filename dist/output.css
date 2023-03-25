@@ -1081,6 +1081,8 @@ video {
   justify-content: center;
   background-image: url('../assets/backgrounds/wavesR.svg');
   background-repeat: repeat-y;
+  padding-top: 0px;
+  padding-bottom: 0px;
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;
@@ -1193,6 +1195,8 @@ video {
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(23 118 166 / var(--tw-border-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 /* pasteleria */
@@ -1353,6 +1357,8 @@ video {
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(250 114 104 / var(--tw-border-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 /* home */
@@ -1577,6 +1583,14 @@ video {
   min-height: 125px;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
 .w-14 {
   width: 3.5rem;
 }
@@ -1595,14 +1609,6 @@ video {
 
 .w-28 {
   width: 7rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-72 {
-  width: 18rem;
 }
 
 .w-16 {
@@ -1934,6 +1940,11 @@ video {
   text-align: center;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1942,11 +1953,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-extrabold {
@@ -2083,12 +2089,12 @@ video {
     display: none;
   }
 
-  .lg\:w-\[30\%\] {
-    width: 30%;
-  }
-
   .lg\:w-32 {
     width: 8rem;
+  }
+
+  .lg\:w-\[30\%\] {
+    width: 30%;
   }
 
   .lg\:flex-row {

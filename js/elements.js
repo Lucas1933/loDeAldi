@@ -86,40 +86,28 @@ function getRotiseriaHome() {
   <div
     class="flex flex-col items-center justify-evenly lg:mr-20 lg:w-[30%]"
   >
-    <div class="mb-4 flex items-center justify-center lg:hidden">
-      <img
-        class="w-14 animate-wiggleFast"
-        src="./assets/rotiseria/lamparitaOn.svg"
-        alt=""
-      />
-      <p class="text-center">Estamos Abiertos!</p>
-      <img
-        class="w-14 animate-wiggleFast"
-        src="./assets/rotiseria/lamparitaOn.svg"
-        alt=""
-      />
-    </div>
+    
     <div class="lg:flex-row"></div>
     <div class="mb-4 flex">
       <img
-        class="w-8 pr-2"
+        class="w-10 pr-2"
         src="./assets/rotiseria/calendar-svgrepo-com.svg"
       />
-      <p>Jueves a domingo</p>
+      <p class="text-xl">Jueves a domingo</p>
     </div>
     <div class="mb-4 flex">
       <img
-        class="w-8 pr-2"
+        class="w-10 pr-2"
         src="./assets/rotiseria/clock-svgrepo-com.svg"
       />
-      <p>19:00hs - 00:00hs</p>
+      <p class="text-xl">19:00hs - 00:00hs</p>
     </div>
     <div class="mb-4 flex items-center justify-center">
       <img
-        class="w-14 pr-2"
+        class="w-16 pr-2"
         src="./assets/rotiseria/gps-location-map-svgrepo-com.svg"
       />
-      <p>
+      <p class="text-xl">
         Hipolito Yirigoyen <br />
         y <br />
         San Juan
@@ -157,13 +145,13 @@ function getRotiseriaHome() {
       />
     </div>
 
-    <p>Contamos con delivery segun la zona, consultanos!</p>
+    <p class="text-xl">Contamos con delivery segun la zona, consultanos!</p>
   </div>
 </div>
 `;
   return rotiseriaHome;
 }
-function getMenuPointing() {}
+
 function getPasteleriaHome() {
   let pasteleriaHome = document.createElement("main");
   pasteleriaHome.classList.add("pasteleriaHome");
