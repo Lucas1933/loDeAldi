@@ -68,7 +68,7 @@
     @apply h-[70vh] w-[50vh] bg-cover bg-center bg-no-repeat;
   }
   .headerPasteleria {
-    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly rounded-b-lg border-2  border-t-0 border-solid border-[#FA7268] bg-wavesHeaderP  shadow-xl;
+    @apply fixed top-0 z-50 flex h-[8%] w-full justify-evenly rounded-b-lg border-2  border-t-0 border-solid border-[#FA7268] bg-black shadow-xl;
   }
   .slideSwitchP {
     @apply flex h-[100%]  flex-row-reverse items-center justify-center rounded-l-full rounded-r-full border-4 border-solid border-[#FA7268] text-xl;
