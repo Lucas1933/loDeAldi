@@ -163,6 +163,7 @@ function getRotiseriaHome() {
 `;
   return rotiseriaHome;
 }
+function getMenuPointing() {}
 function getPasteleriaHome() {
   let pasteleriaHome = document.createElement("main");
   pasteleriaHome.classList.add("pasteleriaHome");
@@ -326,7 +327,7 @@ function getHeader() {
       
     >
       <div
-        class="flex w-12 bg-black animate-slideR justify-center rounded-full border-4 border-solid border-[#002233]"
+        class="flex w-12 bg-black animate-slideR justify-center rounded-full border-4 border-solid border-[#1776a6]"
       >
         <img
         
