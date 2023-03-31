@@ -42,7 +42,7 @@ export function getMenu() {
       1500,
       "",
       3,
-      "./assets/rotiseria/pizzas/3.jpeg",
+      "./assets/rotiseria/pizzas/404.png",
       "pizza"
     )
   );
@@ -51,7 +51,7 @@ export function getMenu() {
       "Salchicha",
       1400,
       "",
-      3,
+      4,
       "./assets/rotiseria/pizzas/404.png",
       "pizza"
     )
@@ -61,8 +61,8 @@ export function getMenu() {
       "Choclo",
       1500,
       "",
-      4,
-      "./assets/rotiseria/pizzas/4.jpeg",
+      5,
+      "./assets/rotiseria/pizzas/5.jpeg",
       "pizza"
     )
   );
@@ -72,8 +72,8 @@ export function getMenu() {
       "Huevo Duro",
       1400,
       "",
-      5,
-      "./assets/rotiseria/pizzas/5.jpeg",
+      6,
+      "./assets/rotiseria/pizzas/6.jpeg",
       "pizza"
     )
   );
@@ -82,8 +82,8 @@ export function getMenu() {
       "Huevo Frito",
       1500,
       "",
-      6,
-      "./assets/rotiseria/pizzas/6.jpeg",
+      7,
+      "./assets/rotiseria/pizzas/7.jpeg",
       "pizza"
     )
   );
@@ -93,8 +93,8 @@ export function getMenu() {
       "Napolitana",
       1450,
       "",
-      7,
-      "./assets/rotiseria/pizzas/7.jpeg",
+      8,
+      "./assets/rotiseria/pizzas/8.jpeg",
       "pizza"
     )
   );
