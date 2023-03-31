@@ -341,18 +341,26 @@ function getError404() {
   return main;
 }
 function getMenu(comidaArray) {
+  function loadBg(foodDiv, foodSrc) {
+    let srcFood = foodSrc;
+    let auxImg = new Image();
+    auxImg.addEventListener("load", () => {
+      foodDiv.setAttribute("style", `background-image: url(${auxImg.src});`);
+      foodDiv.firstElementChild.remove();
+    });
+    auxImg.src = srcFood;
+  }
   function getNewMain(comidaArray) {
     let main = document.createElement("main");
+    let foodDivs;
     main.classList.add("foodGrid");
     if (comidaArray[0].type == "hamburguesa") {
       main.appendChild(MENU.getBurguerExtras);
     }
     comidaArray.forEach((cadaComida) => {
       if (cadaComida.type != "hamburguesa") {
-        main.innerHTML += `<div
-          style="background-image: url('${cadaComida.src}')"
-          class="foodDivs"
-        >
+        main.innerHTML += `<div class="foodDivs">
+        <div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
           <div class="bg-secondary-R text-center shrink  text-black h-fit">
             <h1 class="font-extrabold">${cadaComida.nombre}</h1>
             <p class="font-semibold text-lg">$${cadaComida.precio}</p>
@@ -378,6 +386,11 @@ function getMenu(comidaArray) {
       }
     });
 
+    foodDivs = Array.from(main.getElementsByClassName("foodDivs"));
+    console.log(foodDivs);
+    for (let i = 0; i < foodDivs.length; i++) {
+      loadBg(foodDivs[i], comidaArray[i].src);
+    }
     return main;
   }
   return getNewMain(comidaArray);

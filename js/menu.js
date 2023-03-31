@@ -42,7 +42,7 @@ export function getMenu() {
       1500,
       "",
       3,
-      "./assets/rotiseria/pizzas/404.png",
+      "./assets/rotiseria/pizzas/3.jpeg",
       "pizza"
     )
   );

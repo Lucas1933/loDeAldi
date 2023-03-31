@@ -1628,6 +1628,14 @@ video {
   width: 3rem;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
