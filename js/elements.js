@@ -368,10 +368,8 @@ function getMenu(comidaArray) {
           </div>
         </div>`;
       } else {
-        main.innerHTML += `<div
-              style="background-image: url('${cadaComida.src}')"
-              class="foodDivs"
-            >
+        main.innerHTML += `<div class="foodDivs">
+        <div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
             <div class="grow">
             <p class="font-extrabold rounded-r-lg rounded-b-lg bg-secondary-R text-center inline-block w-16 ">Incluye fritas!</p></div>
           <div class="flex flex-col justify-end">
