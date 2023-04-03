@@ -76,6 +76,7 @@ function displayRotiseria() {
   if (window.location.pathname === "/rotiseria") {
     RENDER.currentMain().replaceWith(ELEMENT.rotiseriaHome);
     RENDER.setRotiseriaHomeListeners();
+    RENDER.loadBg(RENDER.currentMain());
   } else {
     RENDER.currentMain().replaceWith(RENDER.getMenu(window.location.pathname));
     RENDER.loadBg(RENDER.currentMain());
