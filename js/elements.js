@@ -66,14 +66,6 @@ function getHome() {
   return home;
 }
 function getRotiseriaHome() {
-  function loadBg(main) {
-    let svgBg = "../assets/backgrounds/wavesR.svg";
-    let auxImg = new Image();
-    auxImg.addEventListener("load", () => {
-      main.setAttribute("style", `background-image: url(${auxImg.src});`);
-    });
-    auxImg.src = svgBg;
-  }
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
   rotiseriaHome.innerHTML = ` 
@@ -144,7 +136,7 @@ function getRotiseriaHome() {
   </div>
 </div>
 `;
-  loadBg(rotiseriaHome);
+
   return rotiseriaHome;
 }
 
@@ -360,14 +352,7 @@ function getMenu(comidaArray) {
     });
     auxImg.src = srcFood;
   }
-  function loadBg(main) {
-    let svgBg = "../assets/backgrounds/wavesR.svg";
-    let auxImg = new Image();
-    auxImg.addEventListener("load", () => {
-      main.setAttribute("style", `background-image: url(${auxImg.src});`);
-    });
-    auxImg.src = svgBg;
-  }
+
   function getNewMain(comidaArray) {
     let main = document.createElement("main");
     let foodDivs;
