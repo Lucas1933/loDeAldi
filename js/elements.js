@@ -66,8 +66,17 @@ function getHome() {
   return home;
 }
 function getRotiseriaHome() {
+  function loadBg(main) {
+    let svgBg = "../assets/backgrounds/wavesR.svg";
+    let auxImg = new Image();
+    auxImg.addEventListener("load", () => {
+      main.setAttribute("style", `background-image: url(${auxImg.src});`);
+    });
+    auxImg.src = svgBg;
+  }
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
+  loadBg(rotiseriaHome);
   rotiseriaHome.innerHTML = ` 
 <div class="lg:mt-10 lg:flex lg:justify-evenly">
   <div
@@ -351,9 +360,8 @@ function getMenu(comidaArray) {
     });
     auxImg.src = srcFood;
   }
-  function loadBg() {
-    let main = RENDER.currentMain();
-    let svgBg = "./assets/backgrounds/wavesR.svg";
+  function loadBg(main) {
+    let svgBg = "../assets/backgrounds/wavesR.svg";
     let auxImg = new Image();
     auxImg.addEventListener("load", () => {
       main.setAttribute("style", `background-image: url(${auxImg.src});`);
@@ -361,10 +369,10 @@ function getMenu(comidaArray) {
     auxImg.src = svgBg;
   }
   function getNewMain(comidaArray) {
-    loadBg();
     let main = document.createElement("main");
     let foodDivs;
     main.classList.add("foodGrid");
+    loadBg(main);
     if (comidaArray[0].type == "hamburguesa") {
       main.appendChild(MENU.getBurguerExtras);
     }
@@ -396,7 +404,7 @@ function getMenu(comidaArray) {
     });
 
     foodDivs = Array.from(main.getElementsByClassName("foodDivs"));
-    console.log(foodDivs);
+
     for (let i = 0; i < foodDivs.length; i++) {
       loadDivsBg(foodDivs[i], comidaArray[i].src);
     }
