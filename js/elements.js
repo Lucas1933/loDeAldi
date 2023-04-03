@@ -393,7 +393,6 @@ function getMenu(comidaArray) {
     for (let i = 0; i < foodDivs.length; i++) {
       loadDivsBg(foodDivs[i], comidaArray[i].src);
     }
-    loadBg(main);
     return main;
   }
   return getNewMain(comidaArray);
