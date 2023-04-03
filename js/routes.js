@@ -78,6 +78,7 @@ function displayRotiseria() {
     RENDER.setRotiseriaHomeListeners();
   } else {
     RENDER.currentMain().replaceWith(RENDER.getMenu(window.location.pathname));
+    RENDER.loadBg(RENDER.currentMain());
     /*  RENDER.setFoodCardsWiggleAnimation(); */
   }
   displayHeader();
