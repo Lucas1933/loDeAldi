@@ -76,7 +76,6 @@ function getRotiseriaHome() {
   }
   let rotiseriaHome = document.createElement("main");
   rotiseriaHome.classList.add("rotiseriaHome");
-  loadBg(rotiseriaHome);
   rotiseriaHome.innerHTML = ` 
 <div class="lg:mt-10 lg:flex lg:justify-evenly">
   <div
@@ -145,6 +144,7 @@ function getRotiseriaHome() {
   </div>
 </div>
 `;
+  loadBg(rotiseriaHome);
   return rotiseriaHome;
 }
 
@@ -372,7 +372,7 @@ function getMenu(comidaArray) {
     let main = document.createElement("main");
     let foodDivs;
     main.classList.add("foodGrid");
-    loadBg(main);
+
     if (comidaArray[0].type == "hamburguesa") {
       main.appendChild(MENU.getBurguerExtras);
     }
@@ -408,6 +408,7 @@ function getMenu(comidaArray) {
     for (let i = 0; i < foodDivs.length; i++) {
       loadDivsBg(foodDivs[i], comidaArray[i].src);
     }
+    loadBg(main);
     return main;
   }
   return getNewMain(comidaArray);
