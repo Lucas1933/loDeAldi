@@ -230,12 +230,12 @@ export const RENDER = {
       modalCarousel.classList.add("hidden");
     });
   },
-  loadBg: (main) => {
-    let svgBg = "../assets/backgrounds/wavesR.svg";
+  loadBg: (element, backgroundSrc) => {
+    let newBg = backgroundSrc;
     let auxImg = new Image();
     auxImg.addEventListener("load", () => {
-      main.setAttribute("style", `background-image: url(${auxImg.src});`);
+      element.setAttribute("style", `background-image: url(${auxImg.src});`);
     });
-    auxImg.src = svgBg;
+    auxImg.src = newBg;
   },
 };

@@ -65,6 +65,7 @@ const ROUTES = {
 function displayHome() {
   RENDER.currentMain().replaceWith(ELEMENT.home);
   RENDER.setHomeListeners();
+  RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/bgHome.svg");
   if (RENDER.currentNavBar() != null) {
     RENDER.currentNavBar().remove();
   }
@@ -76,11 +77,11 @@ function displayRotiseria() {
   if (window.location.pathname === "/rotiseria") {
     RENDER.currentMain().replaceWith(ELEMENT.rotiseriaHome);
     RENDER.setRotiseriaHomeListeners();
-    RENDER.loadBg(RENDER.currentMain());
+    RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesR.svg");
   } else {
     RENDER.currentMain().replaceWith(RENDER.getMenu(window.location.pathname));
-    RENDER.loadBg(RENDER.currentMain());
-    /*  RENDER.setFoodCardsWiggleAnimation(); */
+    RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesR.svg");
+    RENDER.setFoodCardsWiggleAnimation();
   }
   displayHeader();
   displayNavBar();
@@ -89,12 +90,14 @@ function displayPasteleria() {
   if (window.location.pathname === "/pasteleria") {
     RENDER.currentMain().replaceWith(ELEMENT.pasteleriaHome);
     RENDER.setPasteleriaHomeListeners();
+    RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesP.svg");
     ELEMENT.root.classList.add("flex", "flex-col");
   } else {
     RENDER.currentMain().replaceWith(
       ELEMENT.pasteleria[window.location.pathname]
     );
     RENDER.setGaleria();
+    RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesP.svg");
   }
   displayHeader();
   displayNavBar();

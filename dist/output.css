@@ -1206,7 +1206,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../assets/backgrounds/wavesP.svg');
+  background-image: url('../assets/backgrounds/wavesP.jpg');
   background-size: cover;
   background-repeat: repeat-y;
   padding-top: 3.5rem;
@@ -1278,7 +1278,7 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   overflow-x: hidden;
-  background-image: url('../assets/backgrounds/wavesP.svg');
+  background-image: url('../assets/backgrounds/wavesP.jpg');
   background-repeat: repeat-y;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
@@ -1371,7 +1371,7 @@ video {
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  background-image: url('../assets/backgrounds/bgHome.svg');
+  background-image: url('../assets/backgrounds/bgHome.jpg');
   background-size: cover;
   background-repeat: repeat-y;
 }
@@ -1894,10 +1894,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-wavesRotiseria {
-  background-image: url('../assets/backgrounds/wavesR.jpg');
 }
 
 .p-6 {
