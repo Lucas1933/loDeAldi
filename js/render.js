@@ -238,4 +238,33 @@ export const RENDER = {
     });
     auxImg.src = newBg;
   },
+  loadBgPasteleriaDivs: () => {
+    let srcs = [];
+    let auxImg = [new Image(), new Image(), new Image(), new Image()];
+    let divs = Array.from(
+      RENDER.currentMain().getElementsByClassName("pasteleriaHomeDivs")
+    );
+    srcs.push(
+      "https://lh3.googleusercontent.com/byYEUS8lEt_5e_Qdf3lJ_-mSGGOmACFSr69y8sLgRBn2IxcAnghd1pWWog9DapuZRK0z6MS8SlFXKA0Ft9Ye66TYtEgpZ7XcR4nvrl7iv0ndKaJB1oDRt-qg9zf_6bWF9YQ0FipWDQ=w2400"
+    );
+    srcs.push(
+      "https://lh3.googleusercontent.com/OOJG2wkvVtHl3PPd6e1MeFzibCIBEGkNL4mMpOt43VMmHaxMkTRMw03NZNm5q01sDMj4MTer369qYDpdrKo7HM5mvcblhvwWvJnHh1X-uu_HjnguESQsi1tLF0PHPdCAkysh3iMEIQ=w2400"
+    );
+    srcs.push(
+      "https://lh3.googleusercontent.com/O3EzwysJu8QTvW1Je30Irr8DBOATdn_WMcskw6opIWBx3H6-gxGmeCsHCaWKsRNRHUl7D-pnVdGWR9oTOXyb5hG17jCqGCADlbdtADb59FigaeNS5lUum2cP9dypHGwGOFvx7TESDg=w2400"
+    );
+    srcs.push("../assets/pasteleria/mas.webp");
+    if (!divs[0].hasAttribute("style")) {
+      for (let i = 0; i < divs.length; i++) {
+        auxImg[i].addEventListener("load", () => {
+          divs[i].setAttribute(
+            "style",
+            `background-image: url(${auxImg[i].src});`
+          );
+          divs[i].firstElementChild.remove();
+        });
+        auxImg[i].src = srcs[i];
+      }
+    }
+  },
 };

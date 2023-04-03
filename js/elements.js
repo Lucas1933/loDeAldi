@@ -146,28 +146,33 @@ function getPasteleriaHome() {
   pasteleriaHome.innerHTML = ` <a
   href="/pasteleria/tortas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/byYEUS8lEt_5e_Qdf3lJ_-mSGGOmACFSr69y8sLgRBn2IxcAnghd1pWWog9DapuZRK0z6MS8SlFXKA0Ft9Ye66TYtEgpZ7XcR4nvrl7iv0ndKaJB1oDRt-qg9zf_6bWF9YQ0FipWDQ=w2400')"
 >
+<div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
   <div><p>Tortas</p></div>
 </a>
 <a
   href="/pasteleria/muffins"
   class="pasteleriaHomeDivs  flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/OOJG2wkvVtHl3PPd6e1MeFzibCIBEGkNL4mMpOt43VMmHaxMkTRMw03NZNm5q01sDMj4MTer369qYDpdrKo7HM5mvcblhvwWvJnHh1X-uu_HjnguESQsi1tLF0PHPdCAkysh3iMEIQ=w2400')"
+  
 >
+<div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
   <div><p>Muffins</p></div>
 </a>
 <a
   href="/pasteleria/tartas"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('https://lh3.googleusercontent.com/O3EzwysJu8QTvW1Je30Irr8DBOATdn_WMcskw6opIWBx3H6-gxGmeCsHCaWKsRNRHUl7D-pnVdGWR9oTOXyb5hG17jCqGCADlbdtADb59FigaeNS5lUum2cP9dypHGwGOFvx7TESDg=w2400')"
-><div><p>Tartas</p></div>
+
+>
+<div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
+<div><p>Tartas</p></div>
 </a>
 <a
   href="/pasteleria/cosas-dulces"
   class="pasteleriaHomeDivs flex flex-col justify-end"
-  style="background-image: url('./assets/pasteleria/mas.webp')"
-><div><p>Postres, alfajores y mas!</p></div>
+ 
+>
+<div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
+<div><p>Postres, alfajores y mas!</p></div>
 </a>
 <a class="w-16  mb-10 animate-bounce fixed bottom-0 left-0" target="_blank" href="https://wa.me/+541168963001"
 ><img src="./assets/homeLogos/whatsapp-color-svgrepo-com.svg" alt=""
@@ -364,7 +369,7 @@ function getMenu(comidaArray) {
     comidaArray.forEach((cadaComida) => {
       if (cadaComida.type != "hamburguesa") {
         main.innerHTML += `<div class="foodDivs">
-        <div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
+        <div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/rotiseria/homeIcons/loading-svgrepo-com.svg" alt=""></div>
           <div class="bg-secondary-R text-center shrink  text-black h-fit">
             <h1 class="font-extrabold">${cadaComida.nombre}</h1>
             <p class="font-semibold text-lg">$${cadaComida.precio}</p>
@@ -373,7 +378,7 @@ function getMenu(comidaArray) {
         </div>`;
       } else {
         main.innerHTML += `<div class="foodDivs">
-        <div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>
+        <div class= "w-full h-full flex flex-col justify-center items-center"><img class="animate-spin w-28" src="./assets/rotiseria/homeIcons/loading-svgrepo-com.svg" alt=""></div>
             <div class="grow">
             <p class="font-extrabold rounded-r-lg rounded-b-lg bg-secondary-R text-center inline-block w-16 ">Incluye fritas!</p></div>
           <div class="flex flex-col justify-end">

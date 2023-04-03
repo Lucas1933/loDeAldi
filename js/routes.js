@@ -91,6 +91,7 @@ function displayPasteleria() {
     RENDER.currentMain().replaceWith(ELEMENT.pasteleriaHome);
     RENDER.setPasteleriaHomeListeners();
     RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesP.svg");
+    RENDER.loadBgPasteleriaDivs();
     ELEMENT.root.classList.add("flex", "flex-col");
   } else {
     RENDER.currentMain().replaceWith(
