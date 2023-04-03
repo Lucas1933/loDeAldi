@@ -12,7 +12,7 @@
   }
   /* rotiseria */
   .rotiseriaHome {
-    @apply flex h-[100vh] flex-col items-center justify-center  bg-wavesRotiseria bg-repeat-y py-0  text-center font-extrabold text-white  lg:bg-wavesRotiseriaLG lg:bg-cover;
+    @apply flex h-[100vh] flex-col items-center justify-center bg-wavesRotiseria bg-repeat-y py-0  text-center font-extrabold text-white  lg:bg-wavesRotiseriaLG lg:bg-cover;
   }
   .foodGrid {
     @apply grid

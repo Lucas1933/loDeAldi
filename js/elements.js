@@ -1,4 +1,5 @@
 import { getMenu as get_Menu } from "./menu.js";
+import { RENDER } from "./render.js";
 /* import { PASTELERIA_URLS } from "./pasteleriaUrls.js"; */
 const MENU = get_Menu();
 
@@ -341,7 +342,7 @@ function getError404() {
   return main;
 }
 function getMenu(comidaArray) {
-  function loadBg(foodDiv, foodSrc) {
+  function loadDivsBg(foodDiv, foodSrc) {
     let srcFood = foodSrc;
     let auxImg = new Image();
     auxImg.addEventListener("load", () => {
@@ -350,7 +351,17 @@ function getMenu(comidaArray) {
     });
     auxImg.src = srcFood;
   }
+  function loadBg() {
+    let main = RENDER.currentMain();
+    let svgBg = "./assets/backgrounds/wavesR.svg";
+    let auxImg = new Image();
+    auxImg.addEventListener("load", () => {
+      main.setAttribute("style", `background-image: url(${auxImg.src});`);
+    });
+    auxImg.src = svgBg;
+  }
   function getNewMain(comidaArray) {
+    loadBg();
     let main = document.createElement("main");
     let foodDivs;
     main.classList.add("foodGrid");
@@ -387,7 +398,7 @@ function getMenu(comidaArray) {
     foodDivs = Array.from(main.getElementsByClassName("foodDivs"));
     console.log(foodDivs);
     for (let i = 0; i < foodDivs.length; i++) {
-      loadBg(foodDivs[i], comidaArray[i].src);
+      loadDivsBg(foodDivs[i], comidaArray[i].src);
     }
     return main;
   }
