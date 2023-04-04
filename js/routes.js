@@ -99,6 +99,7 @@ function displayPasteleria() {
     );
     RENDER.setGaleria();
     RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesP.svg");
+    RENDER.observerGaleria();
   }
   displayHeader();
   displayNavBar();

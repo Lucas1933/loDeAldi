@@ -267,4 +267,48 @@ export const RENDER = {
       }
     }
   },
+  observerGaleria: async () => {
+    function loadBg(bg, div) {
+      let auxImg = new Image();
+      auxImg.addEventListener(
+        "load",
+        () => {
+          div.setAttribute("style", `background-image: url(${auxImg.src});`);
+          div.firstElementChild.remove();
+        },
+        { once: true }
+      );
+      auxImg.src = bg;
+    }
+    let respuesta = await fetch("../pasteleria_urls.json").then((res) =>
+      res.json()
+    );
+    let pasteleria = respuesta.pasteleria;
+    let elemento = window.location.pathname.substring(
+      12,
+      window.location.pathname.length
+    );
+
+    let bgsImages = pasteleria[elemento];
+
+    let divs = Array.from(
+      RENDER.currentMain().getElementsByClassName("pasteleriaGaleriaDivs")
+    );
+    let options = {
+      root: RENDER.currentMain(),
+      rootMargin: "0px",
+      threshold: 1.0,
+    };
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.hasAttribute("style")) {
+          console.log("probando theshold", bgsImages.length);
+          loadBg(bgsImages.pop(), entry.target);
+        }
+      });
+    }, options);
+    for (let i = 0; i < divs.length; i++) {
+      observer.observe(divs[i]);
+    }
+  },
 };

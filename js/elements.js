@@ -184,32 +184,17 @@ function getPasteleriaHome() {
 async function getGaleria(elemento) {
   let main = document.createElement("main");
   let modal = document.createElement("div");
-  let divs;
   let respuesta = await fetch("../pasteleria_urls.json").then((res) =>
     res.json()
   );
   let pasteleria = respuesta.pasteleria;
+
   main.classList.add("pasteleriaGaleriaGrid");
-  async function loadingDivs() {
-    for (let i = 0; i < pasteleria[elemento].length; i++) {
-      main.innerHTML += `  <div
-    class="pasteleriaGaleriaDivs flex flex-col justify-center items-center"
-  ><img class="animate-spin w-8" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>`;
-    }
-  }
-  await loadingDivs();
-  divs = await Array.from(main.getElementsByClassName("pasteleriaGaleriaDivs"));
-  async function insertBg(bgSrc, div) {
-    let src = bgSrc;
-    let image = new Image();
-    image.addEventListener("load", () => {
-      div.setAttribute("style", `background-image: url(${src});`);
-      div.firstChild.remove();
-    });
-    image.src = src;
-  }
+
   for (let i = 0; i < pasteleria[elemento].length; i++) {
-    await insertBg(pasteleria[elemento][i], divs[i]);
+    main.innerHTML += `  <div
+    class="pasteleriaGaleriaDivs  flex flex-col justify-center items-center"
+  ><img class="animate-spin w-8" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>`;
   }
   modal.id = "modalCarousel";
   modal.classList.add("pasteleriaGaleriaModal", "hidden");
