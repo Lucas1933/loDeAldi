@@ -273,14 +273,13 @@ export const RENDER = {
   observerGaleria: async () => {
     function loadBg(bg, div) {
       let auxImg = new Image();
-      auxImg.addEventListener(
-        "load",
-        () => {
+      auxImg.addEventListener("load", () => {
+        if (!div.hasAttribute("style")) {
           div.setAttribute("style", `background-image: url(${auxImg.src});`);
           div.firstElementChild.remove();
-        },
-        { once: true }
-      );
+        }
+      });
+      console.log(auxImg);
       auxImg.src = bg;
     }
     let respuesta = await fetch("../pasteleria_urls.json").then((res) =>
@@ -297,14 +296,18 @@ export const RENDER = {
     let divs = Array.from(
       RENDER.currentMain().getElementsByClassName("pasteleriaGaleriaDivs")
     );
+    console.log(RENDER.currentMain());
     let options = {
-      root: RENDER.currentMain(),
       rootMargin: "0px",
       threshold: 1.0,
     };
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (
+          entry.isIntersecting &&
+          !entry.target.hasAttribute("style") &&
+          bgsImages.length != 0
+        ) {
           loadBg(bgsImages.pop(), entry.target);
         }
       });

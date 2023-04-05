@@ -97,9 +97,9 @@ function displayPasteleria() {
     RENDER.currentMain().replaceWith(
       ELEMENT.pasteleria[window.location.pathname]
     );
-    RENDER.setGaleria();
     RENDER.loadBg(RENDER.currentMain(), "../assets/backgrounds/wavesP.svg");
     RENDER.observerGaleria();
+    RENDER.setGaleria();
   }
   displayHeader();
   displayNavBar();
