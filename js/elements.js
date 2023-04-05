@@ -190,10 +190,12 @@ async function getGaleria(elemento) {
   let pasteleria = respuesta.pasteleria;
 
   main.classList.add("pasteleriaGaleriaGrid");
-
-  for (let i = 0; i < pasteleria[elemento].length; i++) {
+  main.innerHTML = `  <div
+  class="pasteleriaGaleriaDivs  flex flex-col justify-center items-center" data-firstload="true"
+><img class="animate-spin w-8" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>`;
+  for (let i = 1; i < pasteleria[elemento].length; i++) {
     main.innerHTML += `  <div
-    class="pasteleriaGaleriaDivs  flex flex-col justify-center items-center" data-firstload="true"
+    class="pasteleriaGaleriaDivs  flex flex-col justify-center items-center" 
   ><img class="animate-spin w-8" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>`;
   }
   modal.id = "modalCarousel";

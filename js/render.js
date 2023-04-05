@@ -304,13 +304,13 @@ export const RENDER = {
     };
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !entry.target.hasAttribute("style")) {
-          console.log("probando theshold", bgsImages.length);
+        if (entry.isIntersecting) {
           loadBg(bgsImages.pop(), entry.target);
         }
       });
     }, options);
     for (let i = 0; i < divs.length; i++) {
+      console.log(divs.length);
       observer.observe(divs[i]);
     }
   },
