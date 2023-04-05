@@ -193,7 +193,7 @@ async function getGaleria(elemento) {
 
   for (let i = 0; i < pasteleria[elemento].length; i++) {
     main.innerHTML += `  <div
-    class="pasteleriaGaleriaDivs  flex flex-col justify-center items-center"
+    class="pasteleriaGaleriaDivs  flex flex-col justify-center items-center" data-firstload="true"
   ><img class="animate-spin w-8" src="./assets/pasteleria/loading-svgrepo-com.svg" alt=""></div>`;
   }
   modal.id = "modalCarousel";

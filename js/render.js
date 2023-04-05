@@ -187,48 +187,51 @@ export const RENDER = {
     let nextBtn = document.getElementById("next");
     let prevBtn = document.getElementById("prev");
     let closeButton = document.getElementById("closeButton");
-    for (let i = 0; i < galeriaDivs.length; i++) {
-      galeriaDivs[i].addEventListener("click", (event) => {
-        let index = galeriaDivs.indexOf(event.target);
-        galeriaDivs.slice(index).forEach((cadaDiv) => {
-          urls.push(cadaDiv.style.backgroundImage);
-        });
+    if (galeriaDivs[0].hasAttribute("data-firstload")) {
+      for (let i = 0; i < galeriaDivs.length; i++) {
+        galeriaDivs[0].removeAttribute("data-firstload");
+        galeriaDivs[i].addEventListener("click", (event) => {
+          let index = galeriaDivs.indexOf(event.target);
+          galeriaDivs.slice(index).forEach((cadaDiv) => {
+            urls.push(cadaDiv.style.backgroundImage);
+          });
 
-        galeriaDivs.slice(0, index).forEach((cadaDiv) => {
-          urls.push(cadaDiv.style.backgroundImage);
+          galeriaDivs.slice(0, index).forEach((cadaDiv) => {
+            urls.push(cadaDiv.style.backgroundImage);
+          });
+          modalCarousel.classList.remove("hidden");
+          carouselDiv.style = `background-image: ${urls[0]};`;
         });
-        modalCarousel.classList.remove("hidden");
-        carouselDiv.style = `background-image: ${urls[0]};`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        let currentIndex = urls.indexOf(carouselDiv.style.backgroundImage);
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= urls.length) {
+          nextIndex = 0;
+        }
+        carouselDiv.style = `background-image: ${urls[nextIndex]};`;
       });
-    }
+      prevBtn.addEventListener("click", () => {
+        let currentIndex = urls.indexOf(carouselDiv.style.backgroundImage);
+        let prevIndex = currentIndex - 1;
+        if (prevIndex < 0) {
+          prevIndex = urls.length - 1;
+        }
+        carouselDiv.style = `background-image: ${urls[prevIndex]};`;
+      });
 
-    nextBtn.addEventListener("click", () => {
-      let currentIndex = urls.indexOf(carouselDiv.style.backgroundImage);
-      let nextIndex = currentIndex + 1;
-      if (nextIndex >= urls.length) {
-        nextIndex = 0;
-      }
-      carouselDiv.style = `background-image: ${urls[nextIndex]};`;
-    });
-    prevBtn.addEventListener("click", () => {
-      let currentIndex = urls.indexOf(carouselDiv.style.backgroundImage);
-      let prevIndex = currentIndex - 1;
-      if (prevIndex < 0) {
-        prevIndex = urls.length - 1;
-      }
-      carouselDiv.style = `background-image: ${urls[prevIndex]};`;
-    });
-
-    modalCarousel.addEventListener("click", (event) => {
-      if (event.target.id == "modalCarousel") {
+      modalCarousel.addEventListener("click", (event) => {
+        if (event.target.id == "modalCarousel") {
+          urls = [];
+          modalCarousel.classList.add("hidden");
+        }
+      });
+      closeButton.addEventListener("click", (event) => {
         urls = [];
         modalCarousel.classList.add("hidden");
-      }
-    });
-    closeButton.addEventListener("click", (event) => {
-      urls = [];
-      modalCarousel.classList.add("hidden");
-    });
+      });
+    }
   },
   loadBg: (element, backgroundSrc) => {
     let newBg = backgroundSrc;
