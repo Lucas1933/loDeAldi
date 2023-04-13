@@ -19,7 +19,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Muzzarella",
-      1200,
+      1300,
       "",
       1,
       "./assets/rotiseria/pizzas/1.jpeg",
@@ -29,7 +29,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Jamon y Morron",
-      1400,
+      1500,
       "",
       2,
       "./assets/rotiseria/pizzas/2.jpeg",
@@ -49,7 +49,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Salchicha",
-      1400,
+      1500,
       "",
       4,
       "./assets/rotiseria/pizzas/404.png",
@@ -70,7 +70,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Huevo Duro",
-      1400,
+      1500,
       "",
       6,
       "./assets/rotiseria/pizzas/6.jpeg",
@@ -80,7 +80,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Huevo Frito",
-      1500,
+      1600,
       "",
       7,
       "./assets/rotiseria/pizzas/7.jpeg",
@@ -91,7 +91,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Napolitana",
-      1450,
+      1500,
       "",
       8,
       "./assets/rotiseria/pizzas/8.jpeg",
