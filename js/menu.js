@@ -216,8 +216,8 @@ function getBurguerExtras() {
           class="block text-xl  rounded-lg bg-white p-6 shadow-lg"
           
         >
-          Otro medallon = $300 <br />
-          Papas con cheddar, panceta y verdeo = $250
+          Otro medallon = $350 <br />
+          Papas con cheddar, panceta y verdeo = $300
         </div>
       </div>
     </div>`;
