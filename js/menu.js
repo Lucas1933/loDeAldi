@@ -91,7 +91,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Napolitana",
-      1600,
+      1700,
       "",
       8,
       "./assets/rotiseria/pizzas/8.jpeg",
