@@ -19,7 +19,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Muzzarella",
-      1700,
+      1800,
       "",
       1,
       "./assets/rotiseria/pizzas/1.jpeg",
@@ -29,7 +29,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Jamon y Morron",
-      2000,
+      2200,
       "",
       2,
       "./assets/rotiseria/pizzas/2.jpeg",
@@ -39,7 +39,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Calabresa",
-      2000,
+      2200,
       "",
       3,
       "./assets/rotiseria/pizzas/404.png",
@@ -49,7 +49,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Salchicha",
-      2000,
+      2300,
       "",
       4,
       "./assets/rotiseria/pizzas/404.png",
@@ -59,7 +59,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Choclo",
-      2000,
+      2300,
       "",
       5,
       "./assets/rotiseria/pizzas/5.jpeg",
@@ -70,7 +70,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Huevo Duro",
-      2000,
+      2200,
       "",
       6,
       "./assets/rotiseria/pizzas/6.jpeg",
@@ -80,7 +80,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Huevo Frito",
-      2100,
+      2300,
       "",
       7,
       "./assets/rotiseria/pizzas/7.jpeg",
@@ -91,7 +91,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Napolitana",
-      2000,
+      2300,
       "",
       8,
       "./assets/rotiseria/pizzas/8.jpeg",
@@ -101,7 +101,7 @@ export function getMenu() {
   MENU.pizzas.push(
     new Comida(
       "Jamon y huevo",
-      2100,
+      2400,
       "",
       8,
       "./assets/rotiseria/pizzas/404.jpeg",
@@ -122,7 +122,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Cuarto de Libra",
-      1500,
+      1600,
       "(Salsa de ketchup y cebolla, queso cheddar, 1 medallon de carne 150g en pan de papa)",
       2,
       "./assets/rotiseria/hamburguesas/404.png",
@@ -132,7 +132,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Completa Clasica",
-      1500,
+      1600,
       "(Lechuga, tomate, jamon,queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       3,
       "./assets/rotiseria/hamburguesas/3.jpeg",
@@ -142,7 +142,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Cheddar y Panceta",
-      1500,
+      1600,
       "(Panceta crocante, cebolla caramelizada, queso cheddar, 1 medallon de carne de 150g en pan de papa)",
       4,
       "./assets/rotiseria/hamburguesas/4.png",
@@ -152,7 +152,7 @@ export function getMenu() {
   MENU.hamburguesas.push(
     new Comida(
       "Cebolla y Morron asado",
-      1500,
+      1600,
       "(Morron asado, cebolla caramelizada, queso muzzarella, 1 medallon de carne de 150g en pan de papa)",
       5,
       "./assets/rotiseria/hamburguesas/5.jpeg",
@@ -163,7 +163,7 @@ export function getMenu() {
   MENU.fritas.push(
     new Comida(
       "Fritas",
-      800,
+      1000,
       " ",
       1,
       "./assets/rotiseria/fritas/404.png",
@@ -173,7 +173,7 @@ export function getMenu() {
   MENU.fritas.push(
     new Comida(
       "Panceta, cheddar y verdeo",
-      1000,
+      1400,
       " ",
       2,
       "./assets/rotiseria/fritas/2.jpeg",
@@ -183,7 +183,7 @@ export function getMenu() {
   MENU.fritas.push(
     new Comida(
       "Salsa Picante",
-      1000,
+      1400,
       " ",
       3,
       "./assets/rotiseria/fritas/404.png",
